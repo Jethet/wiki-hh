@@ -1,4 +1,4 @@
-    Starting a coding project with Node and Express
+Starting a coding project with Node and Express
 
     Create a folder for the project on your computer	
 You need an empty folder with the name of your project. 
@@ -15,8 +15,8 @@ Open the terminal of VSC	In VSC, go to View – Terminal (on Mac, the shortcut i
 If you prefer, you can use a terminal outside of VSC.
 
     Check if you have Node installed	
-In the terminal, type node –version. 
-If Node is installed, you will see the version in your terminal.
+In the terminal, type node –version. If Node is installed, you will see the version
+in your terminal.
 If you do not have Node, go to nodejs.org to download it (there is an explanation
 how to download and install). 
 You only have to install Node once, and it will remain on your computer always.
@@ -52,7 +52,8 @@ with that.
     Install Express	for each new project: npm i express –save
 You can see in the package.json file that Express has been added after you install it. 
 That will happen with each package you install: it will be listed in the package.json 
-file. You can check if you already have Express with express –version.
+file. You can check if you already have Express with express –-version.
+(SEE: Using the Express generator, at the bottom of the text)
 
     First file: index.js	
 If you have not changed the name of your ‘entry point’ when you 
@@ -105,7 +106,25 @@ npm install –save-dev nodemon
 This should add nodemon to your package.json file.
 Use the command  npm run dev to start the server. Whenever changes are made to the code, 
 nodemon will automatically restart the server.
-	
-	
-	
-	
+
+---------------------------------------------------------------------------------
+
+Using the Express application generator
+
+The Express development environment includes an installation of Nodejs, the NPM package 
+manager, and (optionally) the Express Application Generator on your local computer.
+
+Node and the NPM package manager are installed together from prepared binary packages, 
+installers, operating system package managers or from source. Express is installed by
+NPM as a dependency of your individual Express web applications (along with other 
+libraries like template engines, database drivers, authentication middleware, middleware 
+to serve static files, etc.)
+
+NPM can also be used to (globally) install the Express Application Generator, a handy 
+tool for creating skeleton Express web apps that follow the MVC pattern. 
+The application generator is optional because you don't need to use this tool to create
+apps that use Express, or construct Express apps that have the same architectural layout
+or dependencies. But it makes getting started a lot easier, and promotes a modular 
+application structure.
+
+npm install express-generator -g
