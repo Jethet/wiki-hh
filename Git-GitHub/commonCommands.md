@@ -40,7 +40,7 @@ This will check out your file if you know the one in the repo is outdated:   
 Otherwise, you'll have to manually sort through them in the conflicted file. Make sure you have no <<< or >>> in your file as your conflicts live in these.
 
 ## Reverting a single file
-This will undo all of your changes for a single file (NB: his will lose any amends you haven't committed so only do this if you're sure):   $ git checkout -- /path-to/file
+This will undo all of your changes for a single file (NB: his will lose any amends you haven't committed so only do this if you're sure):  $ git checkout -- /path-to/file
 
 ## Reverting all of your current work
-If you want to delete your current changes and revert back to the previous commit (this will lose any amends you haven’t committed so only do this if you're sure):   $ git reset –hard
+If you want to delete your current changes and revert back to the previous commit (this will lose any amends you haven’t committed so only do this if you're sure):  $ git reset –hard
