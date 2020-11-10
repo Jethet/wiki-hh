@@ -103,7 +103,7 @@ ________________________________________________________________________________
 Elements have an opening and a closing tag, plus content. All the following are
    elements:
 
-      **heading:**
+      heading:
       There are 6 sizes for headings. The code is:
       <h1></h1>  (usually only 1 per page: the page title)
       <h2></h2>
@@ -170,10 +170,10 @@ NOTE: sections can have articles and articles can have sections; no precedence.
                                     and further indented than the term)
 
 
--  <pre></pre> all that is within these tags is respected: in this way empty
+<pre></pre> all that is within these tags is respected: in this way empty
    lines can be created, for example.
 
--  image
+image
    There should always be a folder for images in the project folder.
    The images can be downloaded by right clicking on a link and select
    'Save as ...', and save the images to the image folder.
@@ -194,17 +194,17 @@ NOTE: sections can have articles and articles can have sections; no precedence.
 ________________________________________________________________________________
 
 TAGS
--  <strong>:
+*  <strong>:
    The strong tag is used to mark the text inside it as strong. It is not a
    visual hint but a semantic hint. Its interpretation will vary depending
    on the medium but by default browsers make the text in this tag 'bold' but
    it is meant to indicate importance, not styling as with <b>.
 
--  <em>:
+*  <em>:
    The em tag marks the text inside it as emphasised. Browsers by default
    make this text italic. Also indicates importance, not styling as with <i>.
 
--  Other tags:
+*  Other tags:
    <small>  makes the font smaller (size of subscript)
    <mark>   puts the text in highlight
    <ins>    makes text look as if inserted by underlining it
