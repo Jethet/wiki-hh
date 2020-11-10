@@ -54,6 +54,6 @@ as description:
     `<button aria-describedby="payNowDescription">Pay now</button>`
     `<div id="payNowDescription">Clicking the button sends you to the form</div>`
 
-area-hidden="true" can be used to ignore elements in a webpage that are
+`area-hidden="true"` can be used to ignore elements in a webpage that are
 not relevant for the experience of a person who cannot see the page (like
 a logo picture or dark/bright theme selector).
