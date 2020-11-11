@@ -14,33 +14,40 @@ __This will also be bold__
 
 _You **can** combine them_
 
-** Unordered list:
+**Unordered list:**
 * Item 1
 * Item 2
   * Item 2a
   * Item 2b
 
-** Ordered list:
+**Ordered list:**
 1. Item 1
 1. Item 2
 1. Item 3
    1. Item 3a
    1. Item 3b
 
-** Images:
+**Images:**  
 ![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
 
-** Links:
+**Links:**  
 http://github.com - automatic!
 [GitHub](http://github.com)
 
-** Blockquotes:
+**Blockquotes**:  
+<!-- As the politician said:
+
+> We're living the future so
+> the present is our past. -->
+
 As the politician said:
 
 > We're living the future so
 > the present is our past.
 
-** Inline code:
+**Inline code:**  
+<!-- I think you should use an
+`<addr>` element here instead. -->
 I think you should use an
 `<addr>` element here instead.
