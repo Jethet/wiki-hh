@@ -1,26 +1,30 @@
 * non-breaking spaces that can serve as indent: macOS Opt plus space
 * inline code: use backticks
 * 'hard' line break: add two spaces at the end of the line
+* header tags go from # for h1 to 6 x # for h6
 
 # This is an h1 tag
 ## This is an h2 tag
 ###### This is an h6 tag
 
+* italic text is surrounded by * or _
 *This text will be italic*
 _This will also be italic_
 
+* bold text is surrounded by ** or __
 **This text will be bold**
-__This will also be bold__
-
-_You **can** combine them_
+__This will also be bold__  
+(You can combine them)
 
 **Unordered list:**
+Use * plus space before each item, at any level:
 * Item 1
 * Item 2
   * Item 2a
   * Item 2b
 
 **Ordered list:**
+Use 1. plus space before each item, at any level:
 1. Item 1
 1. Item 2
 1. Item 3
@@ -28,18 +32,15 @@ _You **can** combine them_
    1. Item 3b
 
 **Images:**  
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+`![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)`
 
 **Links:**  
-http://github.com - automatic!
-[GitHub](http://github.com)
+`http://github.com - automatic!
+[GitHub](http://github.com)`
 
 **Blockquotes**:  
-<!-- As the politician said:
-
-> We're living the future so
-> the present is our past. -->
+Put > before each quote line:
 
 As the politician said:
 
@@ -47,7 +48,9 @@ As the politician said:
 > the present is our past.
 
 **Inline code:**  
-<!-- I think you should use an
-`<addr>` element here instead. -->
+Use backticks (`) around the code:
+I think you should use an
+addr element here instead.
+will become:
 I think you should use an
 `<addr>` element here instead.
