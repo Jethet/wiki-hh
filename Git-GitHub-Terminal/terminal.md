@@ -1,10 +1,10 @@
-* **cd *directoryname***	go to the working directory you named.
-* **cd ..**	Brings you up one directory level.
-* **cd ../../** Brings you up multiple directory levels.
-* **cd**	Returns you to your home directory.
-* **chmod**	Changes permissions for access to a file. Study the man page  
+* **cd *directoryname*** Go to the working directory you named.
+* **cd ..**      Brings you up one directory level.
+* **cd ../../**  Brings you up multiple directory levels.
+* **cd**         Returns you to your home directory.
+* **chmod**      Changes permissions for access to a file. Study the man page  
 before using this one.
-* **cp *file1* *file2***	Copies a file: first name of original file, second name of copy.
+* **cp *file1* *file2***  Copies a file: first name of original file, second name of copy.
 * **ctrl + c** to leave any terminal view you are stuck in (terminates most operations).
 * **date**	Displays the current date and time.
 * **diff**	Compares two files line by line (assumes text).
@@ -18,7 +18,7 @@ complete information, use ls –l
 * **man man** Shows manual of the man command.
 * **mkdir *directoryname***	Makes a new directory.
 * **more *filename*** Displays a text file one page at a time. Press the spacebar to  
-see the next page; press Q to quit. The man command works through more.
+see the next page; press Q to quit. The man command works through *more*.
 * **mv *file1* *file2***	Moves a file or changes its name.
 * **pwd**	Displays the pathname of the current directory.
 * **rm *filename***	Removes (deletes) a file.
