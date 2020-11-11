@@ -7,13 +7,10 @@
 ## This is an h2 tag
 ###### This is an h6 tag
 
-* italic text is surrounded by * or _
-*This text will be italic*
-_This will also be italic_
 
-* bold text is surrounded by ** or __
-**This text will be bold**
-__This will also be bold__  
+* italic text is surrounded by * or _
+
+* bold text is surrounded by ** or __  
 (You can combine them)
 
 **Unordered list:**
@@ -48,9 +45,9 @@ As the politician said:
 > the present is our past.
 
 **Inline code:**  
-Use backticks (`) around the code:
+Use backticks around the code:  
 I think you should use an
-addr element here instead.
+addr element here instead.  
 will become:
 I think you should use an
 `<addr>` element here instead.
