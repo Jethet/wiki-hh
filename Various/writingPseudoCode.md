@@ -2,23 +2,12 @@
 
 1. Arrange the sequence of tasks and write the pseudocode accordingly.  
 1. Start with the statement of a pseudo code which establishes the main  
-goal or the aim.
-
- **Example:**
- This program will allow the user to check the number whether it's even or odd.
-
-1. The way the if-else, for, while loops are indented in a program, indent  the statements likewise, as it helps to comprehend the decision control  
-and execution mechanism. They also improve the readability to a great extent.
-
- **Example:**
-    if "1"
-        print response
-            "I am case 1"
-
-    if "2"
-        print response
-            "I am case 2"
-
+goal or the aim.  
+**Example:** This program will allow the user to check the number whether  
+it's even or odd.  
+1. The way the if-else, for, while loops are indented in a program, indent the  
+statements likewise, as it helps to comprehend the decision control and  
+execution mechanism. They also improve the readability to a great extent.
 1. Use appropriate naming conventions. The human tendency follows the approach to  
 follow what we see. If a programmer goes through a pseudo code, his approach will  
 be the same as per it, so the naming must be simple and distinct.
