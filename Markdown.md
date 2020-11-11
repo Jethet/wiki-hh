@@ -45,9 +45,5 @@ As the politician said:
 > the present is our past.
 
 **Inline code:**  
-Use backticks around the code:  
-I think you should use an
-addr element here instead.  
-will become:
-I think you should use an
-`<addr>` element here instead.
+Use backticks around the code: I think you should use an addr element here instead  
+will become: I think you should use an `<addr>` element here instead.
