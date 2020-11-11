@@ -1,4 +1,4 @@
-# How to write a Pseudo-code?
+# How to write a Pseudo-code
 
 1. Arrange the sequence of tasks and write the pseudocode accordingly.  
 1. Start with the statement of a pseudo code which establishes the main  
@@ -32,4 +32,4 @@ too many technical terms.
 
 * **DON'Ts**
 * Don't make the pseudo code abstract
-* Don't be too generalized
+* Don't be too generalized  
