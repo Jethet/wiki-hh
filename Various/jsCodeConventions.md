@@ -1,7 +1,7 @@
 # Code Conventions for JavaScript
 
 JavaScript programs should be stored in and delivered as .js files.
- 
+
 JavaScript code should *not* be embedded in HTML files unless the code is specific to a  
 single session. Code in HTML adds significantly to pageweight with no opportunity for  
 mitigation by caching, minification, and compression.
@@ -25,20 +25,7 @@ Blank spaces
  first token on a line, restoring the previous indentation.
 * The ternary operator can be visually confusing, so wrap the entire ternary expression  
 in parenthesiss. The condition, the ? question mark, and the : colon always begins a  
-line, indented 4 spaces.
+line, indented 4 spaces:
 
-  `let integer = function (  
-      value,  
-      default_value  
-    ) {  
-      value = resolve(value);  
-      return (  
-        typeof value === "number"  
-          ? Math.floor(value)  
-          : (  
-            typeof value === "string"  
-              ? value.charCodeAt(0)  
-              : default_value  
-          )  
-        );  
-      };`
+`![Example](./exampleTernary.png)
+Format: ![Alt Text](example ternary)`
