@@ -30,11 +30,11 @@ Use 1. plus space before each item, at any level:
 
 **Images:**  
 `![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)`
+Format: ![Alt Text](url)`  (without backticks)
 
 **Links:**  
 `http://github.com - automatic!
-[GitHub](http://github.com)`
+[GitHub](http://github.com)`  (without backticks)
 
 **Blockquotes**:  
 Put > before each quote line:
