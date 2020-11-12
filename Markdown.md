@@ -36,6 +36,10 @@ Format: ![Alt Text](url)`  (without backticks)
 `http://github.com - automatic!
 [GitHub](http://github.com)`  (without backticks)
 
+GitHub has its own version of Markdown with extra features,  
+for example any regular URL will automatically be converted  
+to a clickable link: https://guides.github.com/features/mastering-markdown/
+
 **Blockquotes**:  
 Put > before each quote line:
 
