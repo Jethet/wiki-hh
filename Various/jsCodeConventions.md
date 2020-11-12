@@ -27,5 +27,4 @@ Blank spaces
 in parenthesiss. The condition, the ? question mark, and the : colon always begins a  
 line, indented 4 spaces:
 
-`![Example](./exampleTernary.png)
-Format: ![Alt Text](example ternary)`
+![Example](/Users/henriettehettinga/GitHub/wiki-hh/Various/exampleTernary.png)
