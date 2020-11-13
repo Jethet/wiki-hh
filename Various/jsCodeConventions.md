@@ -1,5 +1,5 @@
 # Code Conventions for JavaScript
-information from https://www.crockford.com/code.html by Douglas Crackford
+*information from https://www.crockford.com/code.html by Douglas Crackford*
 
 JavaScript programs should be stored in and delivered as .js files.
 
