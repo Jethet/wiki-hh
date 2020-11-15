@@ -32,17 +32,17 @@ res.header('Access-Control-Allow-Origin', 'https://*name-of-domain-deployment*')
 
 If your API has no authentication then you don't need to worry about limiting access
 
-`app.use(function(req, res, next) {
-  // update to match the domain you will make the request from:
-  res.header("Access-Control-Allow-Origin", "YOUR-DOMAIN.TLD"); 
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+  app.use(function(req, res, next) {
+    // update to match the domain you will make the request from:
+    res.header("Access-Control-Allow-Origin", "YOUR-DOMAIN.TLD"); 
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
-app.get('/', function(req, res, next) {
-  // Handle the get for this route
-});
+  app.get('/', function(req, res, next) {
+    // Handle the get for this route
+  });
 
-app.post('/', function(req, res, next) {
- // Handle the post for this route
-});`
+  app.post('/', function(req, res, next) {
+  // Handle the post for this route
+  });
