@@ -9,16 +9,16 @@
 # This is an h1 tag
 ## This is an h2 tag
 ###### This is an h6 tag
-****
+------
 
-**Unordered list:**
+**Unordered list:**  
 Use * plus space before each item, at any level:
 * Item 1
 * Item 2
   * Item 2a
   * Item 2b
 
-**Ordered list:**
+**Ordered list:**  
 Use 1. plus space before each item, at any level:
 1. Item 1
 1. Item 2
@@ -42,7 +42,7 @@ https://guides.github.com/features/mastering-markdown/
 To emphasize links, add asterisks before and after the brackets and parentheses.  
 To denote links as code, add backticks in the brackets.
 
-**Urls and email**
+**Urls and email:**  
 To quickly turn a URL or email address into a link, enclose it in angle  
 brackets < >.
 
@@ -60,7 +60,7 @@ Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
 Use backticks around the code: I think you should use an addr element here  
 instead will become: I think you should use an `<addr>` element here instead.
 
-**Blocks of code:**
+**Blocks of code:**  
 Use three backticks around the code:  
 ```
 const myLogger = (req, res, next) => {
@@ -72,7 +72,8 @@ const myLogger = (req, res, next) => {
 app.use(myLogger)
 ```
 
-**Horizontal Rule**
+**Horizontal Rule**  
 To create a horizontal rule, use three or more asterisks (***), dashes (---),  
-or underscores (___) on a line by themselves. They all create a thin horizontal  
-line.
+or underscores (___) on a line by themselves. They all create a horizontal line.  
+
+-----
