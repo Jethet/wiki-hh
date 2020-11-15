@@ -51,3 +51,15 @@ As the politician said:
 **Inline code:**  
 Use backticks around the code: I think you should use an addr element here instead  
 will become: I think you should use an `<addr>` element here instead.
+
+**Blocks of code:**
+Use three backticks around the code:  
+```
+const myLogger = (req, res, next) => {
+  const visitTime = new Date()
+  console.log(`Visited ${req.url} at ${visitTime.toLocaleString()}`);
+  next()
+}
+
+app.use(myLogger)
+```
