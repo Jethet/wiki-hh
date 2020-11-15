@@ -31,7 +31,7 @@ If you want to restrict to a specific origin, you should write the full URL:
 res.header('Access-Control-Allow-Origin', 'https://*name-of-domain-deployment*').  
 
 If your API has no authentication then you don't need to worry about limiting access
-
+```
   app.use(function(req, res, next) {
     // update to match the domain you will make the request from:
     res.header("Access-Control-Allow-Origin", "YOUR-DOMAIN.TLD"); 
@@ -46,3 +46,4 @@ If your API has no authentication then you don't need to worry about limiting ac
   app.post('/', function(req, res, next) {
   // Handle the post for this route
   });
+  ```
