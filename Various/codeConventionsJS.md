@@ -59,3 +59,8 @@ the function, and not the function itself
 * constructor functions that must be used with the new prefix should start with a  
 capital letter
 * global variables should be avoided, but when used should be in ALL_CAPS.
+
+## Folder levels
+import from same folder: "./component"
+import from one level up: "../component"
+import from two levels up: "../../component"
