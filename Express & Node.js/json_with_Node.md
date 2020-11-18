@@ -56,6 +56,7 @@ let student = {
 let data = JSON.stringify(student);
 fs.writeFileSync('student-2.json', data);
 ```
+**IMPORTANT:** the resulting data is in the form of one line of string, which is difficult to read. For serialized JSON to be human readable, add: `let data = JSON.stringify(student, null, 2);`. This will add newlines and a couple of indentations to the serialized JSON.
 
 * **The writeFile function** executes in asynchronous manner, which means code is not blocked while data is written to the file. Like all asynchronous methods from before, we need to pass a callback to this function.  
 Example:
