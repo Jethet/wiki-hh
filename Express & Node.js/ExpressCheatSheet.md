@@ -2,7 +2,7 @@
 
 ## A minimal server with 4 lines of code
 
-```
+```js
 //after installing Express with npm i express, load the express module
 const express = require('express');
 
@@ -50,7 +50,7 @@ To allow the user to create a new instance of a resource, create the route handl
 * match the `POST` HTTP method, and 
 * use a route path of `/quotes`
 
-```
+```js
 app.post('/quotes', function (request, response) {
 
   const newQuote = request.body
@@ -91,7 +91,7 @@ To allow the user to update a resource, such as a recipe, we'd create the route 
 * match the `PUT` HTTP method, and 
 * use a route path of `/quotes/:id`, to match an example of /recipes/117
 
-```
+```js
 app.put("/quotes/:id", function (request, response) {
   const quoteId = request.params.id;
   
@@ -114,7 +114,7 @@ To allow the user to delete a resource by id, create the route handler to:
 * match the `DELETE` HTTP method, and 
 * use a route path of `/quotes/:id` to match an example of /quotes/117, as follows:
 
-```
+```js
 app.delete('/quotes/:id', function(req, res) {
   
   //look in the request params to get the id of the recipe to delete:
