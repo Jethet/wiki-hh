@@ -12,3 +12,16 @@
 >  brew services start postgresql
 >Or, if you don't want/need a background service you can just run:
 >  pg_ctl -D /usr/local/var/postgres start
+
+## New installation PostgresQL: installation wizard info
+The following settings will be used for the installation:
+Installation Directory: /Library/PostgreSQL/13
+Server Installation Directory: /Library/PostgreSQL/13
+Data Directory: /Library/PostgreSQL/13/data
+Database Port: 5432
+Database Superuser: postgres
+Operating System Account: postgres
+Database Service: postgresql-13
+Command Line Tools Installation Directory: /Library/PostgreSQL/13
+pgAdmin4 Installation Directory: /Library/PostgreSQL/13/pgAdmin 4
+Stack Builder Installation Directory: /Library/PostgreSQL/13
