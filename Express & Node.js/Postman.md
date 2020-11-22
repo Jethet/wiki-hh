@@ -3,7 +3,8 @@ When getting this type of error using Postman to test an endpoint:
 >Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
     >at ServerResponse.setHeader (_http_outgoing.js:536:11)
     >at ServerResponse.header (/Users/henriettehettinga/Coding-various/10-MIGRACODE/>Node-Databases Module/node-challenge-chat-server/node_modules/express/lib/response.>js:771:10)
-    >at ServerResponse.send (/Users/henriettehettinga/Coding-various/10-MIGRACODE/Node-Databases >Module/node-challenge-chat-server/node_modules/express/lib/response.js:170:12)  
+    >at ServerResponse.send (/Users/henriettehettinga/Coding-various/10-MIGRACODE/Node-Databases >Module/node-challenge-chat-server/node_modules/express/lib/response.js:170:12)
+
 you should add a **return** somewhere to get out of sending the request.
 
 **Code example:**
