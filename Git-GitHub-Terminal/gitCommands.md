@@ -44,3 +44,21 @@ This will undo all of your changes for a single file (NB: his will lose any amen
 
 ## Reverting all of your current work
 If you want to delete your current changes and revert back to the previous commit (this will lose any amends you haven’t committed so only do this if you're sure):  $ git reset –hard
+
+
+## Creating subfolders in repositories
+```
+warning: adding embedded git repository: Databases-Homework
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> Databases-Homework
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached Databases-Homework
+hint: 
+hint: See "git help submodule" for more information.```  
