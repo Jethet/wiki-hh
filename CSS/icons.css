@@ -1,0 +1,30 @@
+/* This is the code I used to put a small white speaker icon in a black textfield */
+
+.input-field-speaker {
+  padding-left: 20px;
+  width: 180px;
+  height: 30px;
+}
+
+.speaker {
+  position:absolute;
+  height: 11px;
+  margin: 8px;
+}
+
+/* The JSX code in the component is: */
+  <div>
+    <img src="/images/speaker.png" className="speaker" />
+    <label>
+      <input
+        type="text"
+        className="input-field-speaker"
+        style={{
+          color: "white",
+          backgroundColor: "black",
+          border: "2px solid black",
+          height: "30px",
+        }}
+      />
+    </label>
+  </div>
