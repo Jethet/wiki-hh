@@ -2,24 +2,16 @@
 
 STEP | EXPLANATION
 :---- | :---------
-Create a folder for the project on your computer | You need an empty folder with the name of your project.
+Create a folder for the project on your computer | You need an empty folder with the name of your project. If you have a directory  
+for your programming, you can create the folder there. It does not matter, as long as you know where you put the folder so that  
+you can find it.
+Open the folder with Visual Studio Code | In VSC, go to File – Open and then go to the directory where you created your project  
+folder. Click the folder once and click the button ‘Open’.
+Open the terminal of VSC | In VSC, go to View – Terminal. On Mac, the shortcut is Ctrl ` (backtick). If you prefer, you can use a  terminal outside of VSC.
+Check if you have Node installed | In the terminal, type node –version. If Node is installed, you will see the version in your terminal.
 
     	
- 
-If you have a directory for your programming, you can create the folder there. 
-It does not matter, as long as you know where you put the folder so that you can find it.
 
-    Open the folder with Visual Studio Code	
-In VSC, go to File – Open and then go to the directory where you created your project 
-folder. Click the folder once and click the button ‘Open’.
-
-    Open the terminal of VSC	
-In VSC, go to View – Terminal. On Mac, the shortcut is Ctrl ` (backtick). 
-If you prefer, you can use a terminal outside of VSC.
-
-    Check if you have Node installed	
-In the terminal, type node –version. If Node is installed, you will see the version
-in your terminal.
 If you do not have Node, go to nodejs.org to download it (there is an explanation
 how to download and install). 
 You only have to install Node once, and it will remain on your computer always.
