@@ -11,4 +11,6 @@ const mailformat = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
     res.send("The email address is not correct.")
   }
 ```
+NB: `myStr.match()` is used to check if a string matches a regular expression.  
+
 
