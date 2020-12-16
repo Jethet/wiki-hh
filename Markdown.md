@@ -77,3 +77,19 @@ To create a horizontal rule, use three or more asterisks (***), dashes (---),
 or underscores (___) on a line by themselves. They all create a horizontal line.  
 
 -----
+
+**Tables**  
+Markdown tables are physically represented using dash `-` for to separate the header  
+row from the content ones and pipe `|` for columns. Example:  
+Column | Column
+------ | ------
+Cell   | Cell    
+
+`:` is used to align a column. Left align is the standard.
+
+Column | Column | Column
+:----- | :----: | -----:
+Left   | Center | Right
+align  | align  | align
+
+NB: Markdown ignores spacing. If you need a void column you must add a space between the pipes.  
