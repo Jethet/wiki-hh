@@ -1,7 +1,11 @@
-Starting a coding project with Node and Express
+# Starting a coding project with Node and Express
 
-    Create a folder for the project on your computer	
-You need an empty folder with the name of your project. 
+STEP | EXPLANATION
+:---- | :---------
+Create a folder for the project on your computer | You need an empty folder with the name of your project.
+
+    	
+ 
 If you have a directory for your programming, you can create the folder there. 
 It does not matter, as long as you know where you put the folder so that you can find it.
 
