@@ -10,7 +10,9 @@
 **Connect to PostgreSQL database server with psql terminal programme**  
 In the PostgreSQL application package you will find the SQL Shell (psql).app. It allows you to interact with the PostgreSQL database server.  
 * launch the psql programme and connect to the PostgreSQL database server  
-* use Enter to walk through the lines; fill in password  D(voluit)@jaar (also masterpassword)
+* use Enter to walk through the lines; fill in password  D(voluit)@jaar (also masterpassword)  
+
+With `/Library/PostgreSQL/13/scripts/runpsql.sh; exit` on the command prompt the login screen restarts.
 
 
 **Basic syntax**  
@@ -22,8 +24,9 @@ In the PostgreSQL application package you will find the SQL Shell (psql).app. It
 When you hit return, you will be asked for your password. If password is accepted, the next line will show you the database you are connected to.
 
 **Shortcut for connection**  
-You can override with the command  
-`psql -d *nameDbase*`  
+After going through the startup screen, you can override with the command 
+`psql -d *nameDbase* -U *nameUser*`  
+You will see the prompt `postgres=#` change into `postgres-#`.  
 *When you use Fn F5 in pgAdmin now and open a query window, it should show the name of the database that you have chosen to connect with.*  
 
 Other ways to avoid typing all the connection parameters are:  
@@ -43,21 +46,23 @@ To connect, use:
 `psql service=service_name *OR* export PGSERVICE=service-name`  
 
 ### Command line for PostgreSQL
-**Use the same database keywords for SQL on the command line as in pgAdmin**  
-
 **Stop** run: `q`  
 **Quit** programme: `\q`  
 Check **version**: `psql -V `   
-**Create** database: `createdb NAME_DB `   
-**Connect** to database: `psql NAME_DB  `  
-**Execute** SQL code in file: `psql -d *database* -f exampleFile.sql  `  
 See **list** of databases: `\l `  
 **Clear** terminal: `\! clear`  
 Connect to **other** database: `\c *database* `  
 **Show users**: (postgres as superuser) `\du`  
 **Login**: `psql -U postgres -h localhost` `psql -U username -W postgres`  
+**Connection info**: `\conninfo`  
+
+**Use the same database keywords for SQL on the command line as in pgAdmin**  
+**Create** database: `createdb NAME_DB `   
+**Connect** to database: `psql NAME_DB  `  
+**Execute** SQL code in file: `psql -d *database* -f exampleFile.sql  `  
 
 ### Schemas in psql terminal:
 See **schemas list**: `\dn`  
+See **all tables**: `\dt`  
 See **list of schema tables**: `\dt exampleSchema.`  
 See **schema table data**: `SELECT * FROM exampleSchema.table;`  
