@@ -1,12 +1,15 @@
 # Express Cheatsheet (adapted from nbogie)
 
-## A minimal server with 4 lines of code
+## A minimal server with a few lines of code
 
 ```js
 //after installing Express with npm i express, load the express module
 const express = require('express');
 
 const app = express();
+// no need to install bodyParser: Express has its own json parser included
+// (https://dev.to/eclecticcoding/express-and-body-parser-khf)
+app.use(express.json())
 
 // test page
 app.get('/', function(request, response) {
@@ -72,7 +75,7 @@ if it has been submitted by HTML form you need to add the line
 ### If the request has come from `fetch` (e.g. in React), or from Postman
 
 if it has come from a HTML form you need to add the line
-```app.use(express.json())```
+```app.use(express.json())```  (for parsing application/json)  
 
 In both cases you can then say `request.body` to get either an object of key-value pairs, or the JSON which was posted.
 
