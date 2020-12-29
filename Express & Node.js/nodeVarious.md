@@ -11,3 +11,21 @@ const pool = new Pool({
 });
 ```
 *remember to put your Postgres username and password in the empty fields*  
+
+## With .env variables:
+`npm i dotenv`  
+Make sure dotenv is in package.json  
+Create file called .env and add:  
+PGUSER=yourusername  
+PGPASSWORD=yourpassword  
+Add to file where pool is defined: `require("dotenv").config();`  
+Use environment variables as follows:  
+```
+const pool = new Pool({
+  user: PGUSER,
+  host: "localhost",
+  database: "cyf_hotels",
+  password: PGPASSWORD,
+  port: 5432,
+});
+```
