@@ -7,3 +7,4 @@ echo .eslintcache >> .gitignore
 git add . && git commit -m "Remove .eslintcache forever"  
 git push  
 
+add .eslintcache to .gitignore file  
