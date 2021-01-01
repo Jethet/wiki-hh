@@ -55,7 +55,7 @@ To be able to work with tables in a schema, you add the schema name before the t
 * `BOOLEAN`
 * `DATE`
 *A database will reject any values that do not match the type!*  
-* `INSERT INTO` *table name* (keys to be used) `VALUES` ('value for key', 'value for key', etc.)
+* `INSERT INTO` *table name* (keyOne, keyTwo) `VALUES` ('value for keyOne', 'value for keyTwo', etc.). For multiple lines, supply a comma-separated list of rows after the VALUES keyword: `INSERT INTO` *table name* (keyOne, keyTwo) `VALUES` ('value1 for keyOne', 'value1 for keyTwo'), ('value2 for keyOne', 'value2 for keyTwo'), ('value3 for keyOne', 'value3 for keyTwo') etc.
 * `REFERENCES` *table name*(*table key*) The type also has to be added, for example `INT`: `customer_id    INT REFERENCES customers(id)`
 * `SERIAL` creates a sequence that generates a sequence of integers (often used as primary key column in a table by using `id SERIAL`). `SERIAL` creates an auto-increment column for a table.
 
