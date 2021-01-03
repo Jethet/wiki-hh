@@ -95,7 +95,7 @@ FOREIGN KEY (student_id) REFERENCES students (id),
 FOREIGN KEY (student_name) REFERENCES students (name)
 )
 ```
-
+*SQL does not accept a comma after the last line!*
 
 #### JOINING TABLES
 A single query can combine information from many tables. This can be done in may ways:  

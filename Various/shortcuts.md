@@ -1,0 +1,1 @@
+alt + shift + 2 = euro sign
