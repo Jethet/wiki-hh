@@ -42,6 +42,16 @@ Boolean values TRUE and FALSE
 **Before creating a table:** use  
 `drop table if exists *table name(s)*;`  
 
+**CREATE A TABLE**  
+```
+CREATE TABLE [IF NOT EXISTS] table_name (
+   column1 datatype(length) column_contraint,
+   column2 datatype(length) column_contraint,
+   column3 datatype(length) column_contraint,
+   table_constraints
+);
+```
+
 **SCHEMAS**  
 To be able to work with tables in a schema, you add the schema name before the table name: production.product, for example.
 
@@ -78,7 +88,10 @@ Syntax: `FOREIGN KEY (column) REFERENCES parent_table (table_name)`
 * The table to that the foreign key references is known as the referenced table or parent table.
 * A table can possess multiple foreign keys according to its relationships with other tables. 
 
-**To reference a foreign key**
+**To reference a foreign key**  
+The *type* references the *table* and the (*column*) 
+Example: `language SERIAL REFERENCES languages (id)  
+
 * make the field in the parent table unique so that there is not more than one record that matches.   
 Example: table *students* has *name*: put UNIQUE there or add it later on with: 
 ```

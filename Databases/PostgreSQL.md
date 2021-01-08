@@ -7,6 +7,11 @@
 * choose *connection* in the popup screen
 * it will show *host*, *port* and *username*  
 
+### Connect to PostgreSQL
+
+**Connect to PostgreSQL from the command line**  
+`brew services start postgresql`
+
 **Connect to PostgreSQL database server with psql terminal programme**  
 In the PostgreSQL application package you will find the SQL Shell (psql).app. It allows you to interact with the PostgreSQL database server.  
 * launch the psql programme and connect to the PostgreSQL database server  
@@ -44,6 +49,7 @@ password=*password*
 ```  
 To connect, use:  
 `psql service=service_name *OR* export PGSERVICE=service-name`  
+
 
 ### Command line for PostgreSQL
 **Stop** run: `q`  
