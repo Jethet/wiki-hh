@@ -86,15 +86,17 @@ select * from customers where id in (
 ```
 
 **Foreign Key**  
-Syntax: `FOREIGN KEY (column) REFERENCES parent_table (table_name)`  
+Syntax: `FKcolumn TYPE REFERENCES parent_table (table_name)`  
+* A foreign key in PostgreSQL states that values in the first table column must appear with values in the second table column.
 * A foreign key is a column or a group of columns used to identify a row uniquely of a different table.
+* The data type must be stated.
 * The table that comprises the foreign key is called the referencing table or child table.
 * The table to that the foreign key references is known as the referenced table or parent table.
 * A table can possess multiple foreign keys according to its relationships with other tables. 
 
 **To reference a foreign key**  
 The *type* references the *table* and the (*column*) 
-Example: `language SERIAL REFERENCES languages (id)  
+Example: `product SERIAL REFERENCES products (id)  
 
 * make the field in the parent table unique so that there is not more than one record that matches.   
 Example: table *students* has *name*: put UNIQUE there or add it later on with: 
