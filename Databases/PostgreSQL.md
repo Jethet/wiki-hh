@@ -14,8 +14,8 @@
 
 **Connect to PostgreSQL database server with psql terminal programme**  
 In the PostgreSQL application package you will find the SQL Shell (psql).app. It allows you to interact with the PostgreSQL database server.  
-* launch the psql programme and connect to the PostgreSQL database server  
-* use Enter to walk through the lines; fill in password  D(voluit)@jaar (also masterpassword)  
+* launch the psql programme to connect to the PostgreSQL database server  
+* use Enter to walk through the lines; fill in password (is your masterpassword)  
 
 With `/Library/PostgreSQL/13/scripts/runpsql.sh; exit` on the command prompt the login screen restarts.
 

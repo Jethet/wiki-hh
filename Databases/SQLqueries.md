@@ -1,24 +1,24 @@
-### Query strings
-A query string is the portion of a URL after the question mark ? where data is passed to a web application and/or back-end database. The syntax is something like `url../...etc?value1=2&value2=3`.  
+### Query strings, params and body
+A query string is the portion of a URL after ? (question mark) where data is passed to a web application and/or back-end database. The syntax is something like `url../...etc?value1=2&value2=3`.  
 
-The data are used in endpoints: `const value1 = req.query.value1`  
+The data are used as variables in endpoint queries: `const value1 = req.query.value1`  
 
-Other data that is taken from a url can be `req.params`: the params come from path segments of the URL **after the :**,  
+Other data that is taken from a url can be `req.params`: the params come from the path segment of the URL **after the : (column)**,  
 that match a parameter in the route definition, such as an id: `req.params.customerId` where the path is `app.get("/customers/:id")`.  
 
-The `req.body` is used in a post request that adds new data from the body content (for example, a form). 
+The `req.body` is used in a POST request that adds new data from the body content (for example, a form). Each variable is posted with a value in the body of data that is sent with the POST request.
 
 
 
-### SQL QUERIES
+### SQL name syntax
 
-**Tablenames** are the plural of the data in the table:  
+**Tablenames:** a tablename is the plural noun of the data in the table:  
 *customer data* becomes *customers*  
 *order data* becomes *orders*  
 
-**ID fields** are the singular plus Id at the end:  
-*customers* uses *customerId* for one customer  
-*orders* uses *orderId* for one order  
+**ID fields:** an ID field name is the singular noun plus Id at the end:  
+the table *customers* has the field *customerId* for one customer  
+the table *orders* has the field *orderId* for one order  
 
 #### SQL Datatypes
 
@@ -26,10 +26,14 @@ The `req.body` is used in a post request that adds new data from the body conten
 **single quotes! Postgres does not allow double quotes**
 `WHERE customername = 'Brown';`  
 *to escape a single quote, use double quote: `'O"Brien'`*  
+TEXT is used for input of an unlimited number of characters  
+
+**VARCHAR**  
+Use VARCHAR(n) when you want PostgreSQL to check the length limit (n) of the input.  
 
 **NUMERIC FIELDS (no quotes)**  
 Use =, >, >=, < and <=  
-Use <> to make sure entities are not equal to each other in any way
+Use <> to make sure entities are not equal to each other in any way.
 
 **DATE FIELDS**  
 **single quotes! syntax depends on location and system setup for dates**  
@@ -53,7 +57,7 @@ CREATE TABLE [IF NOT EXISTS] table_name (
 ```
 
 **SCHEMAS**  
-To be able to work with tables in a schema, you add the schema name before the table name: production.product, for example.
+To be able to work with different tables in a schema, you add the schema name before the table name: production.product, for example (see JOINING TABLES).
 
 **SELECT queries**  
 * `SERIAL PRIMARY KEY` defines a unique identifier for each row that will automatically increment every time data is inserted
