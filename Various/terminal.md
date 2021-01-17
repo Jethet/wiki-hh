@@ -5,4 +5,4 @@ With `echo "this is the text" >> example-filename` the text is not replaced.
 
 
 NB: `rm *` will remove all files
-Remove files with a specific pattern: never put a space after *
+Remove files with a specific pattern: never put a space after *, always immediately put pattern after *.
