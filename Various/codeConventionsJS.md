@@ -32,7 +32,7 @@ line, indented 4 spaces:
 
           ![Example](/wiki-images/exampleTernary.png)
 
-* clauses (case, catch, default, else, finally) are not statements and so should not  
+* clauses (`case`, `catch`, `default`, `else`, `finally`) are not statements and so should not  
 be indented like statements
 
 ## Comments
@@ -42,11 +42,11 @@ be indented like statements
 ## Function declarations
 * all functions should be declared before they are used
 * inner functions should come after the outer function's variable declarations (this  
-helps make it clear what variables are included in its scope).
-* no space between the name of a function and the (  of its parameter list
-* one space between the ) and the {  that begins the statement body
+helps make it clear what variables are included in its scope)
+* no space between the name of a function and the `(`  of its parameter list
+* one space between the `)` and the `{`  that begins the statement body
 * the body itself is indented four spaces
-* the } is aligned with the line containing the beginning of the function declaration
+* the `}` is aligned with the line containing the beginning of the function declaration
 * when a function is to be invoked immediately, the entire invocation expression should  
 be wrapped in parens so that it is clear that the value being produced is the result of  
 the function, and not the function itself
@@ -61,6 +61,7 @@ capital letter
 * global variables should be avoided, but when used should be in ALL_CAPS.
 
 ## Folder levels
-import from same folder: "./component"
-import from one level up: "../component"
-import from two levels up: "../../component"
+import from same folder: ` from "./component"`  
+import from one level up: ` from "../component"`  
+import from two levels up: ` from "../../component"`  
+
