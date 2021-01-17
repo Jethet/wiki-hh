@@ -1,7 +1,6 @@
 To write in a text file: `echo "this is the text" > example-filename` 
-This also creates the file *filename* if it does not exist already.  
-It will replace any text that is already there.  
-With `echo "this is the text" >> example-filename` the text is not replaced.
+This also creates the file *example-filename* if it does not exist already.  
+It will replace any text that is already there. With `echo "this is the text" >> example-filename` the text is not replaced.
 
 
 NB: `rm *` will remove all files
