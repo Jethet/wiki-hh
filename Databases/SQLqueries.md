@@ -249,3 +249,5 @@ The values will be deleted but the row is not gone (contrary to using **drop**).
 Example:  
 `DELETE FROM bookings WHERE id = 4;`
 
+**DELETE CASCADE**  
+When deleting records in PostgreSQL, foreign key relationships that may exist between these records and records in a different table. Using the DELETE CASCADE option ensure that all child records are also deleted when a parent record is deleted.  
