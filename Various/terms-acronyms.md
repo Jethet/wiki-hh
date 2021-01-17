@@ -1,3 +1,6 @@
+### Accessible Rich Internet Applications (ARIA)
+See *Accessibility* folder.
+
 ### Content Delivery Network (CDN)
 A CDN is a system of geographically distributed servers that work together to provide fast delivery of Internet content.  
 It's designed to minimize latency in loading web pages by reducing the physical distance between the server and the user.  
@@ -24,3 +27,4 @@ A web page may freely embed cross-origin images, stylesheets, scripts, iframes, 
 browser and server can interact to determine whether it is safe to allow the cross-origin request. It allows for more freedom  
 and functionality than purely same-origin requests, but is more secure than simply allowing all cross-origin requests.   
 See **CORS.md** in folder *Express & Node.js*  
+

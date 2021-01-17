@@ -15,13 +15,13 @@ for variables.
 1. Don’t write the pseudo code in a complete programmatic manner. It must be simple to understand even for a  
 layman or client, so don’t incorporate too many technical terms.
 
-* **DO's**
+**DO**
 * Use control structures
 * Use proper naming convention
 * Indentation and whitespaces are key
 * Keep it simple
 * Keep it concise
 
-* **DON'Ts**
+**DON'T**
 * Don't make the pseudo code abstract
 * Don't be too general  
