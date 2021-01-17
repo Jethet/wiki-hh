@@ -30,8 +30,7 @@ Blank spaces
 in parenthesiss. The condition, the `?` question mark, and the `:` colon always begins a  
 line, indented 4 spaces:
 
-Example: <https://github.com/Jethet/wiki-hh/blob/main/wiki-images/exampleTernary.png>
-![Example](/wiki-images/exampleTernary.png)
+          ![Example](/wiki-images/exampleTernary.png)
 
 * clauses (case, catch, default, else, finally) are not statements and so should not  
 be indented like statements
