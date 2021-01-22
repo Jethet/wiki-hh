@@ -1,21 +1,26 @@
-# A list of the most commonly used git commands
-## Cloning
-Navigate into the folder you want to clone your project into:  $ cd /chosen-path/  
-Then clone it:   $ git clone [project URL]  
-If you want to do a shallow clone which would only get the recent commit and ignore all of the repos history you can do:   $ git clone [project URL] --depth=1
+## A list of the most commonly used git commands
+### Cloning
+Navigate into the folder you want to clone your project into:  `$ cd /chosen-path/` 
+Then clone it:   `$ git clone [project URL]`
+If you want to do a shallow clone which would only get the recent commit and ignore all of the repos history you can do:   `$ git clone [project URL] --depth=1`
 
-## Checking git status
-Which files have changed, which branch is git using, etc.:   $ git status  
-Show a log of your recent commits:   $ git log
+### Checking git status
+Which files have changed, which branch is git using, etc.:   `$ git status`  
+Show a log of your recent commits:   `$ git log`
 
-## Adding/committing and pushing
+### Adding/committing and pushing
+```
 $ git add [file or directory]
 
 $ git commit -m 'your commit message'
 
 $ git push 
+```
+### Undoing
+Undo staging a file: `$ git reset HEAD <filename>` (if it is only one file you can leave out the filename)  
+Undo staging a commit: `git reset HEAD~1` (=move back one commit)  
 
-## Branches
+### Branches
 **Creating** a new branch:   $ git checkout -b [branch-name]
 
 **Pushing** your branch to the repo for the first time:   $ git push -u origin [branch-name]
