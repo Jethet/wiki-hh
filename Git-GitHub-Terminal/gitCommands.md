@@ -16,6 +16,8 @@ $ git commit -m 'your commit message'
 
 $ git push 
 ```
+In case the commit and push concerns an existing file, the shortcut is to use `git commit -am "message"`  
+
 ### Undoing
 Undo staging a file: `$ git reset HEAD <filename>` (if it is only one file you can leave out the filename)  
 Undo staging a commit: `git reset HEAD~1` (=move back one commit)  
