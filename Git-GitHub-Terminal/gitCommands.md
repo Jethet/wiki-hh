@@ -32,15 +32,15 @@ You can use `gitlog` to see past commits: the most recent one is at the top.
 
 **Switching** branch:   `git checkout branch-name`
 
-To see a **list** of all your branches:   git branch
+To see a **list** of all your branches:   `git branch`
 
-**Deleting** a branch: make sure you're not on the branch you want to delete otherwise it will not work. Use `git branch -d branch-name`
+**Deleting** a branch: make sure you're not on the branch you want to delete otherwise it will not work: `git branch -d branch-name`
 
 Delete a **remote** branch:   `git push origin --delete branch-name`  
 Delete a **local** branch:   `git branch -d branch-name`  
 This pulls your branch from origin if you do not have it locally:   `git checkout -b branch-name origin/branch-name`
 
-Safely **merging** a branch: Go onto the branch you want merge into, for example `develop`, then merge in your chosen branch, for example `new-feature-amend`:   
+Safely **merging** a branch: go onto the branch you want merge into, then merge in your chosen branch:  
 `git merge branch-name --no-commit --no-ff`  
 (the --no-commit does not automatically commit the branch after merging and --no-ff does not fast forward the branch you're merging into)
 
@@ -50,8 +50,8 @@ This will check out your file if you know the one in the repo is outdated:   
 Otherwise, you'll have to manually sort through them in the conflicted file. Make sure you have no `<<<` or `>>>` in your file as your conflicts live in these.
 
 ### Reverting a single file
-This will undo all of your changes for a single file (NB: his will lose any amends you haven't committed so only do this if you're sure):  
-`git checkout -- /path-to/file`
+This will undo all of your changes for a single file: `git checkout -- /path-to/file`  
+This will **lose** any amends that have not been committed.
 
 ### Git stash  
 `git stash push -m "Temporary changes"` switch branch without committing the changes you made on the current branch  
@@ -59,8 +59,8 @@ This will undo all of your changes for a single file (NB: his will lose any amen
 `git stash apply <index number of stash>` will get back the stashed changes  
 
 ## Reverting all of your current work
-If you want to delete your current changes and revert back to the previous commit (this will lose any amends you haven’t committed,  
-so only do this if you're sure):  `git reset –hard`
+To delete your current changes and revert back to the previous commit: `git reset –hard`  
+This will **lose** any amends that have not been committed.  
 
 ## Creating subfolders in repositories
 ```
