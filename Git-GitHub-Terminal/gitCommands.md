@@ -1,8 +1,7 @@
 ## A list of the most commonly used git commands
 ### Cloning
 Navigate into the folder you want to clone your project into:  `cd /chosen-path/`. Then clone it:   `git clone project-URL`.  
-If you want to do a shallow clone which would only get the recent commit and ignore all of the repos history you can do:  
-`git clone project-URL --depth=1`
+If you want to do a shallow clone (= only get the recent commit, ignore all history): `git clone project-URL --depth=1`
 
 ### Checking git status
 Which files have changed, which branch is git using, etc.:   `git status`  
