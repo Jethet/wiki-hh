@@ -1,8 +1,8 @@
 ## A list of the most commonly used git commands
 ### Cloning
-Navigate into the folder you want to clone your project into:  `cd /chosen-path/` 
-Then clone it:   `git clone project-URL`
-If you want to do a shallow clone which would only get the recent commit and ignore all of the repos history you can do:   `git clone project-URL --depth=1`
+Navigate into the folder you want to clone your project into:  `cd /chosen-path/`. Then clone it:   `git clone project-URL`.  
+If you want to do a shallow clone which would only get the recent commit and ignore all of the repos history you can do:  
+`git clone project-URL --depth=1`
 
 ### Checking git status
 Which files have changed, which branch is git using, etc.:   `git status`  
@@ -45,19 +45,23 @@ Safely **merging** a branch: Go onto the branch you want merge into, for example
 `git merge branch-name --no-commit --no-ff`  
 (the --no-commit does not automatically commit the branch after merging and --no-ff does not fast forward the branch you're merging into)
 
-## Solving conflicts
+### Solving conflicts
 This will check out their file if you know yours is incorrect:   `git checkout --theirs /path-to/conflict-file`  
 This will check out your file if you know the one in the repo is outdated:   `git checkout --ours /path-to/conflict-file`  
 Otherwise, you'll have to manually sort through them in the conflicted file. Make sure you have no `<<<` or `>>>` in your file as your conflicts live in these.
 
-## Reverting a single file
+### Reverting a single file
 This will undo all of your changes for a single file (NB: his will lose any amends you haven't committed so only do this if you're sure):  
 `git checkout -- /path-to/file`
+
+### Git stash  
+`git stash push -m "Temporary changes"` switch branch without committing the changes you made on the current branch  
+`git stash list` shows all stashes you created (each stash has an index number)  
+`git stash apply <index number of stash>` will get back the stashed changes  
 
 ## Reverting all of your current work
 If you want to delete your current changes and revert back to the previous commit (this will lose any amends you haven’t committed,  
 so only do this if you're sure):  `git reset –hard`
-
 
 ## Creating subfolders in repositories
 ```
@@ -76,3 +80,5 @@ hint:   git rm --cached Databases-Homework
 hint: 
 hint: See "git help submodule" for more information.
 ```  
+**Get out of GNU terminal**  
+^X (stands for Ctrl X)
