@@ -20,7 +20,10 @@ In case the commit and push concerns an existing file, the shortcut is to use `g
 
 ### Undoing
 Undo staging a file: `$ git reset HEAD <filename>` (if it is only one file you can leave out the filename)  
-Undo staging a commit: `git reset HEAD~1` (=move back one commit)  
+Undo staging a commit: `git reset HEAD~1` (=move back one commit, commit is undone)  
+You can use `gitlog` to see past commits: the most recent one is at the top.  
+`git reset --hard` plus the log hash will go back to the commit of that hash but also deletes everything that was done after it  
+
 
 ### Branches
 **Creating** a new branch:   $ git checkout -b [branch-name]
