@@ -38,7 +38,7 @@ for example `:hover` to turn a button blue when the cursor hovers over it.
 * undo bullets: lists can be used without bullets by adding 'list-style: none;'.  
 * a list has **padding** and **margins** by default in all the browsers. Remove these with `margin: 0;` and `padding: 0;`.
 
-#### Display
+#### Display and positioning
  
 The display property specifies the display behaviour (the type of rendering box) of an element. In HTML, the default display  
 property value is taken from the HTML specifications or from the browser/user default style sheet. **Inline** and **block**  
@@ -79,7 +79,7 @@ to the edges of the container, the web page is usable on small screens: you can 
 block-level element is set, and with `margin: 0 auto` the element will centre horizontally in the container: the  
 remaining space will be split evenly between the two margins.
 
-**Floating element**
+**Floating elements**
 A floating element stands as far to the left or right of its container element as possible. Other elements, such as  
 paragraphs text or Lists, wrap around the floating element. To ensure an element floats, its width must always be  
 specified (otherwise it takes the width of the entire page).
@@ -92,9 +92,9 @@ specified (otherwise it takes the width of the entire page).
 To NOT WRAP text but have this appear after the floating element, use `clear`: `clear: left` will move the text, list  
 etc. down below the float instead of wrapping it around the floating element (same for `clear: right` and `clear: both`).
 
-**Clearfix for floating images**
-In case an image etc. is floated and is taller than the element containing it (the container), the image may overflow outside of its  
-container. This can be fixed using:  
+**Clearfix for floating elements**
+Elements after a floating element will flow around it. In case an image etc. is floated and is taller than the element  
+containing it (the container), the image may overflow outside of its container. This can be fixed using:  
 ```
 .clearfix::after {
   content: "";
@@ -102,6 +102,23 @@ container. This can be fixed using:
   display: table;
 }
 ```
+
+Inline boxes flow from left to right and block boxes from top to bottom.
+Default position HTML elements is `<div class="static">`. STATIC means not positioned
+in any specific way within the normal flow of the page. If not static, then an
+element is 'positioned'.
+`<div class="relative">`: when an element has position RELATIVE it is no longer in
+the normal flow and can be moved to top/bottom/right/left.
+With a FIXED position, an element is relative to the viewport of the browser
+window. As the viewport does not change when the window is scrolled, the element
+always appears to be at the same place. Top/right/bottom/left properties are used.
+A fixed element does not leave a gap in the page where it would normally have been
+located.
+ABSOLUTE positioning means the element behaves as if fixed, except relative to
+the nearest positional ancestor (or else the document body). An element of
+`<div class="relative">` can have an absolute-positioned 'child': `<div class="absolute">`.
+
+
 
 BOX MODEL: an element can be seen as a box. The box model describes the
 stacking of spatial properties of an element: what effects its size and
@@ -150,21 +167,6 @@ them:
   display: inline-block;
 }
 
-POSITIONING
-Inline boxes flow from left to right and block boxes from top to bottom.
-Default position HTML elements is <div class="static">. STATIC means not positioned
-in any specific way within the normal flow of the page. If not static, then an
-element is 'positioned'.
-<div class="relative">: when an element has position RELATIVE it is no longer in
-the normal flow and can be moved to top/bottom/right/left.
-With a FIXED position, an element is relative to the viewport of the browser
-window. As the viewport does not change when the window is scrolled, the element
-always appears to be at the same place. Top/right/bottom/left properties are used.
-A fixed element does not leave a gap in the page where it would normally have been
-located.
-ABSOLUTE positioning means the element behaves as if fixed, except relative to
-the nearest positional ancestor (or else the document body). An element of
-<div class="relative"> can have an absolute-positioned 'child': <div class="absolute">.
 
 Z-INDEX: the z-index controls how content overlaps. The element with the highest
 z-index appears on top.
