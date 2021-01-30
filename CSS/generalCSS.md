@@ -1,48 +1,10 @@
-COMMENTS IN CSS: use /*place your comments here*/
+### General CSS info
+CSS defines the visual representation of the content of a website, such as colour, margins, borders,  backgrounds and positions in the page. CSS is the presentation of the website, and HTML is the structure.
 
-CSS defines the visual representation of the content of a website, such as
-colour, margins, borders, backgrounds and positions in the page. CSS is the
-presentation of the website, where HTML is the structure.
+**Comments in CSS:** use `/* place your comments here */`.
 
-Selector: element
-example of CSS rule:
-body {
-  color: xxxx;
-}
-'body' is the selector, 'color' is the property and 'xxx' is the value:
-general code is
-selector {
-  property: value;
-  property: value;
-  property: value;
-  ( ... etc. ...)
-}
-A group of properties for a given selector is always defined within the curly
-braces, as shown above.
-With the * selector ALL elements are selected. * can also select all elements
-inside another element.
-Text decoration includes underline, overline and line-through.
-
-SELECTOR: The part of a CSS rule that determines which HTML elements the rule
-applies to.
-Selector: class
-A class selector selects all elements that use the specified class. This can be
-.my-picture or .title.
-Pseudo classes: a keyword added to a selector.
-A pseudo class specifies a special state of the element to be selected, for
-example 'hover' to turn a button blue when the cursor hovers over it.
-
-Selector: id
-The id selector selects the element with the exact id. There can be only one
-element with a particular id.
-
-Selector: nested elements
-This selects all elements of a type that are nested within a class
-
-Using element selectors the style is ensured for all elements of that type:
-h1 style for all headings of size 1, etc.
-
-RESET styles to avoid browser inconsistencies:
+#### Reset styles to avoid browser inconsistencies
+```
 html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
   margin: 0;
   padding: 0;
@@ -50,22 +12,48 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
   font-size: 100%;
   vertical-align: baseline;
 }
-UNDO BULLETS: lists can be used without bullets by adding 'list-style: none;'
-LIST HAS PADDING AND MARGINS BY DEFAULT in all browsers. Remove these with
-'margin: 0;' and 'padding: 0;'
+```
 
-DISPLAY The display property specifies the display behaviour (the type of rendering
-box) of an element. In HTML, the default display property value is taken from the
-HTML specifications or from the browser/user default style sheet.
-INLINE and BLOCK ELEMENTS are the most common ways to display elements.
+#### Selector, property and value in CSS
+The selector is the part of a CSS rule that determines which HTML elements the rule applies to:
+```
+body {
+  color: xxxx;
+}
+```
+=> `body` is the selector, `color` is the property and `#xAxBxC` is the value.
 
-- block: elements appear on a new line (also called block-level element)
-  <div> is the standard block-level element: starts on a new line and stretches
-  out to the left and right as far as it can.
-  <p>, <form>, <header>, <footer>, <section>, <h1>, <ul>, <li> etc. are also
-  block-level elements.
+`*` selector: all elements are selected. `*` can also select all elements inside another element.
+`.` selector: class selector that selects all elements that use the specified class.
+`#` selector: id selector that selects the element with the exact id. There can be only one element   
+with a particular id.
+`body` `h1` `a` `p` `img` etc. can be used as *element selectors*. The CSS style is ensured for all  
+elements of that type.
 
-- inline: elements appear on the same underline
+**Pseudo class**: a keyword added to a selector. A pseudo class specifies a special state of the   
+element to be selected, for example 'hover' to turn a button blue when the cursor hovers over it.
+
+
+
+#### Padding and margins
+
+**Lists**
+Undo bullets: lists can be used without bullets by adding 'list-style: none;'
+A list has padding and margins by default in browsers. Remove these with `margin: 0;` and `padding: 0;`.
+
+#### Display
+ 
+The display property specifies the display behaviour (the type of rendering box) of an element.  
+In HTML, the default display property value is taken from the HTML specifications or from the  
+browser/user default style sheet. **Inline** and **block** elements are the most common ways to  
+display elements.
+
+* `block`: elements appear on a new line (also called block-level element)
+  `<div>` is the standard block-level element: starts on a new line and stretches out to the left
+  and right as far as it can.
+  `<p>, <form>, <header>, <footer>, <section>, <h1>, <ul>, <li>` etc. are all block-level elements.
+
+* inline: elements appear on the same underline
   An inline element can wrap some text inside a paragraph: <span>sometext</span>
   without disrupting the flow of that paragraph.
   Examples of inline elements are <img>, <a> (most common because used for links),
@@ -232,7 +220,7 @@ To use grid layout, always start with: display: grid;
 IMAGES: always optimise beforehand (scaling etc.) to have small filesize
 -------------------------------------------------------------------------------
 FLEXBOX:
-Note: when you change row to column, you ALSO need  to change the direction of
+Note: when you change row to column, you ALSO need to change the direction of
  'justify-content' because this now refers to vertical alignment. Use
   'align-items:' for this.
 
