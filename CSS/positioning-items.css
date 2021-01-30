@@ -7,12 +7,12 @@
 }
 
 .speaker {
-  position:absolute;
+  position: absolute;
   height: 11px;
   margin: 8px;
 }
 
-/* The JSX code in the component is: 
+/* The JSX code in the component is: */
   <div>
     <img src="/images/speaker.png" className="speaker" />
     <label>
@@ -28,7 +28,7 @@
       />
     </label>
   </div>
-  */
+  
 
 /* For a dropdown (from a hamburger menu etc.) use: */
 .dropdown {
