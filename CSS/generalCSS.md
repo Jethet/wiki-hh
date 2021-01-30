@@ -92,12 +92,14 @@ specified (otherwise it takes the width of the entire page).
 To NOT WRAP text but have this appear after the floating element, use `clear`: `clear: left` will move the text, list  
 etc. down below the float instead of wrapping it around the floating element (same for `clear: right` and `clear: both`).
 
-**Clearfix**
-In case an image etc. is taller than the element containing it (the container), the image may overflow outside of its  
-container. This can be fixed using  
+**Clearfix for floating images**
+In case an image etc. is floated and is taller than the element containing it (the container), the image may overflow outside of its  
+container. This can be fixed using:  
 ```
-.clearfix {
-  overflow: auto;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 ```
 
