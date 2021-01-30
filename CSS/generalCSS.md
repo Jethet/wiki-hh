@@ -148,7 +148,7 @@ PERCENT WIDTH: percent is a measurement unit relative to the containing box.
 It can ensure that an image is always 50% the width of its container, for example.
 With 'min-width' and 'max-width' the size of the image can be limited.
 
-PSEUDO CLASS
+#### Pseudo class
 A pseudo class is a keyword added to selectors to specify a special STATE. In
 this way, different styling can be specified for different states of a link:
 a:link
@@ -179,10 +179,10 @@ have the menu as sidebar.
 
 TEXT SHADOW: adds a drop shadow and is formatted as follows:
 text-shadow: horizontal-shadow vertical-shadow blur color
-- horizontal-shadow: length of shadow along x-axis
-- vertical-shadow: length of shadow along y-axis
-- blur: controls how much (if any) blur radius is added to the shadow (optional)
-- color: controls the colour of the shadow (optional)
+* horizontal-shadow: length of shadow along x-axis
+* vertical-shadow: length of shadow along y-axis
+* blur: controls how much (if any) blur radius is added to the shadow (optional)
+* color: controls the colour of the shadow (optional)
 Same goes for BOX SHADOW: this makes it possible to use multiple drop shadows on
 box elements using: 'box-shadow: horizontal-shadow vertical-shadow blur size
  color inset'
@@ -194,13 +194,7 @@ Opacity of 0.2 is very transparant; 1.0 is solid colour.
 BORDER RADIUS: creates rounded corners to elements; the higher the number, the
 bigger the curve.
 
-BACKGROUND IMAGES: add to 'body': 'background: url(path-to-image)'
-Use more background images by adding more urls after each other.
-Set properties for background images: 'background-size: first_image_size, second-
-image-size' etc.
-'no repeat' must be added, otherwise the image repeats itself to fill the container.
-'background-attachment: fixed, fixed' will keep the background from changing when
-scrolling: it remains in view.
+
 
 With EM (em = ephemeral unit) used for font-size, the font is kept relative to
 the default font size. This means 0.5 em is 50% of the size that would apply as
@@ -214,9 +208,21 @@ item on a list with the 'child' element: :nth-child(odd) and :nth-child(even)
 
 To use grid layout, always start with: display: grid;
 
-IMAGES: always optimise beforehand (scaling etc.) to have small filesize
--------------------------------------------------------------------------------
-FLEXBOX:
+#### Images
+Always optimise images beforehand (scaling etc.) to have small filesize.  
+`vertical-align: top` will position all images in an image container at the top   
+`object-fit: cover` will size the image to the given width.  
+
+**Background images:**  
+Add to `body` or whatever element where the background should be: `background: url(path-to-image)`
+Use more background images by adding more urls after each other.  
+Set properties for background images: `background-size: first_image_size, second-image-size` etc.  
+`no repeat` must be added, otherwise the image repeats itself to fill the container.  
+`background-attachment: fixed, fixed` will keep the background from changing when scrolling: it remains in view.
+
+
+### Flexbox
+
 Note: when you change row to column, you ALSO need to change the direction of
  'justify-content' because this now refers to vertical alignment. Use
   'align-items:' for this.
