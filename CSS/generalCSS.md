@@ -26,44 +26,36 @@ body {
 
 `*` selector: all elements are selected. `*` can also select all elements inside another element.  
 `.` selector: class selector that selects all elements that use the specified class.  
-`#` selector: id selector that selects the element with the exact id. There can be only one element   
-with a particular id.  
-`body` `h1` `a` `p` `img` etc. can be used as *element selectors*. The CSS style is ensured for all  
-elements of that type.
+`#` selector: id selector that selects the element with the exact id. There can be only one element with a particular id.  
+`body` `h1` `a` `p` `img` etc. can be used as *element selectors*. The CSS style is ensured for all elements of that type.
 
-**Pseudo class**: a keyword added to a selector. A pseudo class specifies a special state of the   
-element to be selected, for example `:hover` to turn a button blue when the cursor hovers over it.
+**Pseudo class**: a keyword added to a selector. A pseudo class specifies a special state of the element to be selected,  
+for example `:hover` to turn a button blue when the cursor hovers over it.
 
 #### Padding and margins
 
-**Lists**
-Undo bullets: lists can be used without bullets by adding 'list-style: none;'.  
-**NB:** a list has padding and margins by default in all the browsers. Remove these with `margin: 0;`  
-and `padding: 0;`.
+**Lists**  
+* undo bullets: lists can be used without bullets by adding 'list-style: none;'.  
+* a list has **padding** and **margins** by default in all the browsers. Remove these with `margin: 0;` and `padding: 0;`.
 
 #### Display
  
-The display property specifies the display behaviour (the type of rendering box) of an element.  
-In HTML, the default display property value is taken from the HTML specifications or from the  
-browser/user default style sheet. **Inline** and **block** elements are the most common ways to  
-display elements.
+The display property specifies the display behaviour (the type of rendering box) of an element. In HTML, the default display  
+property value is taken from the HTML specifications or from the browser/user default style sheet. **Inline** and **block**  
+elements are the most common ways to display elements.
 
-* **block**: elements appear on a new line (also called block-level element).  
-  `<div>` is the standard block-level element: starts on a new line and stretches out to the left  
-  and right as far as it can.  
+* **block**: elements appear on a new line (also called block-level element).   `<div>` is the standard block-level element:  
+starts on a new line and stretches out to the left and right as far as it can.  
   `<p>, <form>, <header>, <footer>, <section>, <h1>, <ul>, <li>` etc. are all block-level elements.
 
-* **inline**: elements appear on the same underline.  An inline element can wrap some text inside a  
-paragraph: `<span>sometext</span>` without disrupting the flow of that paragraph.  
-  Examples of inline elements are `<img>`, `<a>` (most common because used for links), `<em>`,  
-  `<strong>` and `<span>`.
+* **inline**: elements appear on the same line. An inline element can wrap some text inside a paragraph: `<span>sometext</span>`  
+without disrupting the flow of that paragraph. Examples of inline elements are `<img>`, `<a>` (most common because used for links),  
+`<em>`, `<strong>` and `<span>`.
 
-INLINE-BLOCK is a display element that is used instead of INLINE when the div
-contains a class that is a block element (such as `<h1>`) that takes over.
-Inline-blocks can have a width and height, for example to create a grid of boxes.
-Inline-block can be used for layouts: set 'vertical-align' to 'top', set the
-width of each column that is defined in the html code. Mind whitespaces in the
-HTML: these will show as gaps between the columns.
+* an **inline block**  is a display element that is used instead of inline when the `div` contains a class that is a block element  
+(such as `<h1>`) that takes over. Inline-blocks can have a width and height, for example to create a grid of boxes. Inline-block  
+can be used for layouts: set 'vertical-align' to 'top', set the width of each column that is defined in the html code. Mind  
+whitespaces in the HTML: these will show as gaps between the columns.
 
 COLUMN: It is possible to make a multi-column text, for example:
 .three-column {
