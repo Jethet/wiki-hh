@@ -84,11 +84,11 @@ A floating element stands as far to the left or right of its container element a
 paragraphs text or Lists, wrap around the floating element. To ensure an element floats, its width must always be  
 specified (otherwise it takes the width of the entire page).
 
-*Floating properties:*
-`float: right`  --> float to the right of the page
-`float: left`   --> float to the left of the page
-`float: inherit` --> inherit the value of the parent element
-`float: none`   --> do not float
+*Floating properties:*  
+`float: right`  --> float to the right of the page  
+`float: left`   --> float to the left of the page  
+`float: inherit` --> inherit the value of the parent element  
+`float: none`   --> do not float  
 To NOT WRAP text but have this appear after the floating element, use `clear`: `clear: left` will move the text, list  
 etc. down below the float instead of wrapping it around the floating element (same for `clear: right` and `clear: both`).
 
@@ -207,6 +207,12 @@ EVEN and ODD RULES: it is possible to apply a different style to every second
 item on a list with the 'child' element: :nth-child(odd) and :nth-child(even)
 
 To use grid layout, always start with: display: grid;
+
+
+**Replaced elements** are external objects such as`<img>` or `<video>`, whose representation is independent of the CSS formatting model.  
+These elements have a content that is not affected by the current document's styles. The position of the replaced element can be  
+affected using CSS, but not the contents of the replaced element itself. The only other impact CSS can have on a replaced  
+element is that there are properties which support controlling the positioning of the element's content within its box.
 
 #### Images
 Always optimise images beforehand (scaling etc.) to have small filesize.  
