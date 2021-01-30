@@ -44,20 +44,21 @@ The display property specifies the display behaviour (the type of rendering box)
 property value is taken from the HTML specifications or from the browser/user default style sheet. **Inline** and **block**  
 elements are the most common ways to display elements.
 
-* **block**: elements appear on a new line (also called block-level element).   `<div>` is the standard block-level element:  
+* **block**: elements appear on a new line (also called block-level element). `<div>` is the standard block-level element:  
 starts on a new line and stretches out to the left and right as far as it can.  
   `<p>, <form>, <header>, <footer>, <section>, <h1>, <ul>, <li>` etc. are all block-level elements.
 
 * **inline**: elements appear on the same line. An inline element can wrap some text inside a paragraph: `<span>sometext</span>`  
-without disrupting the flow of that paragraph. Examples of inline elements are `<img>`, `<a>` (most common because used for links),  
+without disrupting the flow of the paragraph. Examples of inline elements are `<img>`, `<a>` (most common because used for links),  
 `<em>`, `<strong>` and `<span>`.
 
-* an **inline block**  is a display element that is used instead of inline when the `div` contains a class that is a block element  
+* an **inline block**  is a display element that is used instead of inline when the `<div>` contains a class that is a block element  
 (such as `<h1>`) that takes over. Inline-blocks can have a width and height, for example to create a grid of boxes. Inline-block  
 can be used for layouts: set 'vertical-align' to 'top', set the width of each column that is defined in the html code. Mind  
 whitespaces in the HTML: these will show as gaps between the columns.
 
-COLUMN: It is possible to make a multi-column text, for example:
+**Column**: It is possible to make a multi-column text, for example:  
+```
 .three-column {
   padding: 1em;
   -moz-column-count: 3;
@@ -67,37 +68,38 @@ COLUMN: It is possible to make a multi-column text, for example:
   column-count: 3;
   column-gap: 1em;
 }
+```
 
-NONE is also a display value: hide and show elements without really deleting
-and recreating them. The page is rendered as though the element does not exist,
-in contrast to 'visibility: hidden' where the element is hidden but still takes
-up the space it would have if visible.
+**none** is also a display value: use `none` to hide and show elements without really deleting and recreating them.  
+The page is rendered as though the element does not exist, in contrast to 'visibility: hidden' where the element is  
+hidden but still takes up the space it would have if visible.
 
-MAX-WIDTH: using 'max-width: xxxpx' instead of 'width' when preventing a block-level
-element from stretching out to the edges of the container, the web page is usable on
-small screens: you can resize the page. The width of the block-level element is set
-and with 'margin: 0 auto;' the element will centre horizontally in the container:
-the remaining space will be split evenly between the two margins.
+**max-width**: using `max-width: xxxpx` instead of `width` when preventing a block-level element from stretching out  
+to the edges of the container, the web page is usable on small screens: you can resize the page. The width of the  
+block-level element is set, and with `margin: 0 auto` the element will centre horizontally in the container: the  
+remaining space will be split evenly between the two margins.
 
-FLOATING ELEMENTS
-A floating elements stands as far to the left or right of their container
-element as possible. Other elements, such as paragraphs text or Lists, wrap around
-the floating element. To ensure an element floats, its width must always be
+**Floating element**
+A floating element stands as far to the left or right of its container element as possible. Other elements, such as  
+paragraphs text or Lists, wrap around the floating element. To ensure an element floats, its width must always be  
 specified (otherwise it takes the width of the entire page).
-Floating properties:
-float: right  --> float to the right of the page
-float: left   --> float to the left of the page
-float: inherit --> inherit the value of the parent element
-float: none   --> do not float
-To NOT WRAP text but have this appear after the floating element, use 'clear':
-'clear: left;' will move the text, list etc. down below the float instead of
-wrapping it around the floating element (same for 'clear: right;' and 'clear: both;').
 
-CLEARFIX: in case an image etc. is taller than the element containing it (the
-container), the image may overflow outside of its container. This can be fixed
-using '.clearfix {
-          overflow: auto;
-        }'
+*Floating properties:*
+`float: right`  --> float to the right of the page
+`float: left`   --> float to the left of the page
+`float: inherit` --> inherit the value of the parent element
+`float: none`   --> do not float
+To NOT WRAP text but have this appear after the floating element, use `clear`: `clear: left` will move the text, list  
+etc. down below the float instead of wrapping it around the floating element (same for `clear: right` and `clear: both`).
+
+**Clearfix**
+In case an image etc. is taller than the element containing it (the container), the image may overflow outside of its  
+container. This can be fixed using  
+```
+.clearfix {
+  overflow: auto;
+}
+```
 
 BOX MODEL: an element can be seen as a box. The box model describes the
 stacking of spatial properties of an element: what effects its size and
