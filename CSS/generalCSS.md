@@ -33,7 +33,7 @@ body {
 
 
 A pseudo class is a keyword added to selectors to specify a special state, for example `:hover` to turn a button blue when the  
-cursor hovers over it. In this way, different styling can be specified for different states of a link `<a>`:
+cursor hovers over it. In this way, different styling can be specified for different states of a link `<a>`:  
 `a:link` is a normal, unvisited link  
 `a:visited` is a link the user has visited  
 `a:hover` is a link when the user mouses over it  
@@ -42,7 +42,7 @@ cursor hovers over it. In this way, different styling can be specified for diffe
 When setting the style for several link states, there are some order rules: `a:hover` MUST come after `a:link` and `a:visited`;  
 `a:active` MUST come after `a:hover`.
 
-With `:hover` it is also possible to use time lapse for the effect to happen, e.g.:
+With `:hover` it is also possible to use time lapse for the effect to happen, e.g.:  
 `transition-duration: 0.5s` effect builds up during certain time  
 `transition-delay: 0.2s` effect does not start immediately  
 `transform: rotate(90deg)` rotating effect of buttons etc.  
@@ -57,23 +57,21 @@ Inline boxes flow from left to right and block boxes from top to bottom.
 of the page. If not static, then an element is 'positioned'.  
 * `<div class="relative">`: when an element has position **relative** it is no longer in the normal flow and can be moved to top, bottom,  
 right or left.
-* With a **fixed** position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled, the element always appears to be at the same place. Top/right/bottom/left properties can be used. A fixed element does not  
-leave a gap in the page where it would normally have been located.
+* With a **fixed** position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled, the element always appears to be at the same place. The top/right/bottom/left properties can be used. A fixed element does  
+not leave a gap in the page where it would normally have been located.
 * **absolute** positioning means the element behaves as if fixed, except relative to the nearest positional ancestor (or else the document  
 body). An element of `<div class="relative">` can have an absolute-positioned 'child': `<div class="absolute">`.
 
 **Inline and block elements are the most common ways to display elements.**  
 * **block**: elements appear on a new line (also called block-level element). `<div>` is the standard block-level element: starts on a new  
-line and stretches out to the left and right as far as it can. `<p> <form> <header> <footer> <section> <h1> <ul> <li>` etc. are block-level  
-elements.
+line and stretches out to the left and right as far as it can. `<p> <form> <header> <footer> <section> <h1> <ul> <li>` etc. are all  
+block-level elements.
 
 * **inline**: elements appear on the same line. An inline element can wrap some text inside a paragraph: `<span>sometext</span>`  
 without disrupting the flow of the paragraph. Examples of inline elements are `<img> <a> <em> <strong> <span>`.
 
-* an **inline block**  is a display element that is used instead of inline when the `<div>` contains a class that is a block element  
-(such as `<h1>`) that takes over. Inline-blocks can have a width and height, for example to create a grid of boxes. An inline-block can  
-be used for layouts: set `vertical-align: top`, set the width of each column that is defined in the html code. NB: whitespaces in the HTML  
-will show as gaps between the columns.
+* an **inline block**  is a display element that is used instead of inline when the `<div>` contains a class that is a block element (such  as `<h1>`) that takes over. Inline-blocks can have a width and height, for example to create a grid of boxes. An inline-block can be used   
+for layouts: set `vertical-align: top`, set the width of each column that is defined in the html code. NB: whitespaces in the HTML will  show as gaps between the columns.
 
 **Column**: It is possible to make a multi-column text, for example:  
 ```
@@ -88,10 +86,10 @@ will show as gaps between the columns.
 }
 ```
 
-**none** is also a display value: use `display: none` to hide and show elements without really deleting and recreating them.  
-The page is rendered as though the element does not exist, in contrast to `visibility: hidden` where the element is hidden but  
-still takes up the space it would have if visible. Use `display: none` in responsive design to include elements that are available  
-for one display size but not for others. 
+**none** is also a display value: use `display: none` to hide and show elements without really deleting and recreating them. The  
+page is rendered as though the element does not exist, in contrast to `visibility: hidden` where the element is hidden but still  
+takes up the space it would have if visible. Use `display: none` in responsive design to include elements that are available for  
+one display size but not for others. 
 
 **max-width**: using `max-width: xxxpx` instead of `width` when preventing a block-level element from stretching out to the edges  
 of the container, the web page is usable on small screens: you can resize the page. The width of the block-level element is set,  
@@ -99,9 +97,9 @@ and with `margin: 0 auto` the element will centre horizontally in the container:
 the two margins.
 
 **Floating elements**  
-A floating element stands as far to the left or right of its container element as possible. Other elements, such as paragraphs  
-text or Lists, wrap around the floating element. To ensure an element floats, its width must always be specified (otherwise it  
-takes the width of the entire page).
+A floating element stands as far to the left or right of its container element as possible. Other elements, such as paragraphs text  
+or Lists, wrap around the floating element. To ensure an element floats, its width must always be specified (otherwise it takes the  
+width of the entire page).
 
 *Floating properties:*  
 * `float: right`    float to the right of the page  
@@ -196,16 +194,16 @@ affected using CSS, but not the contents of the replaced element itself. The onl
 element is that there are properties which support controlling the positioning of the element's content within its box.
 
 #### Images
-Always optimise images beforehand (scaling etc.) to have small filesize.  
-`vertical-align: top` will position all images in an image container at the top   
-`object-fit: cover` will size the image to the given width.  
+* Always optimise images beforehand (scaling etc.) to have small filesize.  
+* `vertical-align: top` will position all images in an image container at the top   
+* `object-fit: cover` will size the image to the given width.  
 
 **Background images**  
-Add to `body` or whatever element where the background should be: `background: url(path-to-image)`
-Use more background images by adding more urls after each other.  
-Set properties for background images: `background-size: first_image_size, second-image-size` etc.  
-`no repeat` must be added, otherwise the image repeats itself to fill the container.  
-`background-attachment: fixed, fixed` will keep the background from changing when scrolling: it remains in view.
+* Add to `body` or whatever element where the background should be: `background: url(path-to-image)`
+* Use more background images by adding more urls after each other.  
+* Set properties for background images: `background-size: first_image_size, second-image-size` etc.  
+* `no repeat` must be added, otherwise the image repeats itself to fill the container.  
+* `background-attachment: fixed, fixed` will keep the background from changing when scrolling: it remains in view.
 
 **Lists**  
 * `list-style: none`: undo bullets  
@@ -213,9 +211,11 @@ Set properties for background images: `background-size: first_image_size, second
 
 **Common styles**  
 It is possible to define common styles for different CSS classes by comma-separating them:  
+```
 .portrait, .title {
   display: inline-block;
-}
+}  
+```
 
 **Even and odd rules**  
 It is possible to apply a different style to every second item on a list with the child element: `:nth-child(odd)` and `:nth-child(even)`.
