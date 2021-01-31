@@ -1,6 +1,6 @@
 ### General CSS info
-CSS defines the visual representation of the content of a website, such as colour, margins, borders,  backgrounds and positions  
-in the page. CSS is the presentation of the website, and HTML is the structure.
+CSS defines the visual representation of the content of a website, such as colour, margins, borders, backgrounds and positions in  
+the page. CSS is the presentation of the website, and HTML is the structure.
 
 **Comments in CSS:** use `/* place your comments here */`.
 
@@ -36,26 +36,35 @@ for example `:hover` to turn a button blue when the cursor hovers over it.
 
 **Lists**  
 * undo bullets: lists can be used without bullets by adding 'list-style: none;'.  
-* a list has **padding** and **margins** by default in all the browsers. Remove these with `margin: 0;` and `padding: 0;`.
+* a list has **padding** and **margins** by default in all the browsers. Remove these with `margin: 0` and `padding: 0`.
 
-#### Display and positioning
- 
-The display property specifies the display behaviour (the type of rendering box) of an element. In HTML, the default display  
-property value is taken from the HTML specifications or from the browser/user default style sheet. **Inline** and **block**  
-elements are the most common ways to display elements.
+### Display and positioning
+#### Box model
+All HTML elements can be considered as boxes. In CSS, the term **box model** is used when talking about design and layout. The CSS  
+box model is essentially a box that wraps around every HTML element. It consists of margins, borders, padding and the actual content.  
+Inline boxes flow from left to right and block boxes from top to bottom. 
 
+* Default position HTML elements is `<div class="static">`. `static` means: not positioned in any specific way within the normal flow  
+of the page. If not static, then an element is 'positioned'.  
+* `<div class="relative">`: when an element has position **relative** it is no longer in the normal flow and can be moved to top, bottom,  
+right or left.
+* With a **fixed** position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled, the element always appears to be at the same place. Top/right/bottom/left properties are used. A fixed element does not leave  
+a gap in the page where it would normally have been located.
+* **absolute** positioning means the element behaves as if fixed, except relative to the nearest positional ancestor (or else to the  
+document body). An element of `<div class="relative">` can have an absolute-positioned 'child': `<div class="absolute">`.
+
+**Inline and block elements are the most common ways to display elements.**  
 * **block**: elements appear on a new line (also called block-level element). `<div>` is the standard block-level element:  
 starts on a new line and stretches out to the left and right as far as it can.  
-  `<p>, <form>, <header>, <footer>, <section>, <h1>, <ul>, <li>` etc. are all block-level elements.
+  `<p> <form> <header> <footer> <section> <h1> <ul> <li>` etc. are all block-level elements.
 
 * **inline**: elements appear on the same line. An inline element can wrap some text inside a paragraph: `<span>sometext</span>`  
-without disrupting the flow of the paragraph. Examples of inline elements are `<img>`, `<a>` (most common because used for links),  
-`<em>`, `<strong>` and `<span>`.
+without disrupting the flow of the paragraph. Examples of inline elements are `<img> <a> <em> <strong> <span>`.
 
-* an **inline block**  is a display element that is used instead of inline when the `<div>` contains a class that is a block element  
-(such as `<h1>`) that takes over. Inline-blocks can have a width and height, for example to create a grid of boxes. Inline-block  
-can be used for layouts: set 'vertical-align' to 'top', set the width of each column that is defined in the html code. Mind  
-whitespaces in the HTML: these will show as gaps between the columns.
+* an **inline block**  is a display element that is used instead of inline when the `<div>` contains a class that is a block  
+element (such as `<h1>`) that takes over. Inline-blocks can have a width and height, for example to create a grid of boxes.  
+Inline-block can be used for layouts: set `vertical-align: top`, set the width of each column that is defined in the html code.  
+NB: whitespaces in the HTML will show as gaps between the columns.
 
 **Column**: It is possible to make a multi-column text, for example:  
 ```
@@ -70,31 +79,32 @@ whitespaces in the HTML: these will show as gaps between the columns.
 }
 ```
 
-**none** is also a display value: use `none` to hide and show elements without really deleting and recreating them.  
-The page is rendered as though the element does not exist, in contrast to 'visibility: hidden' where the element is  
-hidden but still takes up the space it would have if visible.
+**none** is also a display value: use `display: none` to hide and show elements without really deleting and recreating them.  
+The page is rendered as though the element does not exist, in contrast to `visibility: hidden` where the element is hidden but  
+still takes up the space it would have if visible. Use `display: none` in responsive design to include elements that are available  
+for one display size but not for others. 
 
-**max-width**: using `max-width: xxxpx` instead of `width` when preventing a block-level element from stretching out  
-to the edges of the container, the web page is usable on small screens: you can resize the page. The width of the  
-block-level element is set, and with `margin: 0 auto` the element will centre horizontally in the container: the  
-remaining space will be split evenly between the two margins.
+**max-width**: using `max-width: xxxpx` instead of `width` when preventing a block-level element from stretching out to the edges  
+of the container, the web page is usable on small screens: you can resize the page. The width of the block-level element is set,  
+and with `margin: 0 auto` the element will centre horizontally in the container: the remaining space will be split evenly between  
+the two margins.
 
-**Floating elements**
-A floating element stands as far to the left or right of its container element as possible. Other elements, such as  
-paragraphs text or Lists, wrap around the floating element. To ensure an element floats, its width must always be  
-specified (otherwise it takes the width of the entire page).
+**Floating elements**  
+A floating element stands as far to the left or right of its container element as possible. Other elements, such as paragraphs  
+text or Lists, wrap around the floating element. To ensure an element floats, its width must always be specified (otherwise it  
+takes the width of the entire page).
 
 *Floating properties:*  
-`float: right`  --> float to the right of the page  
-`float: left`   --> float to the left of the page  
-`float: inherit` --> inherit the value of the parent element  
-`float: none`   --> do not float  
-To NOT WRAP text but have this appear after the floating element, use `clear`: `clear: left` will move the text, list  
-etc. down below the float instead of wrapping it around the floating element (same for `clear: right` and `clear: both`).
+* `float: right`    float to the right of the page  
+* `float: left`     float to the left of the page  
+* `float: inherit`  inherit the value of the parent element  
+* `float: none`     do not float  
+To NOT WRAP text but have this appear after the floating element, use `clear`: `clear: left` will move the text, list, etc. down  
+below the float instead of wrapping it around the floating element (same for `clear: right` and `clear: both`).
 
-**Clearfix for floating elements**
-Elements after a floating element will flow around it. In case an image etc. is floated and is taller than the element  
-containing it (the container), the image may overflow outside of its container. This can be fixed using:  
+**Clearfix for floating elements**  
+Elements after a floating element will flow around it. In case an image etc. is floated and is taller than the element containing  
+it (the container), the image may overflow outside of its container. This can be fixed using:  
 ```
 .clearfix::after {
   content: "";
@@ -103,26 +113,9 @@ containing it (the container), the image may overflow outside of its container. 
 }
 ```
 
-Inline boxes flow from left to right and block boxes from top to bottom.
-Default position HTML elements is `<div class="static">`. STATIC means not positioned
-in any specific way within the normal flow of the page. If not static, then an
-element is 'positioned'.
-`<div class="relative">`: when an element has position RELATIVE it is no longer in
-the normal flow and can be moved to top/bottom/right/left.
-With a FIXED position, an element is relative to the viewport of the browser
-window. As the viewport does not change when the window is scrolled, the element
-always appears to be at the same place. Top/right/bottom/left properties are used.
-A fixed element does not leave a gap in the page where it would normally have been
-located.
-ABSOLUTE positioning means the element behaves as if fixed, except relative to
-the nearest positional ancestor (or else the document body). An element of
-`<div class="relative">` can have an absolute-positioned 'child': `<div class="absolute">`.
 
 
 
-BOX MODEL: an element can be seen as a box. The box model describes the
-stacking of spatial properties of an element: what effects its size and
-spacing on the page. These are padding, margin, border, height and width.
 
 PADDING AND MARGIN
 Margin: whitespace AROUND the element
