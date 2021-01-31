@@ -39,6 +39,12 @@ cursor hovers over it. In this way, different styling can be specified for diffe
 `a:hover` is a link when the user mouses over it  
 `a:active` is a link the moment it is clicked  
 
+The `text-decoration` property is mostly used to remove underlines from links:  
+```
+a:link {
+  text-decoration: none;
+}  
+```
 When setting the style for several link states, there are some order rules: `a:hover` MUST come after `a:link` and `a:visited`;  
 `a:active` MUST come after `a:hover`.
 
@@ -184,8 +190,9 @@ the default font size. This means 0.5 em is 50% of the size that would apply as
 default.
 
 
+#### CSS grid
 
-To use grid layout, always start with: display: grid;
+To use grid layout, always start with: `display: grid`.
 
 
 **Replaced elements** are external objects such as`<img>` or `<video>`, whose representation is independent of the CSS formatting model.  
