@@ -45,7 +45,7 @@ a:link {
   text-decoration: none;
 }  
 ```
-When setting the style for several link states, there are some order rules: `a:hover` MUST come after `a:link` and `a:visited`;  
+When setting the style for several link states, there are rules for the order: `a:hover` MUST come after `a:link` and `a:visited`;  
 `a:active` MUST come after `a:hover`.
 
 With `:hover` it is also possible to use time lapse for the effect to happen, e.g.:  
@@ -127,20 +127,18 @@ it (the container), the image may overflow outside of its container. This can be
 }
 ```
 
+#### Padding and margin
 
+**Margin** is the whitespace *around* the element
+**Padding** is the whitespace *inside* the element
 
-#### Padding and margins
+Padding and margin can be set in a number of ways, following a specific order:
+* padding/margin: top right bottom left `padding: 10px 20px 30px 5px`
+* padding/margin: top right/left bottom `margin: 10px 20px 5px`
+* padding/margin: top/bottom right/left `padding: 5px 15px`
+* padding/margin: all `margin: 20px`
+You can also set one specific padding or margin, for example `padding-right: 10px` or `margin-top: 30px`.
 
-Margin: whitespace AROUND the element
-Padding: whitespace INSIDE the element
-
-Padding and margin can be set in a number of ways:
-padding: top right bottom left  --> padding: 10px 20px 30px 5px
-padding: top right/left bottom  --> padding: 10px 20px 5px
-padding: top/bottom right/left  --> padding: 5px 15px
-padding: all  --> padding: 20px
-You can also set one specific padding: padding-right
-All of this also applies to MARGIN.
 
 To keep the box from becoming bigger with padding and borders, use BOX-SIZING.
 With 'box-sizing: border-box;' the padding and border no longer increase the
