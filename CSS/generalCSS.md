@@ -139,14 +139,22 @@ Padding and margin can be set in a number of ways, following a specific order:
 * padding/margin: all `margin: 20px`
 You can also set one specific padding or margin, for example `padding-right: 10px` or `margin-top: 30px`.
 
+#### Box model
 
-To keep the box from becoming bigger with padding and borders, use BOX-SIZING.
-With 'box-sizing: border-box;' the padding and border no longer increase the
-width of a box. This is a very recent technique and should be used together
-with '-webkit' and '-moz' prefix to be used in specific browsers. Use as follows:
+In CSS everything is a box. The default size of a box is based on the content. This excludes the border and padding that is added  
+to the content. It means the box will become bigger when padding and border are added. This can be controlled with **box-sizing**:  
+`box-sizing: content-box` is the default and takes the width/height of the content  
+`box-sizing: border-box` includes both content and border/padding  
+`box-sizing: initial` sets the box-sizing to the default value  
+`box-sizing: inherit` sets the box-sizing to the parent's value  
+
+With `box-sizing: border-box` the padding and border no longer increase the width of a box. This is a very recent technique, and it  
+should be used together with the `-webkit` and `-moz` prefix to be used in specific browsers, as follows:  
+```
 -webkit-box-sizing: border-box;
    -mox-box-sizing: border-box;
         box-sizing: border-box;
+```
 
 PERCENT WIDTH: percent is a measurement unit relative to the containing box.
 It can ensure that an image is always 50% the width of its container, for example.
