@@ -3,4 +3,10 @@ Selector, property and value
 Padding and margin
 Display & positioning
 Images
+
+
+separate files:
+
 Flexbox
+responsiveLayout
+positioning items
