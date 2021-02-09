@@ -210,19 +210,7 @@ element is that there are properties which support controlling the positioning o
 * Always optimise images beforehand (scaling etc.) to have small filesize.  
 * `vertical-align: top` will position all images in an image container at the top   
 * `object-fit: cover` will size the image to the given width.  
-*Scaling images* can be done within their container:  
-```
-.container {
-  width: 50%;
-  height: 200px;
-  overflow: hidden;
-}
-.container img {
-  max-width: 100%;
-  height: auto;
-  display: block
-}
-```
+
 
 **Background images**  
 * Add to `body` or whatever element where the background should be: `background: url(path-to-image)`

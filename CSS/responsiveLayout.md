@@ -2,7 +2,8 @@
 
 **Using pixels**  
 With px, an element is locked in place to an exact location on the page, or an element stays exactly a certain size.  
-This could be useful to keep a design pixel perfect with a web design.
+This could be useful to keep a design pixel perfect with a web design.  
+For responsive design, use flexible settings such as percentages or em.  
 
 **Using em and rem**  
 `em` stands for ephemeral units. An em will take the defined font size of your page and then increase or decrease  
@@ -13,4 +14,18 @@ Using `em` or `rem` can be a good choice because both desktop and mobile may hav
 By using an em to increase or decrease elements, this will adjust from the threshold (being `1em`) and move from there.  
 `rem` (=root em) units for the font-size property will be **relative to the font-size of the parent element**. The difference  
 is that em units on other properties than font-size will be relative to the font-size of the current element. The size  
-of rem units will always be relative to the font-size of the root html element. 
+of rem units will always be relative to the font-size of the root html element.   
+
+**Scaling images** can be done within the image container:  
+```
+.container {
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+}
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block
+}
+```
