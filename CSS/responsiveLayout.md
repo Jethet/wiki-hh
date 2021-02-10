@@ -16,6 +16,12 @@ By using an em to increase or decrease elements, this will adjust from the thres
 is that em units on other properties than font-size will be relative to the font-size of the current element. The size  
 of rem units will always be relative to the font-size of the root html element.   
 
+
+#### Images
+* Always optimise images beforehand (scaling etc.) to have small filesize.  
+* `vertical-align: top` will position all images in an image container at the top   
+* `object-fit: cover` will size the image to the given width.  
+
 **Scaling images** can be done within the image container:  
 ```
 .container {
@@ -29,3 +35,11 @@ of rem units will always be relative to the font-size of the root html element.
   display: block
 }
 ```
+
+**Background images**  
+* Add to `body` or whatever element where the background should be: `background: url(path-to-image)`
+* Use more background images by adding more urls after each other.  
+* Set properties for background images: `background-size: first_image_size, second-image-size` etc.  
+* `no repeat` must be added, otherwise the image repeats itself to fill the container.  
+* `background-attachment: fixed, fixed` will keep the background from changing when scrolling: it remains in view.
+
