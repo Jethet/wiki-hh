@@ -12,13 +12,29 @@ today.setHours(0)
 console.log(today);
 
 
-// reproduce time in 00.00 format
+// reproduce time in 00 format
 function formatTime(num) {
   if (num < 10) {
     num = "0" + num;
   }
   return num;
 }
+
+// format time in 00:00 
+function formatTime2(hour, minute) {
+
+  if (hour.toString().length < 2) {
+    hour = '0' + hour
+  }
+  if (minute.toString().length < 2) {
+    minute = '0' + minute
+  }
+  return `Currnet Time: ${hour} : ${minute}`
+}
+
+
+// get current time and show it in (needs HTML code for DOM element !!!)
+
 /*
 <body>
   <div>
@@ -27,7 +43,7 @@ function formatTime(num) {
   <script src="currentTime.js"></script>
 </body>
 */
-// get current time and show it in (needs HTML code for DOM element !!!)
+
 function currentTime() {
   const today = new Date();
   let hour = today.getHours();
