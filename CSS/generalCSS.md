@@ -219,6 +219,51 @@ element is that there are properties which support controlling the positioning o
 * `no repeat` must be added, otherwise the image repeats itself to fill the container.  
 * `background-attachment: fixed, fixed` will keep the background from changing when scrolling: it remains in view.
 
+#### Gradient
+CSS gradients let you display smooth transitions between two or more specified colors. CSS defines two types of  
+gradients:  
+
+* **Linear Gradients** (goes down/up/left/right/diagonally)  
+To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render  
+smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient  
+effect:`background-image: linear-gradient(direction, color-stop1, color-stop2, ...);`  
+Examples:  
+(default: top to bottom) `background-image: linear-gradient(red, yellow);`  
+(from left to right) `background-image: linear-gradient(to right, red , yellow);`  
+(diagonal) `background-image: linear-gradient(to bottom right, red, yellow);`  
+(more colours) `background-image: linear-gradient(red, yellow, green);`  
+(rainbow) `background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);`  
+
+**Transparency**: CSS gradients also support transparency, which can be used to create fading effects. To add   
+transparency, we use the rgba() function to define the color stops. The last parameter in the rgba() function can  
+be a value from 0 to 1, and it defines the transparency of the color: 0 indicates full transparency, 1 indicates full  
+color (no transparency). Example: `background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));`
+
+* **Radial Gradients** (defined by their center)  
+A radial gradient is defined by its center. To create a radial gradient you must also define at least two color stops.  
+Syntax: `background-image: radial-gradient(shape size at position, start-color, ..., last-color);` By default, shape is  
+ellipse, size is farthest-corner, and position is center. The shape parameter defines the shape. It can take the value  
+circle or ellipse.  
+Examples:  
+(evenly spaced colour stops) `background-image: radial-gradient(red, yellow, green);`  
+(with differently spaced color stops) `background-image: radial-gradient(red 5%, yellow 15%, green 60%);`
+(gradient with the shape of a circle) `background-image: radial-gradient(circle, red, yellow, green);`  
+
+The **size** parameter defines the size of the gradient. It can take four values:  
+* closest-side
+* farthest-side
+* closest-corner
+* farthest-corner
+Examples:  
+`background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);` (result is more compact)  
+`background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);` (result has bigger hazy part)  
+
+
+
+
+
+
+
 **Lists**  
 * `list-style: none`: undo bullets  
 * a list has **padding** and **margins** by default in all the browsers. Remove these with `margin: 0` and `padding: 0`.
