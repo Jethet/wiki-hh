@@ -45,6 +45,8 @@ Combine with **DISTINCT**:
 `SELECT *column1*, *column2*`  
 `FROM *table_name*`  
 `WHERE *condition*;`  
+Example: `SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;`  
+Example with Regex: `SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';`  
 
 **LOGICAL OPERATORS: AND, OR, NOT**  
 * Using AND with WHERE: all conditions must be true for a record to be selected  
