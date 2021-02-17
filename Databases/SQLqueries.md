@@ -172,10 +172,8 @@ FROM table1
 FULL JOIN table2 ON table1.column_name = table2.column_name
 ```  
 **SELF JOIN**  
-With `SELF JOIN` the table is linked to itself to find certain similarities or connections (for example, employees who report  
-to other employees).  
-Use an alias to rename the tables to be able to differentiate, for example the table *customers* can be aliased as *customersA*  
-in a SELF JOIN with *customersB*, and these two are identical copies of the original table.  
+With `SELF JOIN` the table is linked to itself to find certain similarities or connections (for example, employees who  report to other employees).  
+Use an alias to rename the tables to be able to differentiate, for example the table *customers* can be aliased as  *customersA* in a SELF JOIN with *customersB*, and these two are identical copies of the original table.  
 Remember: the A and B have to be used for every column as well!  
 ```
 SELECT column_names
@@ -242,6 +240,7 @@ Examples:
 `UPDATE customers SET name='John Smith', country='UK' WHERE id=3;`  
 `UPDATE bookings SET nights = 5 where customer_id = 1 and hotel_id = 1;`  
 
+
 **DELETE**  
 Syntax: `DELETE FROM table WHERE condition;`  
 **=> always include a WHERE condition, otherwise all rows will be deleted**  
@@ -250,4 +249,8 @@ Example:
 `DELETE FROM bookings WHERE id = 4;`
 
 **DELETE CASCADE**  
-When deleting records in PostgreSQL, foreign key relationships that may exist between these records and records in a different table. Using the DELETE CASCADE option ensure that all child records are also deleted when a parent record is deleted.  
+When deleting records in PostgreSQL, foreign key relationships that may exist between these records and records in a  different table. Using the DELETE CASCADE option ensure that all child records are also deleted when a parent record is  deleted.  
+
+**DROP TABLE to delete**  
+`DROP TABLE table_name;` This statement is used to remove a table definition and all associated data, indexes, rules,  
+triggers, and constraints for that table.
