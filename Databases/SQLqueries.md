@@ -253,4 +253,7 @@ When deleting records in PostgreSQL, foreign key relationships that may exist be
 
 **DROP TABLE to delete**  
 `DROP TABLE table_name;` This statement is used to remove a table definition and all associated data, indexes, rules,  
-triggers, and constraints for that table.
+triggers, and constraints for that table.  
+To **delete a column** from a table, use 
+```ALTER TABLE table_name 
+DROP COLUMN column_name;```
