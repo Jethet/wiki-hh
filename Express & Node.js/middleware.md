@@ -5,4 +5,18 @@
 * When a request is received by the server, it is funneled through middleware functions from top to bottom, until it finds the middleware designed to handle that request. Then the middleware sends an appropriate response to the browser.
 
 **Examples of middleware to be added:**  
-To serve static files with Express, use express.static(): `app.use(express.static("public"));`
+To serve static files with Express, use express.static(): `app.use(express.static("public"));`  
+
+To parse form data (extract data from a FormData object), use express-formidable:    
+```
+const express = require('express');
+const formidableMiddleware = require('express-formidable');
+
+var app = express();
+
+app.use(formidableMiddleware());
+
+app.post('/upload', (req, res) => {
+  req.fields; // contains non-file fields
+  req.files; // contains files
+}); ```
