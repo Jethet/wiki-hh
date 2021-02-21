@@ -194,33 +194,34 @@ image
 ________________________________________________________________________________
 
 TAGS
-*  <strong>:
+* <strong>:
    The strong tag is used to mark the text inside it as strong. It is not a
    visual hint but a semantic hint. Its interpretation will vary depending
    on the medium but by default browsers make the text in this tag 'bold' but
    it is meant to indicate importance, not styling as with <b>.
 
-*  <em>:
+* <em>:
    The em tag marks the text inside it as emphasised. Browsers by default
    make this text italic. Also indicates importance, not styling as with <i>.
 
-*  Other tags:
-   <small>  makes the font smaller (size of subscript)
-   <mark>   puts the text in highlight
-   <ins>    makes text look as if inserted by underlining it
-   <del>    makes text look deleted by crossing it out
-   <sup>    puts text as superscript
-   <sub>    puts text as subscript
-   <i>      makes text italic
-   <b>      makes text bold
+* Other tags: | Used for:
+-------------------------
+`<small>` | makes the font smaller (size of subscript)  
+`<mark>` | puts the text in highlight  
+`<ins>` | makes text look as if inserted by underlining it  
+`<del>` | makes text look deleted by crossing it out  
+`<sup>` | puts text as superscript  
+`<sub>` | puts text as subscript  
+`<i>` | makes text italic  
+`<b>` | makes text bold  
 
--  <blockquote>:
-   The blockquote tag is used to insert citations in the text. By default,
-   browsers apply a margin to the blockquote text.
+- `<blockquote>`:
+The blockquote tag is used to insert citations in the text. By default,
+browsers apply a margin to the blockquote text.
 
--  <q>: The q tag is used for inline quotes.
+- <q>: The q tag is used for inline quotes.
 
--  <hr>: adds a horizontal line in the page
+- <hr>: adds a horizontal line in the page
 ________________________________________________________________________________
 
 LINKS
