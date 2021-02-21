@@ -22,7 +22,6 @@
 ```
 <head>
   <title>THIS IS THE TITLE</title>
-  ... etc.
 </head>
 <body>
 </body>
@@ -30,121 +29,90 @@
 * footer: will be repeated for each page
 
 ### HEAD:
-In the head, the links to the css stylesheets should come first, above the title:
-`<link rel="stylesheet" href="file.css">`.
-The styles.css link should be the last one you add. To start with a good
-layout without default values, include `<link rel="stylesheet" href="reset.css">`
-The media attribute allows loading different stylesheets depending on the
-device capabilities:
+In the head, the links to the css stylesheets should come first, above the title: `<link rel="stylesheet" href="file.css">`.  
+The styles.css link should be the last one you add. To start with a good layout without default values, include  
+`<link rel="stylesheet" href="reset.css">`
+
+The media attribute allows loading different stylesheets depending on the device capabilities:  
   `<link href="file.css" media="screen" rel="stylesheet">`
   `<link href="file.css" media="print" rel="stylesheet">`
-Other resources than stylesheets can be added:
-  RSS feed: `<link rel="alternate" type="application/rss+xml" href="file.css">`
-  Favicon:  `<link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">`
 
-With the `<style>` tag, a style can be added without loading an external stylesheet:
-     `<style>.some-css {}</style>` (with media attribute this can be applied only
-     for a specified medium, for example `<style media="print">.some-css {}</style>`)
-With the base tag a base URL is set for all relative URLs contained in the page,
-for example `<base href="https://flavicon.com/">`  for flavicon icons that are used.
+Other resources than stylesheets can be added:  
+RSS feed: `<link rel="alternate" type="application/rss+xml" href="file.css">`  
+Favicon:  `<link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">`
 
-Meta tag:
-The meta tag is very important, especially for SEO. A meta element has only the
-starting tag. The basic meta tag is the description that could be used by search
-engines to describe the page:
-   `<meta name="description" content="Full explanation of healthy food">`
-With the charset tag the page character encoding is set, usally utf-8:
-   `<meta charset="utf-8">`
-With the robots tag the SEO bots are instructed to index a page:
-   `<meta name="robots" content="noindex">`
-or if they should follow links: `<meta name="robots" content="nofollow">`
-Combination is possible: `<meta name="robots" content="noindex, nofollow">`
-With viewport tag the browser is told to set the page width based on the device
-width: `<meta name="viewport" content="width=device-width, initial-scale=1">`
-With `<meta http-equiv="refresh" content="3;url=http://flavicon.com/anotherpage">`
-as meta tag, the browser is told to wait 3 seconds before directing to the other page.
+With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media  
+attribute this can be applied only for a specified medium, for example `<style media="print">.some-css {}</style>`)  
+
+With the base tag, a base URL is set for all relative URLs contained in the page, for example `<base href="https://flavicon.com/">`  
+for flavicon icons that are used.
+
+* **Meta tag:** The meta tag is very important, especially for SEO. A meta element has only the starting tag. The basic meta tag is the description that could be used by search engines to describe the page: `<meta name="description" content="Full explanation of healthy food">`
+* With the **charset** tag the page character encoding is set, usally utf-8: `<meta charset="utf-8">`
+* With the **robots** tag the SEO bots are instructed to index a page: `<meta name="robots" content="noindex">` or if they should follow links: `<meta name="robots" content="nofollow">` Combination is possible: `<meta name="robots" content="noindex, nofollow">`
+* With **viewport** tag the browser is told to set the page width based on the device width: `<meta name="viewport" content="width=device-width, initial-scale=1">`
+* With `<meta http-equiv="refresh" content="3;url=http://flavicon.com/anotherpage">`
+as meta tag, the browser is told to **wait** 3 seconds before directing to the other page.
 
 ### BODY:
-There is only one body tag on a page (just like only one head and htlm tag).
-There are two general categories of elements in the body:
-  block elements: `<p>`, `<div>`, heading elements, lists and list items, etc.
-  inline elements: `<a>`, `<span>`, `<img>`, etc.
-
-### BLOCK elements
-Block elements do not allow other elements on either side of them. Width/height,
-margin, padding and borders of block elements can be altered. A block element can
-contain an inline element or another block element.
-INLINE elements can sit next to other inline elements. Width, margin etc. cannot
+There is only one body tag on a page (just like only one head and htlm tag). There are two general categories of elements in the body:  
+* **block elements:** `<p>`, `<div>`, heading elements, lists and list items, etc. Block elements do not allow other elements on either side of them. Width/height, margin, padding and borders of block elements can be altered. A block element can contain an inline element or another block element.
+* **inline elements:** `<a>`, `<span>`, `<img>`, etc. Inline elements can sit next to other inline elements. Width, margin etc. cannot
 be altered for inline elements. Inline elements cannot contain a block element.
 
 ### HEADER
-The header tag represents the part that is the introduction. It usually contains
-a heading tag, a tagline for an article or image, etc. Code: `<header></header>`
+The header tag represents the part that is the introduction. It usually contains a heading tag, a tagline for an article or  
+image, etc. Code: `<header></header>`
 
 ### MAIN
 The main tag represents the main part of a page. Code: `<main></main>`
 
 ### FOOTER
-The footer tag is used to determine the footer of an article or page.
-Code: `<footer></footer>`
+The footer tag is used to determine the footer of an article or page. Code: `<footer></footer>`
 
 ## ELEMENTS
-Elements have an opening and a closing tag, plus content. All the following are
-elements:
+Elements have an opening and a closing tag, plus content. All the following are elements.
 
-heading:
-There are 6 sizes for headings. The code is:
-`<h1></h1>`  (usually only 1 per page: the page title)
-`<h2></h2>`
-etc.
-h1 defines the largest (= most important) heading and h6 the smallest.
-SEO engines recognise headings. Headings are block elements and cannot
-contain other elements.
+**heading**  
+There are 6 sizes for headings. The code is: `<h1></h1>` (usually only 1 per page: the page title), `<h2></h2>` etc.  
+`<h1>` defines the largest (= most important) heading and `<h6>` the smallest. SEO engines recognise headings. Headings  
+are block elements and cannot contain other elements.
 
-**paragraph**:
-Use `<p>` to put content into paragraphs. It will break up your text and
-make it easier to read for the user. Code (after code for header): `<p></p>`
-This is a block element. Inside it, an inline element can be added. No
-block element can be added and no p element can be nested inside a `<p>`.
-By default, browsers style a paragraph with a margin on top and bottom,
-adding space between two consecutive paragraphs like paragraph in text.
+**paragraph**  
+Use `<p>` to put content into paragraphs. It will break up your text and make it easier to read for the user. Code  
+(after code for header): `<p></p>` This is a block element. Inside it, an inline element can be added. No block element  
+can be added and no p element can be nested inside a `<p>`. By default, browsers style a paragraph with a margin on top  
+and bottom, adding space between two consecutive paragraphs like paragraph in text.
 
-`<span></span>` is an inline tag that can be used to create a section in a
-paragraph that can be targeted using CSS.
-`<br>` can be used to create a new line inside a p tag, without additional
-spacing. `<br>` is an inline element.
+**span**  
+`<span></span>` is an inline tag that can be used to create a section in a paragraph that can be targeted using CSS.
 
-**div** (= division element):
-The div is a general purpose container for other elements, to be used
-anywhere a container is needed but where an existing tag is not suited.
-A div tag groups elements together. This is useful for styling (e.g.
-giving the grouped elements the same colour). Code to wrap around elements:
-`<div></div>`
+**break**  
+`<br>` can be used to create a new line inside a p tag, without additional spacing. `<br>` is an inline element.
+
+**div** (= division element)  
+The div is a general purpose container for other elements, to be used anywhere a container is needed but where an existing  
+tag is not suited. A div tag groups elements together. This is useful for styling (e.g. giving the grouped elements the same  
+colour). Code to wrap around elements: `<div></div>`
 
 **article** (semantic element)  
-The article tag identifies self-contained and independent content in a
-page and can be reused independently, such as blog posts or newspaper
-articles. Code: `<article></article>`
+The article tag identifies self-contained and independent content in a page and can be reused independently, such as blog posts  
+or newspaper articles. Code: `<article></article>`
 
 **section** (semantic element)  
-A section element defines a section in a document: `<section></section>`
-It is useful to break a long article into different sections, for example.
-
-NOTE: sections can have articles and articles can have sections; no precedence.
+A section element defines a section in a document: `<section></section>`. It is useful to break a long article into different  
+sections, for example. NOTE: sections can have articles and articles can have sections; no precedence.
 
 **nav**  
-This tag is used to create the markup that defines the page navigation.
-It is typically used with a ul or ol list. Code: `<nav></nav>`
+This tag is used to create the markup that defines the page navigation. It is typically used with a ul or ol list. Code: `<nav></nav>`
 
 **aside**  
-The aside tag is used to add content that is related to the main content,
-for example a box to add a quote, or a sidebar. Aside indicates that the
-things it contains are not part of the regular flow of the section in
-which aside is present. Code: `<aside></aside>`
+The aside tag is used to add content that is related to the main content, for example a box to add a quote, or a sidebar. Aside  
+indicates that the things it contains are not part of the regular flow of the section in which aside is present. Code: `<aside></aside>`
 
 **lists**  
-ul: unordered list with bullets, and ol: ordered list with numbers before
-each item.  ul and ol are used with list items `<li>`. The code example is:
+`<ul>`: unordered list with bullets, and `<ol>`: ordered list with numbers before each item. ul and ol are used with list items `<li>`.  
+The code example is:
 ```
 <ol>
   <li>item 1</li>
@@ -170,24 +138,21 @@ it is called. Code:
 </div>
 ```
 
-It is possible to link to a video and combine this with pictures.
-First the link to the video should be added (with code `<a href="">`) and
-images of pictures can be added under this (small indent).
-
+It is possible to link to a video and combine this with pictures. First the link to the video should be added (with code  
+`<a href="">`) and images of pictures can be added under this (small indent).
 
 #### TAGS
 `<strong>`:  
-The strong tag is used to mark the text inside it as strong. It is not a
-visual hint but a semantic hint. Its interpretation will vary depending
-on the medium but by default browsers make the text in this tag 'bold' but
-it is meant to indicate importance, not styling as with `<b>`.
+The strong tag is used to mark the text inside it as strong. It is not a visual hint but a semantic hint. Its interpretation will  
+vary depending on the medium but by default browsers make the text in this tag 'bold' but it is meant to indicate importance, not  
+styling as with `<b>`.
 
 `<em>`:  
-The em tag marks the text inside it as emphasised. Browsers by default
-make this text italic. Also indicates importance, not styling as with `<i>`.
+The em tag marks the text inside it as emphasised. Browsers by default make this text italic. Also indicates importance, not styling  
+as with `<i>`.
 
 Other tags: | Used for:
--------------------------
+------------ ------------
 `<small>` | makes the font smaller (size of subscript)  
 `<mark>` | puts the text in highlight  
 `<ins>` | makes text look as if inserted by underlining it  
