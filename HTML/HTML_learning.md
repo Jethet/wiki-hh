@@ -379,14 +379,16 @@ URL:
 Input field to enter a URL; with pattern attribute, validation can be specified:
     <input type="url" name="website" pattern="https://.*">
 
-Multi-line text: textarea
-With the textarea element users can enter multi-line text. This requires an
-ending tag:  <textarea></textarea>
-CSS can be used or attributes rows and cols: <textarea rows="20" cols="10"></textarea>
+Multi-line text: **textarea**  
+With the textarea element users can enter multi-line text. This requires an ending tag:  <textarea></textarea>  
+CSS can be used for sizing, or attributes rows and cols: <textarea rows="20" cols="10"></textarea>. `cols"number"`  
+specifies the width of the text area (in average character width). Default value is 20, default font is Courier.  
+A name is always required to reference the form data after the form is submitted (if you omit the name attribute,  
+no data from the text area will be submitted).  
 
-Drop-down menu: select
-The select tag creates a drop-down menu and the user can choose one of the options
-available. The options are created with <option></option>:
+Drop-down menu: **select**  
+The select tag creates a drop-down menu and the user can choose one of the options available. The options are  
+created with <option></option>:
    <select name="colour">
       <option value="red">Red</option>
       <option value="yellow">Yellow</option>
