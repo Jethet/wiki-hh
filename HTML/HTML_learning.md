@@ -151,6 +151,11 @@ styling as with `<b>`.
 The em tag marks the text inside it as emphasised. Browsers by default make this text italic. Also indicates importance, not styling  
 as with `<i>`.
 
+Column | Column | Column
+:----- | :----: | -----:
+Left   | Center | Right
+align  | align  | align
+
 Other tags: | Used for:
 ------------ ------------
 `<small>` | makes the font smaller (size of subscript)  
