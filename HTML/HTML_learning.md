@@ -152,17 +152,15 @@ The em tag marks the text inside it as emphasised. Browsers by default make this
 as with `<i>`.
 
 Other tags | Used for 
------- | ------ 
-`<small>` | makes the font smaller (size of subscript) 
-`<mark>` | puts the text in highlight  
-
-
-`<ins>` | makes text look as if inserted by underlining it  
-`<del>` | makes text look deleted by crossing it out  
-`<sup>` | puts text as superscript  
-`<sub>` | puts text as subscript  
-`<i>` | makes text italic  
-`<b>` | makes text bold  
+---------- | :-------
+`<small>` | makes the font smaller (size of subscript)
+`<mark>` | puts the text in highlight
+`<ins>` | makes text look as if inserted by underlining it
+`<del>` | makes text look deleted by crossing it out
+`<sup>` | puts text as superscript
+`<sub>` | puts text as subscript
+`<i>` | makes text italic
+`<b>` | makes text bold
 
 * `<blockquote>`: The blockquote tag is used to insert citations in the text. By default, browsers apply a margin to the blockquote text.
 
