@@ -204,7 +204,7 @@ TAGS
    The em tag marks the text inside it as emphasised. Browsers by default
    make this text italic. Also indicates importance, not styling as with <i>.
 
-* Other tags: | Used for:
+Other tags: | Used for:
 -------------------------
 `<small>` | makes the font smaller (size of subscript)  
 `<mark>` | puts the text in highlight  
