@@ -39,9 +39,10 @@ NB: the last line of code in our file is the one that shows up first in the outp
 writing the whole path out in full.
 ```
 fs.readFile(__dirname + '/data/posts.json', function (error, file) {
-    console.log(file);
+    console.log(file.toString());
 });
 ```
+Use `file.toString()` to avoid the result being logged in buffer format.
 
 --------------
 **Writing JSON to a File**
