@@ -1,0 +1,1 @@
+**Watch out for problems with main and master**: now that GitHub automatically creates the main branch as `main` instead of `master`, it is important to check the name of the main branch that you push to Heroku.
