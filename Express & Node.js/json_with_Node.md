@@ -34,6 +34,15 @@ console.log('This is after the read call')
 
 NB: the last line of code in our file is the one that shows up first in the output since the callback has not been called yet.
 
+**Using __dirname**
+`__dirname` is a Node global object that gives you a path to current working directory. It avoids  
+writing the whole path out in full.
+```
+fs.readFile(__dirname + '/data/posts.json', function (error, file) {
+    console.log(file);
+});
+```
+
 --------------
 **Writing JSON to a File**
 
@@ -50,7 +59,6 @@ let student = {
     age: 23, 
     gender: 'Male',
     department: 'English',
-    car: 'Honda' 
 };
  
 let data = JSON.stringify(student);
@@ -68,7 +76,6 @@ let student = {
     age: 23, 
     gender: 'Male',
     department: 'English',
-    car: 'Honda' 
 };
  
 let data = JSON.stringify(student, null, 2);
@@ -80,4 +87,3 @@ fs.writeFile('student-3.json', data, (err) => {
 
 console.log('This is after the write call');
 ```
-
