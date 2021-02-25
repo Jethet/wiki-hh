@@ -16,8 +16,12 @@ When you hit Send, the form will send a POST request to the server, using whatev
 attribute as the endpoint. In the example it is `/create`. The server will have to deal with the  
 requests that come as POST request on the `/create` endpoint.
 
+**Normally you would extract it using req.body.** When data has been POSTed to the server as FormData, we  
+need to do things slightly differently to access the data that's come through in the request.  
 To **extract the contents out of the special FormData object** you use **`express-formidable`**.  This  
-is Express middleware that will extract the form data from the request and make it  available to you when   you do req.fields. It is not built-in, and needs to be installed: `npm install express-formidable --save`
+is Express middleware that will extract the form data from the request and make it available to you when  
+you do req.fields. It is not built-in, and needs to be installed: `npm install express-formidable --save`
 
 In the server.js file: `const formidable = require('express-formidable');` (no - allowed in variable name)  
 and `app.use(formidable())`
+
