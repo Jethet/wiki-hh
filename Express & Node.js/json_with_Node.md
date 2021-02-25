@@ -4,8 +4,9 @@
 
 The Node.js fs module has two functions available that can be used to read files from the file system: *readFile* and *readFileSync*.
 
-* **The readFileSync function** reads data from a file in a synchronous manner. This function blocks the rest of the code from executing until all the data is read from a file. The function is particularly useful when your application has to load configuration settings before it can perform any other tasks.  
-Example:  
+* **The readFileSync function** reads data from a file in a synchronous manner. This function blocks the rest of the code from executing  
+until all the data is read from a file. The function is particularly useful when your application has to load configuration settings before m
+it can perform any other tasks. Example:  
 ```
 const fs = require('fs');
 
@@ -16,9 +17,13 @@ console.log(student);
 In the above Node.js code we first load the fs module to our application. Next we use the readFileSync function and pass it the relative  
 file path to the file that we want to read.  
 We want to read the file in its JSON format and for this we use the JSON.parse function. This function handles parsing the raw data,  
-converts it to ASCII text, and parses the actual JSON data in to a JavaScript object
+converts it to ASCII text, and parses the actual JSON data in to a JavaScript object.
 
-* **The readFile function** reads file data in an asynchronous manner. When a readFile function is called, the file reading process starts and immediately the control shifts to next line executing the remaining lines of code. Once the file data has been loaded, this function will call the callback function provided to it. This way you aren't blocking code execution while waiting for the operating system to get back to you with data. The readFile function takes two parameters: the path to the file that is to be read, and the callback function that is to be called when the file is read completely. You can optionally also include a parameter with options.  
+* **The readFile function** reads file data in an asynchronous manner. When a readFile function is called, the file reading process starts  
+and immediately the control shifts to next line executing the remaining lines of code. Once the file data has been loaded, this function will  
+call the callback function provided to it. This way you aren't blocking code execution while waiting for the operating system to get back to  
+you with data. The readFile function takes two parameters: the path to the file that is to be read, and the callback function that is to be  
+called when the file is read completely. You can optionally also include a parameter with options.  
 Example:  
 ```
 const fs = require('fs');
@@ -33,6 +38,10 @@ console.log('This is after the read call')
 ```
 
 NB: the last line of code in our file is the one that shows up first in the output since the callback has not been called yet.
+
+**fs.readFile** returns a file in JSON format. To access the data object inside the file, we need to parse it from JSON back to a JavaScipt  
+object. Add `JSON.parse()` to the fs.readFile's callback function: `let parsedFile = JSON.parse(file)` (see `let students = JSON.parse(data)`).
+
 
 **Using __dirname**  
 `__dirname` is a Node global object that gives you a path to current working directory. It avoids writing the whole path out in full.
