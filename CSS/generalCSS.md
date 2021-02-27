@@ -29,15 +29,13 @@ body {
 `#` selector: id selector that selects the element with the exact id. There can be only one element with a particular id.  
 `body` `h1` `a` `p` `img` etc. can be used as *element selectors*. The CSS style is ensured for all elements of that type.
 
-**Pseudo class** a keyword added to a selector. A pseudo class specifies a special state of the element to be selected,  
-
-
+**Pseudo class:**  
 A pseudo class is a keyword added to selectors to specify a special state, for example `:hover` to turn a button blue when the  
 cursor hovers over it. In this way, different styling can be specified for different states of a link `<a>`:  
-`a:link` is a normal, unvisited link  
-`a:visited` is a link the user has visited  
-`a:hover` is a link when the user mouses over it  
-`a:active` is a link the moment it is clicked  
+* `a:link` is a normal, unvisited link  
+* `a:visited` is a link the user has visited  
+* `a:hover` is a link when the user mouses over it  
+* `a:active` is a link the moment it is clicked  
 
 The `text-decoration` property is mostly used to remove underlines from links:  
 ```
@@ -45,13 +43,13 @@ a:link {
   text-decoration: none;
 }  
 ```
-When setting the style for several link states, there are rules for the order: `a:hover` MUST come after `a:link` and `a:visited`;  
-`a:active` MUST come after `a:hover`.
+When setting the style for several link states, there are rules for the order: `a:hover` **must** come after `a:link` and `a:visited`;  
+`a:active` **must** come after `a:hover`.
 
 With `:hover` it is also possible to use time lapse for the effect to happen, e.g.:  
-`transition-duration: 0.5s` effect builds up during certain time  
-`transition-delay: 0.2s` effect does not start immediately  
-`transform: rotate(90deg)` rotating effect of buttons etc.  
+* `transition-duration: 0.5s` effect builds up during certain time  
+* `transition-delay: 0.2s` effect does not start immediately  
+* `transform: rotate(90deg)` rotating effect of buttons etc.  
 
 ### Display and positioning
 #### Box model
@@ -126,19 +124,6 @@ it (the container), the image may overflow outside of its container. This can be
   display: table;
 }
 ```
-
-#### Padding and margin
-
-**Margin** is the whitespace *around* the element
-**Padding** is the whitespace *inside* the element
-
-Padding and margin can be set in a number of ways, following a specific order:
-* padding/margin: top right bottom left `padding: 10px 20px 30px 5px`
-* padding/margin: top right/left bottom `margin: 10px 20px 5px`
-* padding/margin: top/bottom right/left `padding: 5px 15px`
-* padding/margin: all `margin: 20px`
-You can also set one specific padding or margin, for example `padding-right: 10px` or `margin-top: 30px`.
-
 #### Box model
 
 In CSS everything is a box. The default size of a box is based on the content. This excludes the border and padding that is added  
@@ -206,6 +191,18 @@ These elements have a content that is not affected by the current document's sty
 affected using CSS, but not the contents of the replaced element itself. The only other impact CSS can have on a replaced  
 element is that there are properties which support controlling the positioning of the element's content within its box.
 
+#### Padding and margin
+
+**Margin** is the whitespace *around* the element
+**Padding** is the whitespace *inside* the element
+
+Padding and margin can be set in a number of ways, following a specific order:
+* padding/margin: top right bottom left `padding: 10px 20px 30px 5px`
+* padding/margin: top right/left bottom `margin: 10px 20px 5px`
+* padding/margin: top/bottom right/left `padding: 5px 15px`
+* padding/margin: all `margin: 20px`
+You can also set one specific padding or margin, for example `padding-right: 10px` or `margin-top: 30px`.
+
 #### Images
 * Always optimise images beforehand (scaling etc.) to have small filesize.  
 * `vertical-align: top` will position all images in an image container at the top   
@@ -257,11 +254,6 @@ The **size** parameter defines the size of the gradient. It can take four values
 Examples:  
 `background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);` (result is more compact)  
 `background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);` (result has bigger hazy part)  
-
-
-
-
-
 
 
 **Lists**  
