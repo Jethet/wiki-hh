@@ -11,6 +11,8 @@ let today = new Date()
 today.setHours(0)
 console.log(today);
 
+const date = new Date().toLocaleDateString()
+// gives format dd/mm/yyyy
 
 // reproduce time in 00 format
 function formatTime(num) {
