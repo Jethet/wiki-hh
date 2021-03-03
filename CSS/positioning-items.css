@@ -35,3 +35,16 @@
 .dropdown {
   position: absolute
 }
+
+/* To have a background image for the entire page */
+.start-page-container {
+  margin: 0 auto;
+  height: 100vh;
+  width: auto;
+  background: url("/images/post-it.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+  background-attachment: fixed;
+}
