@@ -145,27 +145,23 @@ it (the container), the image may overflow outside of its container. This can be
 **Z-index:** the z-index controls how content overlaps. The element with the highest z-index appears on top.
 
 ### Media queries and responsive design
-By using media queries it is possible to make a design that responds to the device and the browser used.
-Use `@media screen and (min-width: xxxpx)` and `@media screen and (max-width: xxxpx)` for this, for example  
+By using media queries it is possible to make a design that responds to the device and the browser used. There are various sizes  
+of device viewports. Use `@media screen and (min-width: xxxpx)` and `@media screen and (max-width: xxxpx)` for this, for example  
 to move a menu to the top if the browser is too small to have the menu as sidebar.
 
-TEXT SHADOW: adds a drop shadow and is formatted as follows:
-text-shadow: horizontal-shadow vertical-shadow blur color
-* horizontal-shadow: length of shadow along x-axis
-* vertical-shadow: length of shadow along y-axis
-* blur: controls how much (if any) blur radius is added to the shadow (optional)
-* color: controls the colour of the shadow (optional)
-Same goes for BOX SHADOW: this makes it possible to use multiple drop shadows on
-box elements using: 'box-shadow: horizontal-shadow vertical-shadow blur size
- color inset'
+**Text shadow** adds a drop shadow and is formatted as follows: text-shadow: horizontal-shadow vertical-shadow blur color  
+* `horizontal-shadow`: length of shadow along x-axis
+* `vertical-shadow`: length of shadow along y-axis
+* `blur`: controls how much (if any) blur radius is added to the shadow (optional)
+* `color`: controls the colour of the shadow (optional)
+Same goes for **Box shadow**: this makes it possible to use multiple drop shadows on box elements using:  
+`box-shadow: horizontal-shadow vertical-shadow blur size color inset`
 
-RGBA: with rgba not only colour but also opacity can be assigned:
-rgba(rgb code, opacity). For example, rgb(176, 175, 192) is the hex code #b0afc0.
-Opacity of 0.2 is very transparant; 1.0 is solid colour.
+**RGBA**: with `rgba` not only colour but also opacity can be assigned: `rgba(rgb code, opacity)`. For example `rgb(176, 175, 192)`  
+ is the hex code #b0afc0. Opacity of 0.2 is very transparant; 1.0 is solid colour.
 
-With EM (em = ephemeral unit) used for font-size, the font is kept relative to
-the default font size. This means 0.5 em is 50% of the size that would apply as
-default.
+With **EM** (em = ephemeral unit) used for font-size, the font is kept relative to the default font size. This means 0.5 em is  
+50% of the size that would apply as default.
 
 
 **Replaced elements** are external objects such as`<img>` or `<video>`, whose representation is independent of the CSS formatting model.  
