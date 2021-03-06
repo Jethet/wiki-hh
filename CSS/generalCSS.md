@@ -53,8 +53,24 @@ With `:hover` it is also possible to use time lapse for the effect to happen, e.
 
 ### Display and positioning
 #### Box model
-All HTML elements can be considered as boxes. The CSS **box model** is essentially a box that wraps around every HTML element. It  
-consists of margins, borders, padding and the actual content. Inline boxes flow from left to right and block boxes from top to bottom. 
+All HTML elements can be considered as boxes. The CSS **box model** is essentially a box that wraps around every HTML  
+element. The default size of a box is based on the content. This excludes the border and padding that is added to the  
+content. It means the box will become bigger when padding and border are added. This can be controlled with **box-sizing**:  
+`box-sizing: content-box` is the default and takes the width/height of the content  
+`box-sizing: border-box` includes both content and border/padding  
+`box-sizing: initial` sets the box-sizing to the default value  
+`box-sizing: inherit` sets the box-sizing to the parent's value  
+
+With `box-sizing: border-box` the padding and border no longer increase the width of a box. This is a very recent technique, and it  
+should be used together with the `-webkit` and `-moz` prefix to be used in specific browsers, as follows:  
+```
+-webkit-box-sizing: border-box;
+   -mox-box-sizing: border-box;
+        box-sizing: border-box;
+```
+
+**Percent width**: percent is a measurement unit relative to the containing box. It can ensure that an image is always 50%  
+the width of its container, for example. With 'min-width' and 'max-width' the size of the image can be limited.
 
 * Default position HTML elements is `<div class="static">`. `static` means: not positioned in any specific way within the normal flow  
 of the page. If not static, then an element is 'positioned'.  
@@ -76,6 +92,7 @@ without disrupting the flow of the paragraph. Examples of inline elements are `<
 
 * an **inline block**  is a display element that is used instead of inline when the `<div>` contains a class that is a block element (such  as `<h1>`) that takes over. Inline-blocks can have a width and height, for example to create a grid of boxes. An inline-block can be used   
 for layouts: set `vertical-align: top`, set the width of each column that is defined in the html code. NB: whitespaces in the HTML will  show as gaps between the columns.
+
 
 **Column**: It is possible to make a multi-column text, for example:  
 ```
@@ -126,26 +143,7 @@ it (the container), the image may overflow outside of its container. This can be
 ```
 #### Box model
 
-In CSS everything is a box. The default size of a box is based on the content. This excludes the border and padding that is added  
-to the content. It means the box will become bigger when padding and border are added. This can be controlled with **box-sizing**:  
-`box-sizing: content-box` is the default and takes the width/height of the content  
-`box-sizing: border-box` includes both content and border/padding  
-`box-sizing: initial` sets the box-sizing to the default value  
-`box-sizing: inherit` sets the box-sizing to the parent's value  
-
-With `box-sizing: border-box` the padding and border no longer increase the width of a box. This is a very recent technique, and it  
-should be used together with the `-webkit` and `-moz` prefix to be used in specific browsers, as follows:  
-```
--webkit-box-sizing: border-box;
-   -mox-box-sizing: border-box;
-        box-sizing: border-box;
-```
-
-PERCENT WIDTH: percent is a measurement unit relative to the containing box.
-It can ensure that an image is always 50% the width of its container, for example.
-With 'min-width' and 'max-width' the size of the image can be limited.
-
-
+In CSS everything is a box. 
 
 
 Z-INDEX: the z-index controls how content overlaps. The element with the highest
