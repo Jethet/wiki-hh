@@ -20,7 +20,8 @@ and can be used to create flexible grid tracks. Example:
 .container {
 display: grid;
 grid-template-columns: 2fr 1fr 1fr;
-} ```  
+}
+```  
 
 Here, the available space is split into four parts: two parts will be assigned to the first track while the remaining  
 two parts will be assigned one track each according to the available space left. This helps ensure consistency when  
@@ -30,10 +31,11 @@ listing:
 .container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-} ```
+}
+```
 
 **Layout**  
-Items in a grid container are children of that container and are laid out automatically with `auto-placement`. This means  
-items are put in the rows that have been defined according to the available space.  
-With `grid-auto-flow: column;` you can display the items in columns (also define grid-template-rows for the number  
-of rows you want the columns to have). With `.container nth-child(*number*)` you can change the order.  
+Items in a grid container are children of that container and are laid out automatically with `auto-placement`. This means items are  
+put in the rows that have been defined according to the available space. With `grid-auto-flow: column;` you can display the items in columns  
+(also define grid-template-rows for the number of rows you want the columns to have). With `.container nth-child(*number*)`  
+you can change the order.  
