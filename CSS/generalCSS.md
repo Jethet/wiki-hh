@@ -53,9 +53,8 @@ With `:hover` it is also possible to use time lapse for the effect to happen, e.
 
 ### Display and positioning
 #### Box model
-All HTML elements can be considered as boxes. In CSS, the term **box model** is used when talking about design and layout. The CSS  
-box model is essentially a box that wraps around every HTML element. It consists of margins, borders, padding and the actual content.  
-Inline boxes flow from left to right and block boxes from top to bottom. 
+All HTML elements can be considered as boxes. The CSS **box model** is essentially a box that wraps around every HTML element. It  
+consists of margins, borders, padding and the actual content. Inline boxes flow from left to right and block boxes from top to bottom. 
 
 * Default position HTML elements is `<div class="static">`. `static` means: not positioned in any specific way within the normal flow  
 of the page. If not static, then an element is 'positioned'.  
@@ -66,7 +65,8 @@ not leave a gap in the page where it would normally have been located.
 * **absolute** positioning means the element behaves as if fixed, except relative to the nearest positional ancestor (or else the document  
 body). An element of `<div class="relative">` can have an absolute-positioned 'child': `<div class="absolute">`.
 
-**Inline and block elements are the most common ways to display elements.**  
+
+**Inline and block elements are the most common ways to display elements:**  
 * **block**: elements appear on a new line (also called block-level element). `<div>` is the standard block-level element: starts on a new  
 line and stretches out to the left and right as far as it can. `<p> <form> <header> <footer> <section> <h1> <ul> <li>` etc. are all  
 block-level elements.
@@ -181,11 +181,6 @@ the default font size. This means 0.5 em is 50% of the size that would apply as
 default.
 
 
-#### CSS grid
-
-To use grid layout, always start with: `display: grid`.
-
-
 **Replaced elements** are external objects such as`<img>` or `<video>`, whose representation is independent of the CSS formatting model.  
 These elements have a content that is not affected by the current document's styles. The position of the replaced element can be  
 affected using CSS, but not the contents of the replaced element itself. The only other impact CSS can have on a replaced  
@@ -231,7 +226,7 @@ Examples:
 (more colours) `background-image: linear-gradient(red, yellow, green);`  
 (rainbow) `background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);`  
 
-**Transparency**: CSS gradients also support transparency, which can be used to create fading effects. To add   
+* **Transparency**: CSS gradients also support transparency, which can be used to create fading effects. To add   
 transparency, we use the rgba() function to define the color stops. The last parameter in the rgba() function can  
 be a value from 0 to 1, and it defines the transparency of the color: 0 indicates full transparency, 1 indicates full  
 color (no transparency). Example: `background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));`

@@ -5,6 +5,9 @@ function sortNumbers(arr) {
   return sortArr;
 }
 
+// Sort numbers from least to greatest:
+let sortArr = arr.sort((a, b) => a-b)
+
 // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN. Check these with:
 if (value) {
   // do something
