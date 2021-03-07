@@ -153,7 +153,8 @@ to move a menu to the top if the browser is too small to have the menu as sideba
 * `horizontal-shadow`: length of shadow along x-axis
 * `vertical-shadow`: length of shadow along y-axis
 * `blur`: controls how much (if any) blur radius is added to the shadow (optional)
-* `color`: controls the colour of the shadow (optional)
+* `color`: controls the colour of the shadow (optional)  
+
 Same goes for **Box shadow**: this makes it possible to use multiple drop shadows on box elements using:  
 `box-shadow: horizontal-shadow vertical-shadow blur size color inset`
 
