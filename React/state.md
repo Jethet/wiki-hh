@@ -5,7 +5,9 @@
 * The useState object gives us a variable with the current value, and a function that lets us change that value.
 * When we call useState we can define an initial value (for example, `false` or `0`).
 * We use a **destructuring assignment** on the useState hook to get these values: the first variable accesses the **state value**, the second variable **changes the state**.
-* This means `useState()` provides the function (*the second variable in the destructuring*) to update the state. This can be used for a button, for example, to set `false` to `true`.
+* This means `useState()` provides the function (*the second variable in the destructuring*) to update the state. This can be used for a button, for example: `onClick={() => variableFunction(!originalValue)}` which would change `false` (originalValue) into `true` with a click on the button.
+* Whenever the component state changes, React will re-render the component with the new state.
+* **State belongs to the individual component**: only that component will update if its button is clicked, even if the component is re-used (such as a list of to do's).
 
 #### Destructuring
 A **destructuring assignment** is a special syntax that allows us to “unpack” arrays or objects into separate variables.   
@@ -21,3 +23,6 @@ for (let [key, value] of user) {
   alert(`${key}:${value}`); // name:John, then age:30
 }
 ```  
+#### Props
+* Props can hold different types of data, i.e. strings, numbers, booleans, objects, arrays, etc.
+* Props must be defined using quoted text: `name = "Jane Doe"` or inside braces: `age = {25}`.
