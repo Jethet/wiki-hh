@@ -29,3 +29,24 @@ function App() {
 
 export default App;
 ```
+
+**Exporting/importing a separate datafile**  
+When using a separate file with data (for example, a list of contacts), this can be exported and imported as follows:  
+```
+export const contacts = [
+  {
+    name: "Jenny Han",
+    email: "jenny.han@notreal.com",
+  },
+  {
+    name: "Jason Long",
+    email: "jason.long@notreal.com",
+  },
+  {
+    name: "Peter Pan",
+    email: "peter.pan@neverland.com",
+  },
+];
+```  
+To import the file in the component where it is used: `import {contacts as contacts} from "../contacts";`
+
