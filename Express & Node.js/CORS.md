@@ -51,4 +51,4 @@ Use "*" to allow CORS for all resources on your server.
 
   CORS error when running locally, add:  
   https//cors-anywhere.herokuapp.com/https://example-api-url.com  
-    The cors-anywhere.herokuapp.com needs to be added **entirely** before the API url.
+  The cors-anywhere.herokuapp.com needs to be added **entirely** before the API url.
