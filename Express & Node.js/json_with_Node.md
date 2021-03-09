@@ -1,5 +1,9 @@
 ## Reading and Writing JSON Files with Node.js
 
+**The .json file does not need any export if it to be used in another file.** It always has to be an array of JSON objects if you want  
+to use the .json file as a test database or something like that. Don't add anything more outside of the array.  
+
+
 **Reading the JSON data from a file**
 
 The Node.js fs module has two functions available that can be used to read files from the file system: *readFile* and *readFileSync*.
