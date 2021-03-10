@@ -19,14 +19,14 @@ Grids can be nested: any element (item) can have a grid.
 **Flexbox:** grid can be used with Flexbox.  
 
 **Line-based positioning**  
-The grid works with lines and these are numbered. To place an item on the grid, the line on which it starts, and the  
-line that it ends on are defined. The horizontal line on top starts from 1 and counts up. The vertical  
-line at the left  
-also counts from 1 at the top horizontal line. The vertical line at the right, where the grid ends,  
-counts with minus  
-(-3, -2, -1) to the bottom horizontal line, which also counts back from the first vertical line (so that it ends with -1,  
-the last number of the vertical line at the right). Example:  
- 
+The grid works with lines and these are numbered. To place an item on the grid, the line on which it starts, and the line that it  
+ends on are defined. The horizontal line on top starts from 1 and counts up. The vertical line at the left also counts from 1 at  
+the top horizontal line. The vertical line at the right, where the grid ends, counts with minus 
+(-3, -2, -1) to the bottom  
+horizontal line, which also counts back from the first vertical line (so that it ends with -1, the last 
+number of the vertical line  
+at the right). Example:  
+
 ![Gridlines](/wiki-images/gridExample.png)
 
 **Styling**  
