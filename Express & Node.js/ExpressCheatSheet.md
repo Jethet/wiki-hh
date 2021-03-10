@@ -10,14 +10,15 @@ const app = express();
 // no need to install bodyParser: Express has its own json parser included
 // (https://dev.to/eclecticcoding/express-and-body-parser-khf)
 app.use(express.json())
+app.use(express.urlencoded())
 
 // test page
-app.get('/', function(request, response) {
+app.get('/', (request, response) => {
   response.send("hello Express world!")
 });
 
 // start the server and make sure it prints a message to show it is working
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log("Server is listening on port 3000. Ready to accept requests.");
 });
 ```
@@ -28,7 +29,7 @@ app.listen(3000, function () {
 A *route* is a path and HTTP method that the server can handle:
 
 ```js
-app.get('/', function(request, response) {
+app.get('/', (request, response) => {
   response.send("hello Express world!")
 });
 ```
@@ -77,7 +78,7 @@ if it has been submitted by HTML form you need to add the line
 if it has come from a HTML form you need to add the line
 ```app.use(express.json())```  (for parsing application/json)  
 
-In both cases you can then say `request.body` to get either an object of key-value pairs, or the JSON which was posted.
+In both cases you can then use `request.body` to get either an object of key-value pairs, or the JSON which was posted.
 
 [Official Express.js documentation about req.body](https://expressjs.com/en/api.html#req.body)
 
@@ -147,4 +148,17 @@ app.delete('/quotes/:id', function(req, res) {
 
 [Official Express.js documentation about Route Parameters](https://expressjs.com/en/guide/routing.html#route-parameters)
 
+
+* `res.send()` automatically closes the connection.  
+* `res.end()` can be used to send an empty response, without any body, to end the response process.  
+* `res.status().end()` can be used to send a status message and end the process.  
+* `res.status().send('error message')` can be used to send status message plus error message. For this, you can also use res.sendStatus(). This is a shortcut and will send both status code and error message:
+  * `res.sendStatus(200)` is short for `res.status (200).send("OK")`
+  * `res.sendStatus(200)` is short for `res.status (403).send("Forbidden")`
+  * `res.sendStatus(200)` is short for `res.status (404).send("Not Found")`
+  * `res.sendStatus(200)` is short for `res.status (500).send("Internal Server Error")`
+
+`res.send` uses the Response.send() method that accepts any string.  
+To send back JSON data to the client you can use the Response.json() method. This method accepts an object or arry,  
+and converts it to JSON before sending it: `res.json({username: 'Jane Smith'})`
 
