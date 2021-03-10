@@ -20,12 +20,17 @@ Grids can be nested: any element (item) can have a grid.
 
 **Line-based positioning**  
 The grid works with lines and these are numbered. To place an item on the grid, the line on which it starts,  
-and the line that it ends on are defined.  
+and the line that it ends on are defined. The horizontal line on top starts from 1 and counts up. The vertical  
+line at the left counts down from 1 at the top horizontal line. The vertical line at the right, where the grid ends,  
+counts down (-3, -2, -1) to the bottom horizontal line, which counts back from the first vertical line (so that it  
+ends with -1, the last number of the vertical line at the right). Example:  
+![Gridlines](/wiki-images/gridExample.png)
 
-|1 | 2 | 3 |
--- | -- | -- 
-|  |  |  |
-|  |  |  |
+**Styling**  
+Whatever HTML element is **put onto the grid** exists in HTML: body, header, aside, paragraph, etc. These elements  
+can be styled with CSS. The grid itself **cannot be styled** with CSS: it does not exist in the DOM. Only HTML and  
+CSS exist in the DOM.
+
 
 
 **Using space**  
