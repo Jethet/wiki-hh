@@ -23,5 +23,27 @@ is Express middleware that will extract the form data from the request and make 
 you do req.fields. It is not built-in, and needs to be installed: `npm install express-formidable --save`
 
 In the server.js file: `const formidable = require('express-formidable');` (no - allowed in variable name)  
-and `app.use(formidable())`
+and `app.use(formidable())`  
+In the POST endpoint on the submit route, a new Formidable form is instantiated:  
+```
+app.post("/submit-form", (req, res) => {
+  new formidable.IncomingFrom().parse(req (err, fields, files) => {
+    if (err) {
+      console.log("Error", error)
+      throw err
+    }
+    console.log("Fields", fields)
+    console.log("Files", files)
+    files.map((file) => {
+      console.log(file)
+    })
+  })
+})
+```
+*A callback is needed to process all files and after formidable is ready, make them available to be **parsed**. You can also use events for this.*  
+The Formidable file object has a number of methods that can be called:  
+* `file.size` - the file size in bytes
+* `file.path` - the path the file is written to
+* `file.name` - the name of the file
+* `file.type` - the MIME type of the file
 
