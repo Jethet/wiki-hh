@@ -1,6 +1,8 @@
 ## Express Router
 
-Express has a 'mini-app' that is an easy-to-use mechanism for routing. The set-up is simple:  
+Express has a 'mini-app' that can be used for routing. It provides more functionality by subdividing the web application rather  
+than including all of the functionality on a single page. The express.Router() function is used to create a new router object.  
+This function is used when you want to create a new router object in your program to handle requests. The set-up is simple:  
 * create a file `routes.js`
 * create a router: `const express = require('express');` `const router = express.Router();`
 * at the bottom of the `routes.js` file, export the router: `module.exports = router;`
@@ -12,3 +14,27 @@ from top to bottom.
 
 If any additional routers are required, separate files similar to `routes.js` can be created and imported into `app.js`, with  
 another middleware added in order for using that router.
+
+With express.router we can simplify our code. Instead of specifying the path every time for a specific request, we can specify  
+the path once and then chain the request methods to that path using the express router. The .all will be applied to all types of  
+request methods, and the other paths will be applied based on the request method. In `routes.js`:  
+```
+Router.route('/') 
+.all((req, res, next) => {  
+    res.statusCode = 200; 
+    res.setHeader('Content-Type', 'text/plain'); 
+    next(); 
+}) 
+.get((req, res, next) => { 
+    res.end('This is a GET request.'); 
+}) 
+.post((req, res, next) => { 
+    res.end('This is a POST request.'); 
+}) 
+.put((req, res, next) => { 
+    res.end('This is a PUT request.'); 
+}) 
+.delete((req, res, next) => { 
+    res.end('This is a DELETE request.'); 
+}); 
+```
