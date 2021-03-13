@@ -1,12 +1,13 @@
 ### useState hook
 * State is an object that represents a **part of an app that can change**, which the UI “reacts” to.  
 * State can be anything; objects, booleans, arrays, strings or integers.  
-* The useState object gives us a variable with the current value, and a function that lets us change that value.
+* The useState object gives us a variable with the current state value, and a function that updates that value.
 * When we call useState we can define an initial value (for example, `false` or `0`).
 * We use a **destructuring assignment** on the useState hook to get these values: the first variable accesses the **state value**, the second variable **changes the state**.
 * This means `useState()` provides the function (*the second variable in the destructuring*) to update the state. This can be used for a button, for example: `onClick={() => variableFunction(!originalValue)}` which would change `false` (originalValue) into `true` with a click on the button.
 * Whenever the component state changes, React will re-render the component with the new state.
 * **State belongs to the individual component**: only that component will update if its button is clicked, even if the component is re-used (such as a list of to do's).
+* Hooks receive props from App.js or components.
 
 ### useEffect hook
 * The useEffect hook is a special hook that runs a function: `useEffect(() => { ... })`
