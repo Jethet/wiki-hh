@@ -28,3 +28,4 @@ browser and server can interact to determine whether it is safe to allow the cro
 and functionality than purely same-origin requests, but is more secure than simply allowing all cross-origin requests.   
 See **CORS.md** in folder *Express & Node.js*  
 
+**SDK:** Software Development Kit  
