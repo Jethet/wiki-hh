@@ -54,3 +54,6 @@ router.post('/post-username', (req, res, next)=>{
 });
 module.exports = router;
 ```
+**res.end()**  
+`res.end()` will end the response process. This method actually comes from Node: response.end() method of http.ServerResponse.  
+It is used to quickly end the response without any data.  
