@@ -4,8 +4,8 @@ Express has a 'mini-app' that can be used for routing. It provides more function
 than including all of the functionality on a single page. The express.Router() function is used to create a new router object.  
 This function is used when you want to create a new router object in your program to handle requests. The set-up is simple:  
 * create a file `routes.js`
-* create a router: `const express = require('express');` `const router = express.Router();`
-* at the bottom of the `routes.js` file, export the router: `module.exports = router;`
+* create a router: `const express = require('express');` `const Router = express.Router();`
+* at the bottom of the `routes.js` file, export the router: `module.exports = Router;`
 * import the router into `app.js` at the top: `const route = require('./routes');`
 * add a middleware for using router in `app.js` file: `app.use(route);`
 
