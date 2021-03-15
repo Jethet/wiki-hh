@@ -38,3 +38,19 @@ Router.route('/')
     res.end('This is a DELETE request.'); 
 }); 
 ```
+
+**This means requests can be made like this (example with form data):**  
+```
+const express = require('express');
+const router = express.Router();
+
+router.get('/add-username', (req, res,next) => {
+   res.send('<form action="/post-username" method="POST"> <input type="text" name="username"> <button    type="submit"> Send </button> </form>');
+});
+
+router.post('/post-username', (req, res, next)=>{
+   console.log('data: ', req.body.username);
+   res.redirect('/');
+});
+module.exports = router;
+```
