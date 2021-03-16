@@ -265,4 +265,36 @@ When deleting records in PostgreSQL, foreign key relationships that may exist be
 triggers, and constraints for that table.  
 To **delete a column** from a table, use 
 ```ALTER TABLE table_name 
-DROP COLUMN column_name;```
+DROP COLUMN column_name;
+```
+
+
+### Error messages
+(Example from BoundlessBooks project) 
+```
+CREATE TABLE IF NOT EXISTS book_card (
+	id SERIAL PRIMARY KEY,
+	author_name VARCHAR(50) UNIQUE,
+	title VARCHAR(150),
+	language VARCHAR(15) UNIQUE,
+	FOREIGN KEY (author_name) REFERENCES authors (name),
+	FOREIGN KEY (language) REFERENCES languages (language)
+);
+```
+**Errors**:  
+```
+ERROR:  syntax error at or near "author_name"
+LINE 6:  FOREIGN KEY author_name REFERENCES authors (name),
+                     ^
+SQL state: 42601
+Character: 147
+```
+*the `author_name` here should be between () (see examples Foreign Key in text above)*  
+
+```
+ERROR: there is no unique constraint matching given keys for referenced table "authors"
+SQL state: 42830  
+```
+*In postgresql all foreign keys must reference a unique key in the parent table. In this example of the book_card*  
+*the table `authors` should have 'unique' as value: `author_name VARCHAR(50) UNIQUE` and the original*  
+*name in the authors table also should have 'unique' as value*
