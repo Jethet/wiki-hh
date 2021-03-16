@@ -53,10 +53,12 @@ For multiple lines, supply a comma-separated list of rows after the VALUES keywo
 
 
 **SCHEMAS**  
-To be able to work with different tables in a schema, you add the schema name before the table name: production.product, for example (see JOINING TABLES).
+To be able to work with different tables in a schema, you add the schema name before the table name: production.product, for example (see SQLqueries/JOINING TABLES).
 
-**SELECT queries**  
+Data types:  
+
 * `SERIAL PRIMARY KEY` defines a unique identifier for each row that will automatically increment every time data is inserted
+* Options are `SMALLSERIAL`, `SERIAL` and `BIGSERIAL`.
 * `VARCHAR()` defines a column to hold text with a maximum length of characters
 * `NOT NULL` defines the column as not nullable: a value must be set
 * `DEFAULT` you can set a default value if the value cannot be null
@@ -66,7 +68,6 @@ To be able to work with different tables in a schema, you add the schema name be
 * `DATE`
 *A database will reject any values that do not match the type!*  
 * `SERIAL` creates a sequence that generates a sequence of integers (often used as primary key column in a table by using `id SERIAL`). `SERIAL` creates an auto-increment column for a table.
-
 
 
 **TO REFERENCE TABLE KEYS**  
