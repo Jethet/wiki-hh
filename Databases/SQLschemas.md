@@ -125,9 +125,17 @@ ALTER COLUMN column_name
 
 ALTER TABLE table_name 
 RENAME TO new_table_name;
-
 ```
+
 Example: `ALTER TABLE customer ADD COLUMN id SERIAL PRIMARY KEY` will add a primary key to the column customer.  
+
+Example adding foreign key as constraint **use `distfk`**:  
+```
+ALTER TABLE authors
+  ADD CONSTRAINT distfk
+  FOREIGN KEY (book)
+  REFERENCES books (title);
+```
 
 **UPDATE**  
 Syntax: `UPDATE table SET column1 = value1, column2 = value2 WHERE condition;`  
