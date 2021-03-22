@@ -8,6 +8,7 @@ Other elements can be:
 * headers with additional info
 
 A base URL is needed and this has to be prepended to every URL used in a request.
+(NB in the project-boundlessbooks repo there is a small API tutorial code with comments regarding requests)
 
 The response from the server comes with an HTTP status code (200, 404, etc.)
 
