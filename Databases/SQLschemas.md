@@ -71,7 +71,16 @@ Data types:
 
 
 **TO REFERENCE TABLE KEYS**  
-`REFERENCES` *table name*(*table key*) The type also has to be added, for example `INT`: `customer_id    INT REFERENCES customers(id)`
+This is called column-level foreign key constraint: `REFERENCES` *table name*(*table key*) The type also has to be added, for example  
+`customer_id INT REFERENCES customers(id)`
+```
+CREATE TABLE student_attendance
+(
+  id          SERIAL PRIMARY KEY,
+  student_id  SERIAL REFERENCES students (id),
+  class_id    SERIAL REFERENCES classes (id)
+);
+```
 
 **Foreign Key**  
 Syntax: `FKcolumn TYPE REFERENCES parent_table (table_name)`  
