@@ -18,11 +18,22 @@ This will print the query property key and the value.
 
 ### Query strings, params and body
 
-A query string is the portion of a URL after ? (question mark) where data is passed to a web application and/or back-end database. The syntax is something like `url../...etc?value1=2&value2=3`.  
+A query string is the portion of a URL **after the first ?** (question mark) where data is passed to a web application and/or backend database.  
+The syntax is something like `url../...etc?value`. Examples:  
+```
+http://example.com/foo?bar
+http://example.com/foo/foo/foo?bar/bar/bar
+http://example.com/?bar
+http://example.com/?@bar._=???/1:
+http://example.com/?bar1=a&bar2=b
+```
+A common convention is to use the query component for key-value pairs (see last example). The main use-case of the query string  
+is filtering and specifically two special cases of filtering: searching and pagination. 
 
-The data are used as variables in endpoint queries: `const value1 = req.query.value1`  
 
-Other data that is taken from a url can be `req.params`: the params come from the path segment of the URL **after the : (column)**,  
+The data are used as variables in endpoint queries: `const value1 = req.query.value1` 
+
+Other data that is taken from a url are `req.params`: the params come from the path segment of the URL **after the : (column)**,  
 that match a parameter in the route definition, such as an id: `req.params.customerId` where the path is `app.get("/customers/:id")`.  
 
 The `req.body` is used in a POST request that adds new data from the body content (for example, a form). Each variable is posted with a value in the body of data that is sent with the POST request.
