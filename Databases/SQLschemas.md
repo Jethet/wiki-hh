@@ -201,4 +201,9 @@ SQL state: 42830
 ```
 *In postgresql all foreign keys must reference a unique key in the parent table. In this example of the book_card*  
 *the table `authors` should have 'unique' as value: `author_name VARCHAR(50) UNIQUE` and the original*  
-*name in the authors table also should have 'unique' as value*
+*name in the authors table also should have 'unique' as value*  
+
+```
+ERROR: column <column name> referenced in foreign key constraint does not exist  
+```
+*you cannot add a foreign key to a column that has not been created yet: first create the column, then add the foreign key*
