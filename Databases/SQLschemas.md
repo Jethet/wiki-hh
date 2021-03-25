@@ -98,8 +98,8 @@ Example: `product SERIAL REFERENCES products (id)
 * make the field in the parent table unique so that there is not more than one record that matches.   
 Example: table *students* has *name*: put UNIQUE there or add it later on with: 
 ```
-alter table students  
-add constraint name unique (name)
+ALTER TABLE students  
+ADD <constraint name> UNIQUE (name)
 ```
 * add a unique key for the field in the table that you are linking to in your new table. Example:  
 ```
