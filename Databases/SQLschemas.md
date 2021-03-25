@@ -95,8 +95,8 @@ Syntax: `FKcolumn TYPE REFERENCES parent_table (table_name)`
 The *type* references the *table* and the (*column*) 
 Example: `product SERIAL REFERENCES products (id)  
 
-* make the field in the parent table unique so that there is not more than one record that matches.   
-Example: table *students* has *name*: put UNIQUE there or add it later on with: 
+* make the field in the parent table **unique** so that there is not more than one record that matches.   
+Example: table *students* has *name*: put UNIQUE there or **add it later on** with: 
 ```
 ALTER TABLE students  
 ADD <constraint name> UNIQUE (name)
@@ -138,12 +138,14 @@ RENAME TO new_table_name;
 
 Example: `ALTER TABLE customer ADD COLUMN id SERIAL PRIMARY KEY` will add a primary key to the column customer.  
 
-Example adding foreign key as constraint **use `distfk`**:  
+Example adding foreign key as constraint **use `distfk`**: a) make sure you have a unique key in the parent table; b) add foreign key reference
 ```
-ALTER TABLE authors
-  ADD CONSTRAINT distfk
-  FOREIGN KEY (book)
-  REFERENCES books (title);
+ALTER TABLE books
+ADD CONSTRAINT distfk
+UNIQUE (title); 
+
+ALTER TABLE book_cards
+ADD FOREIGN KEY (book_title) REFERENCES books (title);
 ```
 
 **UPDATE**  
