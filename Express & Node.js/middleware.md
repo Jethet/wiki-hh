@@ -5,6 +5,14 @@
 * When a request is received by the server, it is funneled through middleware functions from top to bottom, until it finds the middleware designed to handle that request. Then the middleware sends an appropriate response to the browser.
 
 **Examples of middleware to be added:**  
+To work with .json data, add:  
+```
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
+app.use(route);
+```
+**route always has to come AFTER the express.json() otherwise you get 'undefined' errors**  
+
 To serve static files with Express, use express.static(): `app.use(express.static("public"));`  
 
 To parse form data (extract data from a FormData object), use express-formidable:    
