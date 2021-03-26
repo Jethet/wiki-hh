@@ -150,6 +150,7 @@ ADD FOREIGN KEY (book_title) REFERENCES books (title);
 
 **UPDATE**  
 Syntax: `UPDATE table SET column1 = value1, column2 = value2 WHERE condition;`  
+The `WHERE` condition usually is an id value.  
 **=> always include a WHERE condition, otherwise all rows will be updated**
 Examples:  
 `UPDATE customers SET name='John Smith', country='UK' WHERE id=3;`  

@@ -34,9 +34,11 @@ is filtering and specifically two special cases of filtering: searching and pagi
 The data that is returned is used as variables in endpoint queries: `const value1 = req.query.value1` 
 
 Other data that is taken from a url are `req.params`: the params come from the path segment of the URL **after the : (column)**,  
-that match a parameter in the route definition, such as an id: `req.params.customerId` where the path is `app.get("/customers/:id")`.  
+that match a parameter in the route definition, such as an id. For example, the path is `app.get("/customers/:id")` and the values are  
+obtained by using `const customerId = req.params.id`.
 
-The `req.body` is used in a POST request that adds new data from the body content (for example, a form). Each variable is posted with a value in the body of data that is sent with the POST request.
+The `req.body` is used in a POST request that adds new data from the body content (for example, a form). Each variable is posted with a   
+value in the body of data that is sent with the POST request. When using integers (for example an id number) you need to use `const productId = parseInt(req.params.id)`.
 
 **Path parameters** are part of the endpoint itself and are not optional. For example, in the following endpoint, {user} and {bicycleId} are required path parameters: `/service/myresource/user/{user}/bicycles/{bicycleId}`. Path parameters are usually set off with curly braces. With path parameters, the order does matter.
 
