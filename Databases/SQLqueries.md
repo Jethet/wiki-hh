@@ -19,8 +19,7 @@ HAVING
 select * from customers where id in (  
   select customer from orders where product_name = (  
     select id from products where name = 'Maximum' and type = 'Variable'  
-    )  
-    )  
+    )
 ```
 
 **SELECT**  
@@ -139,7 +138,8 @@ To control the number of records returned by a search query:
 `SELECT *column*`  
 `FROM *table_name*`  
 `LIMIT *number*;`  
-Example:  
+
+Example:
 ```
 SELECT productid, unitprice * quantity AS BiggestOrder  
 FROM order_details  
