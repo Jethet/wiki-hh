@@ -171,7 +171,6 @@ Example:
 `WHERE EXTRACT(year from checkin_date) = 2020;`  
 
 
-
 #### JOINING TABLES
 A single query can combine information from many tables. This can be done in may ways:  
 * only records that have data on both tables that are joined
@@ -264,3 +263,6 @@ SELECT country, COUNT(*)
 FROM customers
 GROUP BY country DESC
 ```
+
+**ESCAPE CHARACTERS**:  to escape single quote ', you have to double it: ''. Example:  
+`INSERT INTO books (title, language) VALUES ('After You''d Gone', 'English');` This returns *After You'd Gone*.
