@@ -113,6 +113,10 @@ FOREIGN KEY (student_name) REFERENCES students (name)
 ```
 *SQL does not accept a comma after the last line!*
 
+**To remove a key constraint**  
+Check what the name of the constraint is in pgAdmin and use ALTER. Example:  
+`ALTER TABLE books DROP CONSTRAINT books_author_id_key;`
+
 **ALTER**
 * To change the structure of an existing table, you use PostgreSQL ALTER TABLE statement. The syntax is:  
 `ALTER TABLE table_name action;`
