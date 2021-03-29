@@ -205,6 +205,9 @@ FROM orders
 JOIN customers ON customers.customerid = orders.customerid  
 ```
 
+Example (from project BoundlessBooks) to get all books from one author:  
+`SELECT authors.firstname, authors.lastname, books.title FROM authors, books WHERE authors.id=books.author_id AND authors.id=$1;", [authorId]`
+
 **OUTER JOIN**  
 Outer join  
 
