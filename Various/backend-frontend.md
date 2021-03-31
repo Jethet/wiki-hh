@@ -34,5 +34,5 @@ time the React app makes a request to something that is not a static asset (i.e.
 forward the request to the server specified in "proxy":  
 * package.json has `"proxy": "http://your-server"`
 * the React app calls `http://localhost:3000/api/users`
-* dev server forwards the call to 'http://your-server/api/users`
+* dev server forwards the call to `http://your-server/api/users`
 
