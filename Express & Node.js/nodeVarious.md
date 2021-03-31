@@ -29,3 +29,7 @@ const pool = new Pool({
   port: 5432,
 });
 ```
+
+**Upgrade npm:** `npm install npm@latest -g`  
+
+**npm no longer present in project:** `curl -qL https://www.npmjs.com/install.sh | sh`  
