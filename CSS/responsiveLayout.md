@@ -43,3 +43,17 @@ of rem units will always be relative to the font-size of the root html element.
 * `no repeat` must be added, otherwise the image repeats itself to fill the container.  
 * `background-attachment: fixed, fixed` will keep the background from changing when scrolling: it remains in view.
 
+Example:  
+```
+.bookpage {
+  margin: 0 auto;
+  background: url("./library.jpg");
+  height: 100vh;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+  background-attachment: fixed;
+}
+```
