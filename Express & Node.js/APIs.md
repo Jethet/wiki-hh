@@ -1,5 +1,7 @@
 ## Working with APIs
 
+APIs are tools for developers to interact with web services, either to access and use their data or to make two services interact with each other.
+
 An API request requires:
 * an HTTP method describing the type of request
 * an endpoint (URL)
