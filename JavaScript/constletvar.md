@@ -1,4 +1,4 @@
-# Differences between var, let and const
+# Var, let and const
 
 **Scope**  
 A function scoped variable is available anywhere inside of the function it is declared in. Block scope means that a variable  
