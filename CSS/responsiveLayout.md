@@ -36,6 +36,8 @@ of rem units will always be relative to the font-size of the root html element.
 }
 ```
 
+If you can 'move' an image from left to right inside the viewport, make sure the width is defined (for example, `90vw` and height `auto`).
+
 **Background images**  
 * Add to `body` or whatever element where the background should be: `background: url(path-to-image)`
 * Use more background images by adding more urls after each other.  
