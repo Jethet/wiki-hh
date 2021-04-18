@@ -39,13 +39,13 @@ The media attribute allows loading different stylesheets depending on the device
 
 Other resources than stylesheets can be added:  
 RSS feed: `<link rel="alternate" type="application/rss+xml" href="file.css">`  
-Favicon:  `<link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">`
+:  `<link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">`
 
 With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media  
 attribute this can be applied only for a specified medium, for example `<style media="print">.some-css {}</style>`)  
 
-With the base tag, a base URL is set for all relative URLs contained in the page, for example `<base href="https://flavicon.com/">`  
-for flavicon icons that are used.
+With the base tag, a base URL is set for all relative URLs contained in the page, for example `<base href="https://favicon.com/">`  
+for favicon icons that are used.
 
 * **Meta tag:** The meta tag is very important, especially for SEO. A meta element has only the starting tag. The basic meta tag is the description that could be used by search engines to describe the page: `<meta name="description" content="Full explanation of healthy food">`
 * With the **charset** tag the page character encoding is set, usally utf-8: `<meta charset="utf-8">`
