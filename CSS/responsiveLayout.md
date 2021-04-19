@@ -36,6 +36,20 @@ of rem units will always be relative to the font-size of the root html element.
 }
 ```
 
+**Make all images the same size as well as responsive**  
+```
+.image-container{
+  width: 90vw;
+  height: 600px;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
+
 If you can 'move' an image from left to right inside the viewport, make sure the width is defined (for example, `90vw` and height `auto`).
 
 **Background images**  
