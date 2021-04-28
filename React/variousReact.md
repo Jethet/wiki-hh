@@ -50,3 +50,6 @@ export const contacts = [
 ```  
 To import the file in the component where it is used: `import {contacts as contacts} from "../contacts";`
 
+**React fragments**  
+In the return statement of a React component, you can use `<>` and `</>` to have one parent element,  
+instead of using `<div>` and `</div>`.
