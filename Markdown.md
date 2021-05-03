@@ -34,6 +34,7 @@ Format: ![Alt Text](url)`  (without backticks)
 `[GitHub](http://github.com)`  (without backticks)  
 You can also add an optional title attribute to your links:  
 `[GitHub](http://github.com "GitHub website url")`  (without backticks)  
+NB: make sure you start on a new line (add two spaces and return if you have a line of text before the link).
 
 GitHub has its own version of Markdown with extra features, for example  
 any regular URL will automatically be converted to a clickable link:  
