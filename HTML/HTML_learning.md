@@ -31,7 +31,7 @@
 <body>
 </body>
 ```
-* footer: whatever is coded between the `<footer></footer> tags will be repeated for each page
+* footer: whatever is coded between the `<footer></footer>` tags will be repeated for each page
 
 #### HEAD:
 * In the head, the links to the css stylesheets should come first, above the title: 
@@ -64,11 +64,34 @@
 ```  
 
 
-* **Meta tag:** The meta tag is very important, especially for SEO. A meta element has only the starting tag. The basic meta tag is the description that could be used by search engines to describe the page: `<meta name="description" content="Full explanation of healthy food">`
-* With the **charset** tag the page character encoding is set, usally utf-8: `<meta charset="utf-8">`
-* With the **robots** tag the SEO bots are instructed to index a page: `<meta name="robots" content="noindex">` or if they should follow links: `<meta name="robots" content="nofollow">` Combination is possible: `<meta name="robots" content="noindex, nofollow">`
-* With **viewport** tag the browser is told to set the page width based on the device width: `<meta name="viewport" content="width=device-width, initial-scale=1">`
-* With `<meta http-equiv="refresh" content="3;url=http://flavicon.com/anotherpage">`
+* **Meta tag:** The meta tag is very important, especially for SEO. A meta element has only the starting tag. The basic meta tag is the description that could be used by search engines to describe the page: 
+``` html
+<meta name="description" content="Full explanation of healthy food">
+```
+* With the **charset** tag the page character encoding is set, usally utf-8: 
+``` html
+<meta charset="utf-8">
+```
+* With the **robots** tag the SEO bots are instructed to index a page: 
+``` html
+<meta name="robots" content="noindex">
+```
+ or if they should follow links:
+ ``` html
+ <meta name="robots" content="nofollow">
+ ```
+ * Combination is possible: 
+ ``` html
+ <meta name="robots" content="noindex, nofollow">
+ ```
+* With **viewport** tag the browser is told to set the page width based on the device width: 
+``` html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+* With 
+``` html
+<meta http-equiv="refresh" content="3;url=http://flavicon.com/anotherpage">
+```
 as meta tag, the browser is told to **wait** 3 seconds before directing to the other page.
 
 #### BODY:
