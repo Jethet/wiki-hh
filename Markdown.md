@@ -73,6 +73,19 @@ const myLogger = (req, res, next) => {
 app.use(myLogger)
 ```
 
+**Syntax highlighting for code:**  
+You can add an optional language identifier to enable syntax highlighting in your fenced code block. Example:
+
+``` javascript
+const myLogger = (req, res, next) => {
+  const visitTime = new Date()
+  console.log(`Visited ${req.url} at ${visitTime.toLocaleString()}`);
+  next()
+}
+
+app.use(myLogger)
+```
+
 **Horizontal Rule**  
 To create a horizontal rule, use three or more asterisks (***), dashes (---),  
 or underscores (___) on a line by themselves. They all create a horizontal line.  
