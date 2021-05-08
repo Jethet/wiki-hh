@@ -9,45 +9,60 @@
 * meta data is not rendered but used by the server (for example: description and
   keywords are giving information that will be used by Google)
 
-* Attributes: key="value" syntax, such as class="", id="", src="", style="". An id is unique in the context of a web page and cannot be duplicated. A class can appear multiple times and hold multiple values.
+* Attributes: `key="value"` syntax, such as `class=""`, `id=""`, `src=""`, `style=""`. An id is unique in the context of a web page and cannot be duplicated. A class can appear multiple times and hold multiple values.
 
-* defer src is used for faster path to a fast-loading page.
+* `defer src` is used for faster path to a fast-loading page.
 
 
 ### Webpage structure
-* doctype needs to be defined first in an HTML page: it tells the browser which version of HTML the page is using. The code is:  
-`<!DOCTYPE html>`
-`<html>`
-`</html>`
-
-* head and body tags: a HTML page is split into two parts, head and body. The head contains important webpage information (title, stylesheet, script, font etc.). The head is the name of the website for search engines. The body contains the webpage content that is visible to the user. The code is:  
+* a doctype needs to be defined first in an HTML page: it tells the browser which version of HTML the page is using. The code is:
+``` html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body></body>
+</html>
 ```
+* head and body tags: an HTML page is split into two parts, head and body. The head contains important webpage information (title, stylesheet, script, font etc.). The head is the name of the website for search engines. The body contains the webpage content that is visible to the user. The code is:  
+``` html
 <head>
   <title>THIS IS THE TITLE</title>
 </head>
 <body>
 </body>
 ```
-* footer: will be repeated for each page
+* footer: whatever is coded between the `<footer></footer> tags will be repeated for each page
 
 #### HEAD:
-In the head, the links to the css stylesheets should come first, above the title: `<link rel="stylesheet" href="file.css">`.  
-The styles.css link should be the last one you add. To start with a good layout without default values, include  
-`<link rel="stylesheet" href="reset.css">`
+* In the head, the links to the css stylesheets should come first, above the title: 
+``` html
+<link rel="stylesheet" href="file.css">
+```  
+* The styles.css link should be the last one you add. To start with a good layout without default values, include
+``` html
+<link rel="stylesheet" href="reset.css">
+```
 
-The media attribute allows loading different stylesheets depending on the device capabilities:  
-  `<link href="file.css" media="screen" rel="stylesheet">`
-  `<link href="file.css" media="print" rel="stylesheet">`
+* The media attribute allows loading different stylesheets depending on the device capabilities:
+``` html
+  <link href="file.css" media="screen" rel="stylesheet">
+  <link href="file.css" media="print" rel="stylesheet">
+```
+* Other resources than stylesheets can be added, for example RSS feed:  
+``` html
+<link rel="alternate" type="application/rss+xml" href="file.css"> 
+<link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">
+```
+* With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media attribute this can be applied only for a specified medium, for example 
+``` html
+<style media="print">.some-css {}</style>
+```
 
-Other resources than stylesheets can be added:  
-RSS feed: `<link rel="alternate" type="application/rss+xml" href="file.css">`  
-:  `<link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">`
+* With the base tag, a base URL is set for all relative URLs contained in the page, for example for favicon icons that are used:
+``` html
+<base href="https://favicon.com/">
+```  
 
-With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media  
-attribute this can be applied only for a specified medium, for example `<style media="print">.some-css {}</style>`)  
-
-With the base tag, a base URL is set for all relative URLs contained in the page, for example `<base href="https://favicon.com/">`  
-for favicon icons that are used.
 
 * **Meta tag:** The meta tag is very important, especially for SEO. A meta element has only the starting tag. The basic meta tag is the description that could be used by search engines to describe the page: `<meta name="description" content="Full explanation of healthy food">`
 * With the **charset** tag the page character encoding is set, usally utf-8: `<meta charset="utf-8">`
