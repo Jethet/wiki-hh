@@ -404,14 +404,12 @@ Options can be grouped with <optgroup></optgroup>. An option group has a label a
       </optgroup>
     </select>
 ```
-It is considered best practice to set a for attribute on the label element, with a value that matches the value of  
-the id attribute of the input element. This allows assistive technologies to create a linked relationship between  
-the label and the child input element.
+*It is considered best practice to set a for attribute on the label element, with a value that matches the value of the id attribute of the input element. This allows assistive technologies to create a linked relationship between the label and the child input element.*
+
 ---
 
 **TABLES**  
-Data in a table is defined in terms of rows, not columns. The columns are defined inside a row.  
-The first row can take the role of the header, if needed.
+Data in a table is defined in terms of rows, not columns. The columns are defined inside a row. The first row can take the role of the header, if needed.
 
 A table must have a `<caption></caption>` tag that describes the content. This tag comes immediately after the  
 opening `<table>` tag. The table header contains the name of a column, typically in bold font. 
@@ -452,13 +450,13 @@ In the example, this would give:
   </tr>
 ```
 **Span:**  
-A row can span over 2 or more columns using colspan:  
+A row can span over 2 or more columns using `colspan`:  
 ``` html
    <tr>
       <td colspan="2">Row 1 Columns 1-2</td>
    </tr>
    ```
-A row can span over 2 or more rows using rowspan:
+A row can span over 2 or more rows using `rowspan`:
 ``` html
    <tr>
       <td colspan="2">Row 1 Columns 1-2</td>
@@ -477,30 +475,30 @@ For big tables there are 3 tags to organise the table to wrap <tr>'s to define t
 * The `<audio>` tag enables embedding audio content in an HTML page. It can play an audio source using the src attribute:   
 ``` html
 <audio src="file.mp3">
-  ```
+```
 * Show the built-in controls with controls attribute: 
 ``` html
 <audio src="file.mp3" controls>
-  ```
+```
 * To set the audio file to play automatically, use autoplay:
 ``` html
    <audio src="file.mp3" controls autoplay>
-     ```
-* With loop the audio restarts: 
+```
+* With loop the audio restarts:
 ``` html
 <audio src="file.mp3" controls autoplay loop>
-  ```
+```
 If loop is not used, the audio stops at the end of the file.
 
 **Video:**  
-The <video> tag enables embedding video content in an HTML page, for example with the src attribute:
+The `<video>` tag enables embedding video content in an HTML page, for example with the src attribute:
 ``` html
  <video src="file.mp4">
-   ```
+```
 * The same tags as for audio apply (controls, autoplay, loop). It is possible to set an image as poster image:
 ``` html
  <video src="file.mp4" poster="picture.png">
-   ```
+```
 * Without poster the browser will show the first frame of the video as soon as it is available. With width and height attributes the space for the element can be specified so that the browser does not change the layout.
 
 **Iframes:**  
