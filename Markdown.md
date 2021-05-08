@@ -4,10 +4,13 @@
 * bold text is surrounded by ** or __  
 (You can combine them)
 
-* header tags go from # for h1 to 6 x # for h6 (space after #)
+* header tags go from # for h1 to 6 x # for h6 (space after #):
 
 # This is an h1 tag
 ## This is an h2 tag
+### This is an h3 tag
+#### This is an h4 tag
+##### This is an h5 tag
 ###### This is an h6 tag
 ------
 
@@ -27,13 +30,13 @@ Use 1. plus space before each item, at any level:
    1. Item 3b
 
 **Images:**  
-`![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)`  (without backticks)
+`![GitHub Logo](/images/logo.png)`
+Format: `![Alt Text](url)`  *no backticks*
 
 **Links:**  
-`[GitHub](http://github.com)`  (without backticks)  
+`[GitHub](http://github.com)`  *no backticks*  
 You can also add an optional title attribute to your links:  
-`[GitHub](http://github.com "GitHub website url")`  (without backticks)  
+`[GitHub](http://github.com "GitHub website url")`  *no backticks*  
 NB: make sure you start on a new line (add two spaces and return if you have a line of text before the link).
 
 GitHub has its own version of Markdown with extra features, for example  
@@ -58,11 +61,10 @@ As the politician said:
 Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
 
 **Inline code:**  
-Use backticks around the code: I think you should use an addr element here  
-instead will become: I think you should use an `<addr>` element here instead.
+Use backticks around the code: 'I think you should use an addr element here' will become:  'I think you should use an `<addr>` element here'.
 
 **Blocks of code:**  
-Use three backticks around the code:  
+Use three backticks (```) at the start and the end of the code:  
 ```
 const myLogger = (req, res, next) => {
   const visitTime = new Date()
@@ -74,7 +76,7 @@ app.use(myLogger)
 ```
 
 **Syntax highlighting for code:**  
-You can add an optional language identifier to enable syntax highlighting in your fenced code block. Example:
+You can add an optional language identifier to enable syntax highlighting in your fenced code block. Add the language after the first three backticks (``` javascript):
 
 ``` javascript
 const myLogger = (req, res, next) => {
