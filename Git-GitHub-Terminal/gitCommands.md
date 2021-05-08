@@ -27,15 +27,12 @@ You can use `gitlog` to see past commits: the most recent one is at the top.
 ### Branches
 **Creating** a new branch: `git branch branch-name`  
 **Creating** a new branch and moving to that branch:   `git checkout -b branch-name`
-
 **Pushing** your branch to the repo for the first time:   `git push -u origin branch-name`
-
 **Switching** branch:   `git checkout branch-name`
 
 To see a **list** of all your branches:   `git branch`
 
 **Deleting** a branch: make sure you're not on the branch you want to delete otherwise it will not work: `git branch -d branch-name`
-
 Delete a **remote** branch:   `git push origin --delete branch-name`  
 Delete a **local** branch:   `git branch -d branch-name`  
 This pulls your branch from origin if you do not have it locally:   `git checkout -b branch-name origin/branch-name`

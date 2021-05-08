@@ -1,9 +1,9 @@
-# HTML learning
+## HTML learning
 
-## VARIOUS
+### Various
 * comments that should be ignored in HTML code:
    Use special tag to add notes that will be ignored:
-     `<!-- Note to self: xxx xxx -->`
+    <!-- Note to self: xxx xxx -->`
 * meta data is not rendered but used by the server (for example: description and
   keywords are giving information that will be used by Google)
 
@@ -12,7 +12,7 @@
 * defer src is used for faster path to a fast-loading page.
 
 
-## WEBPAGE STRUCTURE
+### Webpage structure
 * doctype needs to be defined first in an HTML page: it tells the browser which version of HTML the page is using. The code is:  
 `<!DOCTYPE html>`
 `<html>`
@@ -28,7 +28,7 @@
 ```
 * footer: will be repeated for each page
 
-### HEAD:
+#### HEAD:
 In the head, the links to the css stylesheets should come first, above the title: `<link rel="stylesheet" href="file.css">`.  
 The styles.css link should be the last one you add. To start with a good layout without default values, include  
 `<link rel="stylesheet" href="reset.css">`
@@ -54,23 +54,23 @@ for favicon icons that are used.
 * With `<meta http-equiv="refresh" content="3;url=http://flavicon.com/anotherpage">`
 as meta tag, the browser is told to **wait** 3 seconds before directing to the other page.
 
-### BODY:
+#### BODY:
 There is only one body tag on a page (just like only one head and htlm tag). There are two general categories of elements in the body:  
 * **block elements:** `<p>`, `<div>`, heading elements, lists and list items, etc. Block elements do not allow other elements on either side of them. Width/height, margin, padding and borders of block elements can be altered. A block element can contain an inline element or another block element.
 * **inline elements:** `<a>`, `<span>`, `<img>`, etc. Inline elements can sit next to other inline elements. Width, margin etc. cannot
 be altered for inline elements. Inline elements cannot contain a block element.
 
-### HEADER
+#### HEADER
 The header tag represents the part that is the introduction. It usually contains a heading tag, a tagline for an article or  
 image, etc. Code: `<header></header>`
 
-### MAIN
+#### MAIN
 The main tag represents the main part of a page. Code: `<main></main>`
 
-### FOOTER
+#### FOOTER
 The footer tag is used to determine the footer of an article or page. Code: `<footer></footer>`
 
-## ELEMENTS
+### ELEMENTS
 Elements have an opening and a closing tag, plus content. All the following are elements.
 
 **heading**  
@@ -209,27 +209,26 @@ The URL can be specified via the parameter: action. Code:
 The browser will submit the form data using POST to the /example URL on the
 same origin.
 
-DATA PROVIDED VIA FORMS
-
-input: this is one of the most widely used form elements, very flexible,
+**Data provided through forms**  
+* **input:** this is one of the most widely used form elements, very flexible,
        it can change behaviour based on the attribute: type. Default is
        single-line text input: `<input>` (is the same as: `<input type="text">`)
        All fields need to have a field name: `<input type="text" name="username">`
        Attribute 'placeholder' makes text show p in an empty field as a hint
        for the user: `<input type="text" name="username" placeholder="Username">`
 
-email: to validate an email for semantic correctness, use:
+* **email:** to validate an email for semantic correctness, use:
        `<input type="email" name="email" placeholder="Your email">`
 
-password: every key entered will appear as an asterisk (*) or dot (.) by using:
+* **password:** every key entered will appear as an asterisk (*) or dot (.) by using:
           `<input type="password" name="password" placeholder="Your password">`
 
-numbers: with type="number" the input element will only accept numbers:
+* **numbers:** with type="number" the input element will only accept numbers:
         `<input type="number" name="age" placeholder="Your age">`
          To specify a minimum and maximum, use: min="18" max="110"
          Use step="x" to accept a value between different values in steps of 'x'.
 
-hidden field: fields can be hidden from the user but will still be sent to the
+* **hidden field:** fields can be hidden from the user but will still be sent to the
        server upon form submit, for example to store values like a CSRF token:
        `<input type="hidden" name="some-hidden-field" value="some-value">`
 
@@ -239,7 +238,7 @@ the user does not change the value, for example default age is 18:
 A placeholder can be set and will appear if the user clears the input field value:
   `<input type="number" name="age" placeholder="Your age" value="18">`
 
-submit: this is a button that can be pressed by the user to submit the form:
+* **submit**: this is a button that can be pressed by the user to submit the form:
         `<input type="submit">`
         A value attribute can be used to use a different text than 'submit':
         `<input type="submit" value="Click here">`
@@ -265,8 +264,10 @@ File types that are allowed can be specified with attribute: accept
 You can use a MIME type or set a file extension:
   <input type="file" name="examples-names" accept=".jpg, .jpeg, .png">
 
-Buttons:
-The input field type="button" can be used to add additional buttons to the form
+___
+
+#### Buttons
+The input field <type="button"> can be used to add additional buttons to the form
 that are not submit buttons:  <input type="button" value="Click here">
 When the button is clicked, something happens (programmed using JavaScript).
 
@@ -301,44 +302,57 @@ type="month" - allows user to enter a month and a year
 type="week"  - allows user to enter a week and a year
 type="datetime-local" field lets the user choose a date and a time.
 
-Colour picker:
+**Colour picker:**  
 With the element type="color" the user can be asked to pick a colour. The browser
 will take care of showing a colour picker to the user. A default value can also
-be set:    <input type="color" name="example-colour" value="#000000">
-
-Range:
+be set:  
+``` html
+<input type="color" name="example-colour" value="#000000">
+```
+**Range:**  
 The range input element shows a slider and the user can move it from a starting
 value to an ending value, if required also with an optional step:
+``` html
     <input type="range" name="age" min="0" max="100" value="30" step="10">
+```
 
-Telephone:
+**Telephone:**  
 Input field to enter a phone number; can show a numeric keyboard on a mobile.
-With pattern an additional validation can be specified:
+With pattern an additional validation can be specified:  
+``` html
     <input type="tel" pattern="[0-9]{3}-[0-9]{8}" name="telephone-number">
+```
 
-URL:
-Input field to enter a URL; with pattern attribute, validation can be specified:
+**URL:**  
+Input field to enter a URL; with the `pattern` attribute, validation can be specified:
+``` html
     <input type="url" name="website" pattern="https://.*">
+```
 
 Multi-line text: **textarea**  
-With the textarea element users can enter multi-line text. This requires an ending tag:  <textarea></textarea>  
-CSS can be used for sizing, or attributes rows and cols: <textarea rows="20" cols="10"></textarea>. `cols"number"`  
-specifies the width of the text area (in average character width). Default value is 20, default font is Courier.  
-A name is always required to reference the form data after the form is submitted (if you omit the name attribute,  
-no data from the text area will be submitted).  
+With the textarea element users can enter multi-line text. This requires an ending tag:  `<textarea></textarea> ` 
+CSS can be used for sizing, or attributes rows and columns: 
+``` html
+<textarea rows="20" cols="10"></textarea>
+```
+The `cols="number"` specifies the width of the text area (in average character width). Default value is 20, default font is Courier.  
+A name is always required to reference the form data after the form is submitted (if you omit the name attribute, no data from the  
+text area will be submitted).  
 
 Drop-down menu: **select**  
-The select tag creates a drop-down menu and the user can choose one of the options available. The options are  
-created with <option></option>:
+The select tag creates a drop-down menu and the user can choose one of the options available. The options are created with   
+`<option></option>`:
+``` html
    <select name="colour">
       <option value="red">Red</option>
       <option value="yellow">Yellow</option>
    </select>
-Set an option disabled: <option value="red" disabled>Red</option>
-Set an option empty:    <option value="">None</option>
+```
+Set an option disabled: `<option value="red" disabled>Red</option>`  
+Set an option empty:    `<option value="">None</option>`  
 
-Options can be grouped with <optgroup></optgroup>. An option group has a label
-attribute:
+Options can be grouped with <optgroup></optgroup>. An option group has a label attribute:
+``` html
     <select name="colour">
       <optgroup label="Primary">
          <option value="red">Red</option>
@@ -349,25 +363,25 @@ attribute:
         <option value="purple">Purple</option>
       </optgroup>
     </select>
-
-It is considered best practice to set a for attribute on the label element,
-with a value that matches the value of the id attribute of the input element.
-This allows assistive technologies to create a linked relationship between
+```
+It is considered best practice to set a for attribute on the label element, with a value that matches the value of  
+the id attribute of the input element. This allows assistive technologies to create a linked relationship between  
 the label and the child input element.
-________________________________________________________________________________
+---
 
-TABLES
-Create a table:   <table> ..... </table>
-Data in a table is defined in terms of rows, not columns. The columns are
-defined inside a row. The first row can take the role of the header, if needed.
-A table must have a <caption></caption> tag that describes the content. This tag
-comes immediately after the opening <table> tag.
-The table header contains the name of a column, typically in bold font.
-The header can be defined using: <th></th>
-A row is added by using:   <tr></tr>
-The content is defined using: <td></td>
-Example of a table with 3 rows with content, and 3 columns defined in the first
-row:
+**TABLES**  
+Data in a table is defined in terms of rows, not columns. The columns are defined inside a row.  
+The first row can take the role of the header, if needed.
+
+A table must have a `<caption></caption>` tag that describes the content. This tag comes immediately after the  
+opening `<table>` tag. The table header contains the name of a column, typically in bold font. 
+
+The header can be defined using: `<th></th>`  
+A row is added by using:   `<tr></tr>`  
+The content is defined using: `<td></td>`  
+
+Example of a table with 3 rows with content, and 3 columns defined in the first row:
+``` html
   <table>
     <tr>
       <th>Column 1</th>
@@ -385,78 +399,99 @@ row:
       <td>Row 2 column 3</td>
     </tr>
   </table>
-(adding CSS padding and border for th and td makes the table look more
-like a proper table).
-To get a row heading or an empty first column heading above the rows,
-use <th></th> in the heading <tr></tr>
+```
+(adding CSS padding and border for `th` and `td` makes the table look more like a proper table).  
+
+To get a row heading or an empty first column heading above the rows, use `<th></th>` in the heading `<tr></tr>`.  
 In the example, this would give:
+``` html
   <tr>
     <th></th>
     <th>Column 1</th>
     <th>Column 2</th>
   </tr>
-
-Span:
-A row can span over 2 or more columns using colspan:
+```
+**Span:**  
+A row can span over 2 or more columns using colspan:  
+``` html
    <tr>
       <td colspan="2">Row 1 Columns 1-2</td>
    </tr>
+   ```
 A row can span over 2 or more rows using rowspan:
+``` html
    <tr>
       <td colspan="2">Row 1 Columns 1-2</td>
    </tr>
+```
+For big tables there are 3 tags to organise the table to wrap <tr>'s to define the different sections:  
+`<thead></thead>`   (header)  
+`<tbody></tbody>`   (body)  
+`<tfoot></tfoot>`   (footer)  
 
-For big tables there are 3 tags to organise the table to wrap <tr>'s to define
-the different sections:
-<thead></thead>   (header)
-<tbody></tbody>   (body)
-<tfoot<>/tfoot>   (footer)
-________________________________________________________________________________
+---
 
-MULTIMEDIA TAGS - AUDIO AND VIDEO
+### Multimedia tags - audio and video
 
-Audio:
-The <audio> tag enables embedding audio content in an HTML page. It can play an
-audio source using the src attribute:   <audio src="file.mp3">
-Show the built-in controls with controls attribute: <audio src="file.mp3" controls>
-To set the audio file to play automatically, use autoplay:
+**Audio:**  
+* The `<audio>` tag enables embedding audio content in an HTML page. It can play an audio source using the src attribute:   
+``` html
+<audio src="file.mp3">
+  ```
+* Show the built-in controls with controls attribute: 
+``` html
+<audio src="file.mp3" controls>
+  ```
+* To set the audio file to play automatically, use autoplay:
+``` html
    <audio src="file.mp3" controls autoplay>
-With loop the audio restarts: <audio src="file.mp3" controls autoplay loop>
+     ```
+* With loop the audio restarts: 
+``` html
+<audio src="file.mp3" controls autoplay loop>
+  ```
 If loop is not used, the audio stops at the end of the file.
 
-Video:
-The <video> tag enables embedding video content in an HTML page, for example
-with the src attribute:   <video src="file.mp4">
-The same tags as for audio apply (controls, autoplay, loop). It is possible to
-set an image as poster image: <video src="file.mp4" poster="picture.png">
-Without poster the browser will show the first frame of the video as soon as it
-is available. With width and height attributes the space for the element can be
-specified so that the browser does not change the layout.
+**Video:**  
+The <video> tag enables embedding video content in an HTML page, for example with the src attribute:
+``` html
+ <video src="file.mp4">
+   ```
+* The same tags as for audio apply (controls, autoplay, loop). It is possible to set an image as poster image:
+``` html
+ <video src="file.mp4" poster="picture.png">
+   ```
+* Without poster the browser will show the first frame of the video as soon as it is available. With width and height attributes the space for the element can be specified so that the browser does not change the layout.
 
-Iframes:
-Content from other websites can be embedded in a web page using the iframe tag.
-An iframe creates a new nested browsing context that does not interfere with the
-parent page (and vice versa). It can be used to do something in one part of the
-page (coding, for example) and see the result in a box. Code for simple iframe:
+**Iframes:**  
+* Content from other websites can be embedded in a web page using the `iframe` tag. An iframe creates a new nested browsing context that does not interfere with the parent page (and vice versa). It can be used to do something in one part of the page (coding, for example) and see the result in a box. Code for simple iframe:
+``` html
 <iframe src="page.html"></iframe>
-It is possible to lead an absolute URL: <iframe src="https://site.com/page.html">
+```
+* It is possible to lead an absolute URL: 
+``` html
+<iframe src="https://site.com/page.html">
 </iframe>
-Set width/height parameters: <iframe src="page.html" width="xx" height="xx"></iframe>
+```
+* Set width/height parameters: 
+``` html
+<iframe src="page.html" width="xx" height="xx"></iframe>
+```
 (or with CSS).
 
-Srcdoc:
-The srcdoc attribute specifies the HTML content of the page to show in the inline
-frame. If a browser supports the srcdoc attribute, it will override the content
-specified in the src attribute (if present). If a browser does not support the
-srcdoc attribute, it will show the file specified in the src attribute instead.
+**Srcdoc:**  
+The `srcdoc` attribute specifies the HTML content of the page to show in the inline frame. If a browser supports the  
+`srcdoc` attribute, it will override the content specified in the `src` attribute (if present). If a browser does not  
+support the `srcdoc` attribute, it will show the file specified in the `src` attribute instead.
 
-Sandbox:
+**Sandbox:**  
 The sandbox attribute can limit operations allowed in iframes by adding options:
+``` html
 <iframe src="page.html" sandbox="allow-forms"></iframe>
-There are options such as "" (nothing is allowed), allow-modals, allow-popups,
-allow-scripts, allow-top-navigation and others.
+```
+There are options such as `""` (nothing is allowed), `allow-modals`, `allow-popups`, `allow-scripts`, `allow-top-navigation` and others.
 
-Referrer:
+**Referrer:**  
 When loading an iframe, the browser sends important information in the Referer
 header (NOTE: misspelt by tradition). This is a header that lets the page know
 who is loading it. The referrerpolicy attribute has the following allowed values:
