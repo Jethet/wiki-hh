@@ -41,9 +41,9 @@ drop table if exists *table name(s)*;
 **CREATE A TABLE**  
 ``` sql
 CREATE TABLE [IF NOT EXISTS] table_name (
-   column1 datatype(length) column_contraint,
-   column2 datatype(length) column_contraint,
-   column3 datatype(length) column_contraint,
+   column1 datatype(length) column_constraint,
+   column2 datatype(length) column_constraint,
+   column3 datatype(length) column_constraint,
    table_constraints
 );
 ```
@@ -51,7 +51,7 @@ CREATE TABLE [IF NOT EXISTS] table_name (
 **INSERT DATA**  
 To insert data into a table, use:  
 ``` sql
-INSERT INTO *table name* (keyOne, keyTwo) VALUES ('value for keyOne', 'value for keyTwo', etc.)
+INSERT INTO table_name ('keyOne', 'keyTwo') VALUES ('value for keyOne', 'value for keyTwo');
 ``` 
 For multiple lines, supply a comma-separated list of rows after the VALUES keyword:  
 `INSERT INTO` *table name* (keyOne, keyTwo) `VALUES` ('value1 for keyOne', 'value1 for keyTwo'),  
