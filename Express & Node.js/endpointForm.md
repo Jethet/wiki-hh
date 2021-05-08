@@ -1,6 +1,6 @@
 **Using HTML form with NodeJS**  
 Example:
-```
+``` html
 <h3>Create a blog post</h3>
 <form action="/create" method="POST">
     <textarea name="blogpost" rows="10" cols="14"></textarea>
@@ -22,10 +22,14 @@ To **extract the contents out of the special FormData object** you use **`expres
 is Express middleware that will extract the form data from the request and make it available to you when  
 you do req.fields. It is not built-in, and needs to be installed: `npm install express-formidable --save`
 
-In the server.js file: `const formidable = require('express-formidable');` (no - allowed in variable name)  
-and `app.use(formidable())`  
-In the POST endpoint on the submit route, a new Formidable form is instantiated:  
+In the server.js file:  
+``` javascript
+const formidable = require('express-formidable');
+//  (no - allowed in variable name)  and
+app.use(formidable())
 ```
+In the POST endpoint on the submit route, a new Formidable form is instantiated:  
+``` javascript
 app.post("/submit-form", (req, res) => {
   new formidable.IncomingFrom().parse(req (err, fields, files) => {
     if (err) {
