@@ -54,8 +54,10 @@ To insert data into a table, use:
 INSERT INTO table_name ('keyOne', 'keyTwo') VALUES ('value for keyOne', 'value for keyTwo');
 ``` 
 For multiple lines, supply a comma-separated list of rows after the VALUES keyword:  
-`INSERT INTO` *table name* (keyOne, keyTwo) `VALUES` ('value1 for keyOne', 'value1 for keyTwo'),  
-('value2 for keyOne', 'value2 for keyTwo'), ('value3 for keyOne', 'value3 for keyTwo') etc.  
+``` sql
+INSERT INTO table_name ('keyOne', 'keyTwo') VALUES ('value1 for keyOne', 'value1 for keyTwo'),  
+('value2 for keyOne', 'value2 for keyTwo'), ('value3 for keyOne', 'value3 for keyTwo');
+```
 
 
 **SCHEMAS**  
@@ -78,8 +80,11 @@ Data types:
 
 **TO REFERENCE TABLE KEYS**  
 This is called column-level foreign key constraint: `REFERENCES` *table name*(*table key*) The type also has to be added, for example  
-`customer_id INT REFERENCES customers(id)`
+``` sql
+customer_id INT REFERENCES customers(id)
 ```
+Example:  
+``` sql
 CREATE TABLE student_attendance
 (
   id          SERIAL PRIMARY KEY,
@@ -89,7 +94,10 @@ CREATE TABLE student_attendance
 ```
 
 **Foreign Key**  
-Syntax: `FKcolumn TYPE REFERENCES parent_table (table_name)`  
+Syntax:  
+``` sql
+fk_column TYPE REFERENCES parent_table (table_name);
+``` 
 * A foreign key in PostgreSQL states that values in the first table column must appear with values in the second table column.
 * A foreign key is a column or a group of columns used to identify a row uniquely of a different table.
 * The data type must be stated.
@@ -99,16 +107,19 @@ Syntax: `FKcolumn TYPE REFERENCES parent_table (table_name)`
 
 **To reference a foreign key**  
 The *type* references the *table* and the (*column*) 
-Example: `product SERIAL REFERENCES products (id)  
+Example:  
+``` sql
+product SERIAL REFERENCES products (id);
+```
 
 * make the field in the parent table **unique** so that there is not more than one record that matches.   
 Example: table *students* has *name*: put UNIQUE there or **add it later on** with: 
-```
+``` sql
 ALTER TABLE students  
 ADD <constraint name> UNIQUE (name)
 ```
 * add a unique key for the field in the table that you are linking to in your new table. Example:  
-```
+``` sql
 create table class_attendance (
 id SERIAL primary key,
 student_id INT UNIQUE,
@@ -121,13 +132,17 @@ FOREIGN KEY (student_name) REFERENCES students (name)
 
 **To remove a key constraint**  
 Check what the name of the constraint is in pgAdmin and use ALTER. Example:  
-`ALTER TABLE books DROP CONSTRAINT books_author_id_key;`
+``` sql
+ALTER TABLE books DROP CONSTRAINT books_author_id_key;
+```
 
 **ALTER**
 * To change the structure of an existing table, you use PostgreSQL ALTER TABLE statement. The syntax is:  
-`ALTER TABLE table_name action;`
-* The following changes to an existing table are available (data_type can be INT, VARCHAR, etc.):
+``` sql
+ALTER TABLE table_name action;
 ```
+* The following changes to an existing table are available (data_type can be INT, VARCHAR, etc.):
+``` sql
 ALTER TABLE table_name 
 ADD COLUMN column_name data_type column_constraint;
 
@@ -146,10 +161,13 @@ ALTER TABLE table_name
 RENAME TO new_table_name;
 ```
 
-Example: `ALTER TABLE customer ADD COLUMN id SERIAL PRIMARY KEY` will add a primary key to the column customer.  
-
-Example adding foreign key as constraint **use `distfk`**: a) make sure you have a unique key in the parent table; b) add foreign key reference
+Example: this will add a primary key to the column customer  
+``` sql
+ALTER TABLE customer ADD COLUMN id SERIAL PRIMARY KEY;
 ```
+
+Example for adding a foreign key as constraint **use `distfk`**: a) make sure you have a unique key in the parent table; b) add foreign key reference
+``` sql
 ALTER TABLE books
 ADD CONSTRAINT distfk
 UNIQUE (title); 
@@ -159,34 +177,48 @@ ADD FOREIGN KEY (book_title) REFERENCES books (title);
 ```
 
 **UPDATE**  
-Syntax: `UPDATE table SET column1 = value1, column2 = value2 WHERE condition;`  
+Syntax: 
+``` sql
+UPDATE table SET column1 = value1, column2 = value2 WHERE condition;
+```  
 The `WHERE` condition usually is an id value.  
 **=> always include a WHERE condition, otherwise all rows will be updated**
 Examples:  
-`UPDATE customers SET name='John Smith', country='UK' WHERE id=3;`  
-`UPDATE bookings SET nights = 5 where customer_id = 1 and hotel_id = 1;`  
-
+``` sql
+UPDATE customers SET name='John Smith', country='UK' WHERE id=3;  
+UPDATE bookings SET nights = 5 where customer_id = 1 and hotel_id = 1; 
+```
 **DELETE**  
-Syntax: `DELETE FROM table WHERE condition;`  
+Syntax:  
+``` sql
+DELETE FROM table WHERE condition;
+```  
 **=> always include a WHERE condition, otherwise all rows will be deleted**  
 The values will be deleted but the row is not gone (contrary to using **drop**).  
-Example: `DELETE FROM bookings WHERE id = 4;`
+Example:  
+``` sql
+DELETE FROM bookings WHERE id = 4;
+```
 
 **DELETE CASCADE**  
 When deleting records in PostgreSQL, foreign key relationships that may exist between these records and records in a  different table. Using the DELETE CASCADE option ensure that all child records are also deleted when a parent record is  deleted.  
 
 **DROP TABLE to delete**  
-`DROP TABLE table_name;` This statement is used to remove a table definition and all associated data, indexes, rules,  
-triggers, and constraints for that table.  
+This statement is used to remove a table definition and all associated data, indexes, rules, triggers, and constraints  
+for a table:  
+``` sql
+DROP TABLE table_name;
+```
 To **delete a column** from a table, use 
-```ALTER TABLE table_name 
+``` sql
+ALTER TABLE table_name 
 DROP COLUMN column_name;
 ```
 
 
 ### Error messages
 (Example from BoundlessBooks project) 
-```
+``` sql
 CREATE TABLE IF NOT EXISTS book_card (
 	id SERIAL PRIMARY KEY,
 	author_name VARCHAR(50) UNIQUE,
@@ -197,7 +229,7 @@ CREATE TABLE IF NOT EXISTS book_card (
 );
 ```
 **Errors**:  
-```
+``` sql
 ERROR:  syntax error at or near "author_name"
 LINE 6:  FOREIGN KEY author_name REFERENCES authors (name),
                      ^
@@ -206,7 +238,7 @@ Character: 147
 ```
 *the `author_name` here should be between () (see examples Foreign Key in text above)*  
 
-```
+``` sql
 ERROR: there is no unique constraint matching given keys for referenced table "authors"
 SQL state: 42830  
 ```
@@ -214,7 +246,7 @@ SQL state: 42830
 *the table `authors` should have 'unique' as value: `author_name VARCHAR(50) UNIQUE` and the original*  
 *name in the authors table also should have 'unique' as value*  
 
-```
+``` sql
 ERROR: column <column name> referenced in foreign key constraint does not exist  
 ```
 *you cannot add a foreign key to a column that has not been created yet: first create the column, then add the foreign key*
