@@ -11,7 +11,7 @@ The Node.js fs module has two functions available that can be used to read files
 * **The readFileSync function** reads data from a file in a synchronous manner. This function blocks the rest of the code from executing  
 until all the data is read from a file. The function is particularly useful when your application has to load configuration settings before m
 it can perform any other tasks. Example:  
-```
+``` js
 const fs = require('fs');
 
 let rawdata = fs.readFileSync('student.json');
@@ -29,7 +29,7 @@ call the callback function provided to it. This way you aren't blocking code exe
 you with data. The readFile function takes two parameters: the path to the file that is to be read, and the callback function that is to be  
 called when the file is read completely. You can optionally also include a parameter with options.  
 Example:  
-```
+``` js
 const fs = require('fs');
 
 fs.readFile('student.json', (err, data) => {
@@ -49,7 +49,7 @@ object. Add `JSON.parse()` to the fs.readFile's callback function: `let parsedFi
 
 **Using __dirname**  
 `__dirname` is a Node global object that gives you a path to current working directory. It avoids writing the whole path out in full.
-```
+``` js
 fs.readFile(__dirname + '/data/posts.json', function (error, file) {
     console.log(file.toString());
 });
@@ -64,7 +64,7 @@ in an asynchronous way while writeFileSync function writes data to a file in a s
 
 * **The writeFileSync function** accepts 2-3 parameters: the path of the file to write data to, the data to write, and an optional parameter. If the file doesn't already exist, then a new file is created for you.  
 Example:  
-```
+``` js
 const fs = require('fs');
 
 let student = { 
@@ -81,7 +81,7 @@ fs.writeFileSync('student-2.json', data);
 
 * **The writeFile function** executes in asynchronous manner, which means code is not blocked while data is written to the file. Like all asynchronous methods from before, we need to pass a callback to this function.  
 Example:
-```
+``` js
 const fs = require('fs');
 
 let student = { 

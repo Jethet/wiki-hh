@@ -1,7 +1,7 @@
 *params* is anything that comes after the column :  
 Example: `req.params.customerId`  
 
-```
+``` js
 const pool = new Pool({
   user: "",
   host: "localhost",
@@ -18,9 +18,13 @@ Make sure dotenv is in package.json
 Create file called .env and add:  
 PGUSER=yourusername  
 PGPASSWORD=yourpassword  
-Add to file where pool is defined: `require("dotenv").config();`  
+Add to file where pool is defined: 
+``` js
+require("dotenv").config();
+```  
+
 Use environment variables as follows:  
-```
+``` js
 const pool = new Pool({
   user: PGUSER,
   host: "localhost",

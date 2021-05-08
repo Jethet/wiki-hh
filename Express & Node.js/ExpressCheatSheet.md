@@ -137,7 +137,7 @@ app.delete('/quotes/:id', function(req, res) {
 
 [Official Express.js documentation about req.query](https://expressjs.com/en/api.html#req.query)
 
-## Extracting values of route parameters
+### Extracting values of route parameters
 
 * If you make a route with a path of `/quotes/:quoteId`
 * ...and then you make a GET request for a URL like: http://localhost:3000/quotes/17

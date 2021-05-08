@@ -18,7 +18,7 @@ another middleware added in order for using that router.
 With express.router we can simplify our code. Instead of specifying the path every time for a specific request, we can specify  
 the path once and then chain the request methods to that path using the express router. The .all will be applied to all types of  
 request methods, and the other paths will be applied based on the request method. In `routes.js`:  
-```
+``` js
 Router.route('/') 
 .all((req, res, next) => {  
     res.statusCode = 200; 
@@ -40,7 +40,7 @@ Router.route('/')
 ```
 
 **This means requests can be made like this (example with form data):**  
-```
+``` js
 const express = require('express');
 const router = express.Router();
 

@@ -1,4 +1,6 @@
-## Error: cannot set headers
+## Postman
+
+**Error: cannot set headers**  
 When getting this type of error using Postman to test an endpoint:  
 >Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
     >at ServerResponse.setHeader (_http_outgoing.js:536:11)
@@ -8,7 +10,7 @@ When getting this type of error using Postman to test an endpoint:
 you should add a **return** somewhere to get out of sending the request.
 
 **Code example:**
-```
+``` js
 app.post("/messages", (req, res) => {
   const newMessage = req.body;
   if (newMessage.from === "" || newMessage.text === "") {    
