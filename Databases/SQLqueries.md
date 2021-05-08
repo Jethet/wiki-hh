@@ -140,7 +140,7 @@ To control the number of records returned by a search query:
 `LIMIT *number*;`  
 
 Example:
-```
+``` sql
 SELECT productid, unitprice * quantity AS BiggestOrder  
 FROM order_details  
 ORDER BY BiggestOrder DESC  

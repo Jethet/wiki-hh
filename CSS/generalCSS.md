@@ -5,7 +5,7 @@ page. CSS is the presentation of the website, and HTML is the structure.
 **Comments in CSS:** use `/* place your comments here */`.
 
 #### Reset styles to avoid browser inconsistencies
-```
+``` css
 html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
 
 #### Selector, property and value in CSS
 The selector is the part of a CSS rule that determines which HTML elements the rule applies to:
-```
+``` css
 body {
   color: xxxx;
 }
@@ -63,7 +63,7 @@ content. It means the box will become bigger when padding and border are added. 
 
 With `box-sizing: border-box` the padding and border no longer increase the width of a box. This is a very recent technique, and it  
 should be used together with the `-webkit` and `-moz` prefix to be used in specific browsers, as follows:  
-```
+``` css
 -webkit-box-sizing: border-box;
    -mox-box-sizing: border-box;
         box-sizing: border-box;
@@ -95,11 +95,11 @@ for layouts: set `vertical-align: top`, set the width of each column that is def
 
 
 **Column**: It is possible to make a multi-column text, for example:  
-```
+``` css
 .three-column {
   padding: 1em;
   -moz-column-count: 3;
-  -mox-column-gap: 1em;
+  -moz-column-gap: 1em;
   -webkit-column-count: 3;
   -webkit-column-gap: 1em;
   column-count: 3;
@@ -134,7 +134,7 @@ below the float instead of wrapping it around the floating element (same for `cl
 **Clearfix for floating elements**  
 Elements after a floating element will flow around it. In case an image etc. is floated and is taller than the element containing  
 it (the container), the image may overflow outside of its container. This can be fixed using:  
-```
+``` css
 .clearfix::after {
   content: "";
   clear: both;
@@ -241,7 +241,7 @@ Examples:
 
 **Common styles**  
 It is possible to define common styles for different CSS classes by comma-separating them:  
-```
+``` css
 .portrait, .title {
   display: inline-block;
 }  

@@ -40,7 +40,7 @@ CSS exist in the DOM.
 Fixed units of measurements like px can be used in defining grids. CSS Grid layout also introduces a new unit of  
 measurement called the **fr unit**. The fr unit represents a fraction of the available space in the grid container  
 and can be used to create flexible grid tracks. Example:  
-```
+``` css
 .container {
 display: grid;
 grid-template-columns: 2fr 1fr 1fr;
@@ -51,7 +51,7 @@ Here, the available space is split into four parts: two parts will be assigned t
 two parts will be assigned one track each according to the available space left. This helps ensure consistency when  
 building a grid. The `repeat()` notation also helps ensure consistency. It can be used to repeat all or part of a track  
 listing:  
-```
+``` css
 .container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);

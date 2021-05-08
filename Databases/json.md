@@ -8,7 +8,7 @@ The JSON object has two useful methods to deal with JSON-formatted content: pars
 * `JSON.parse()` can take a function as a second argument that can transform the object values before they are returned.
 
 Here the object’s values are transformed to uppercase in the returned object of the parse method:
-```
+``` javascript
 const user = {
   name: 'Sammy',
   email: 'Sammy@domain.com',
@@ -30,7 +30,7 @@ JSON.parse(userStr, (key, value) => {
 * `JSON.stringify()` can take two additional arguments, the first one being a replacer function and the second a String or Number value to use as a space in the returned string.
 
 The replacer function can be used to filter out values, as any value returned as undefined will be out of the returned string:  
-```
+``` javascript
 const user = {
   id: 229,
   name: 'Sammy',

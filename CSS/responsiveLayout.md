@@ -23,7 +23,7 @@ of rem units will always be relative to the font-size of the root html element.
 * `object-fit: cover` will size the image to the given width.  
 
 **Scaling images** can be done within the image container:  
-```
+``` css
 .container {
   width: 50%;
   height: 200px;
@@ -37,7 +37,7 @@ of rem units will always be relative to the font-size of the root html element.
 ```
 
 **Make all images the same size as well as responsive**  
-```
+``` css
 .image-container{
   width: 90vw;
   height: 600px;
@@ -60,7 +60,7 @@ If you can 'move' an image from left to right inside the viewport, make sure the
 * `background-attachment: fixed, fixed` will keep the background from changing when scrolling: it remains in view.
 
 Example:  
-```
+``` css
 .bookpage {
   margin: 0 auto;
   background: url("./library.jpg");
