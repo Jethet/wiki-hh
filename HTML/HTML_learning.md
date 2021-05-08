@@ -474,19 +474,19 @@ For big tables there are 3 tags to organise the table to wrap <tr>'s to define t
 **Audio:**  
 * The `<audio>` tag enables embedding audio content in an HTML page. It can play an audio source using the src attribute:   
 ``` html
-<audio src="file.mp3">
+ <audio src="file.mp3">
 ```
 * Show the built-in controls with controls attribute: 
 ``` html
-<audio src="file.mp3" controls>
+ <audio src="file.mp3" controls>
 ```
 * To set the audio file to play automatically, use autoplay:
 ``` html
-   <audio src="file.mp3" controls autoplay>
+ <audio src="file.mp3" controls autoplay>
 ```
 * With loop the audio restarts:
 ``` html
-<audio src="file.mp3" controls autoplay loop>
+ <audio src="file.mp3" controls autoplay loop>
 ```
 If loop is not used, the audio stops at the end of the file.
 
