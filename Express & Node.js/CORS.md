@@ -7,8 +7,12 @@ from a different server than your React app was initially loaded (see **terms-ac
 
 * in package.json you should see a dependency:  `cors: "^2.8.5"`
 
-* Then in your server.js add `var cors = require('cors')`  
-and `app.use(cors())`
+* Then in your server.js add:  
+``` javascript
+var cors = require('cors')
+// and
+app.use(cors())
+```
 
 WEBSITE WITH EXAMPLES: https://expressjs.com/en/resources/middleware/cors.html
 
@@ -32,7 +36,7 @@ res.header('Access-Control-Allow-Origin', 'https://*name-of-domain-deployment*')
 
 If your API has no authentication then you don't need to worry about limiting access.  
 Use "*" to allow CORS for all resources on your server.
-```
+``` javascript
   app.use(function(req, res, next) {
     // update to match the domain you will make the request from:
     res.header("Access-Control-Allow-Origin", "*"); 
@@ -50,5 +54,7 @@ Use "*" to allow CORS for all resources on your server.
   ```
 
   CORS error when running locally, add:  
-  https://cors-anywhere.herokuapp.com/https://example-api-url.com  
+  ``` javascript
+  https://cors-anywhere.herokuapp.com/https://example-api-url.com
+  ```
   The cors-anywhere.herokuapp.com needs to be added **entirely** before the API url.

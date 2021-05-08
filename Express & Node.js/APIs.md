@@ -15,7 +15,7 @@ A base URL is needed and this has to be prepended to every URL used in a request
 The response from the server comes with an HTTP status code (200, 404, etc.)
 
 **Axios** is used to make consistent requests in the browser:  
-```
+``` javascript
 axios.get("some.url").then(response => {
   console.log("This is the response data:", response)
 })

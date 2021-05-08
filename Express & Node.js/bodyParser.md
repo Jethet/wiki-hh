@@ -1,11 +1,17 @@
 The Express package includes a json parser. Add this to the server code:  
-`app.use(express.json())`  or  
-`app.use(express.urlencoded({extended: true}))`
+``` javascript
+app.use(express.json())
+// or  
+app.use(express.urlencoded({extended: true}))
+```
 
 The express.json() function is a **built-in middleware** function in Express. It parses incoming requests with JSON payloads  
 and is based on body-parser.
 
-Syntax: `express.json( [options] )`  
+Syntax:  
+``` javascript
+express.json( [options] )
+``` 
 The options parameter has various property like inflate, limit, type, etc.
 
 Urlencoded does a similar thing, it parses the fields included in a urlencoded payload sent with a request to your server,  
