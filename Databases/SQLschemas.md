@@ -201,7 +201,7 @@ DELETE FROM bookings WHERE id = 4;
 ```
 
 **DELETE CASCADE**  
-When deleting records in PostgreSQL, foreign key relationships that may exist between these records and records in a  different table. Using the DELETE CASCADE option ensure that all child records are also deleted when a parent record is  deleted.  
+When deleting records in PostgreSQL, foreign key relationships that may exist between these records and records in a  different table. Using the `DELETE CASCADE` option ensure that all child records are also deleted when a parent record is  deleted.  
 
 **DROP TABLE to delete**  
 This statement is used to remove a table definition and all associated data, indexes, rules, triggers, and constraints  
@@ -215,9 +215,10 @@ ALTER TABLE table_name
 DROP COLUMN column_name;
 ```
 
+___
 
 ### Error messages
-(Example from BoundlessBooks project) 
+(Example with errors, from BoundlessBooks project) 
 ``` sql
 CREATE TABLE IF NOT EXISTS book_card (
 	id SERIAL PRIMARY KEY,
@@ -228,7 +229,8 @@ CREATE TABLE IF NOT EXISTS book_card (
 	FOREIGN KEY (language) REFERENCES languages (language)
 );
 ```
-**Errors**:  
+*returns the following errors:*  
+___
 ``` sql
 ERROR:  syntax error at or near "author_name"
 LINE 6:  FOREIGN KEY author_name REFERENCES authors (name),
@@ -237,7 +239,7 @@ SQL state: 42601
 Character: 147
 ```
 *the `author_name` here should be between () (see examples Foreign Key in text above)*  
-
+___
 ``` sql
 ERROR: there is no unique constraint matching given keys for referenced table "authors"
 SQL state: 42830  
@@ -245,8 +247,9 @@ SQL state: 42830
 *In postgresql all foreign keys must reference a unique key in the parent table. In this example of the book_card*  
 *the table `authors` should have 'unique' as value: `author_name VARCHAR(50) UNIQUE` and the original*  
 *name in the authors table also should have 'unique' as value*  
-
+___
 ``` sql
 ERROR: column <column name> referenced in foreign key constraint does not exist  
 ```
-*you cannot add a foreign key to a column that has not been created yet: first create the column, then add the foreign key*
+*you cannot add a foreign key to a column that has not been created yet: first create the column, then add the foreign key*  
+___
