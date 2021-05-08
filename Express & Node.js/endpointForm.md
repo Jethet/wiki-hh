@@ -25,7 +25,9 @@ you do req.fields. It is not built-in, and needs to be installed: `npm install e
 In the server.js file:  
 ``` javascript
 const formidable = require('express-formidable');
-//  (no - allowed in variable name)  and
+
+// 
+// and add to the middleware:
 app.use(formidable())
 ```
 In the POST endpoint on the submit route, a new Formidable form is instantiated:  
