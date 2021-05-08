@@ -45,9 +45,9 @@ The above shows a *route handler* being registered which will be used to handle 
     * the HTTP response under construction (not yet sent), which our handler will generally fill in (perhaps including requested content in the body of the response) and set a status code on to indicate the outcome of the processing of the request.
 
 
-# Basic C.R.U.D. operations (Create Read/Retrieve Update Delete)
+## Basic CRUD operations (Create Read/Retrieve Update Delete)
 
-## CREATING a resource
+### CREATING a resource
 
 To allow the user to create a new instance of a resource, create the route handler to:
 
@@ -65,15 +65,15 @@ app.post('/quotes', function (request, response) {
 Note: the new content is normally submitted as part of the request body, and accessed with `request.body`.
 However, before this is possible, see the following section `Accessing request.body in a POST request`.
 
-## Accessing request.body in a POST request
+### Accessing request.body in a POST request
 If you are going to use the body of a POST request in a route handler, you will have to add one of two lines to first process the body. How you do this depends on how the request has been submitted.  
 
-### If the request has come from an HTML form:
+#### If the request has come from an HTML form:
 
 if it has been submitted by HTML form you need to add the line
 ```app.use(express.urlencoded({ extended: false }))```
 
-### If the request has come from `fetch` (e.g. in React), or from Postman
+#### If the request has come from `fetch` (e.g. in React), or from Postman
 
 if it has come from a HTML form you need to add the line
 ```app.use(express.json())```  (for parsing application/json)  
@@ -82,13 +82,13 @@ In both cases you can then use `request.body` to get either an object of key-val
 
 [Official Express.js documentation about req.body](https://expressjs.com/en/api.html#req.body)
 
-## READING/RETRIEVING a resource
+### READING/RETRIEVING a resource
 
 To read *all* resources we make a route handler to match the `GET` HTTP method, and a route path of `/quotes`
 
 To read *one* resource we make a route handler to match the `GET` HTTP method, and a route path of `/quotes/:id`, in order to match GET requests to real paths such as /recipe/117
 
-## UPDATING a resource
+### UPDATING a resource
 
 To allow the user to update a resource, such as a recipe, we'd create the route handler to:
 
@@ -98,10 +98,7 @@ To allow the user to update a resource, such as a recipe, we'd create the route 
 ```js
 app.put("/quotes/:id", function (request, response) {
   const quoteId = request.params.id;
-  
   //TODO: find the quote with the matching id
-  
-
 });
 ```
 
@@ -111,7 +108,7 @@ As with POST requests which create resources, we expect the changed content in t
 
 
 
-## DELETING a resource
+### DELETING a resource
 
 To allow the user to delete a resource by id, create the route handler to:
 
@@ -132,7 +129,7 @@ app.delete('/quotes/:id', function(req, res) {
 **Note that the request params will be strings, not numbers, so you may have to attempt to convert your id param to a number before trying to match it against recipe ids if those happen to be stored as numbers: `parseInt(request.params.id)`.**
 
 
-## Extracting values of query parameters
+### Extracting values from query parameters
 
 * If you make a route with a path of `/quotes/search`
 * ...and then you make a GET request for a URL like: http://localhost:3000/quotes/search?term=blue&author=Davids
