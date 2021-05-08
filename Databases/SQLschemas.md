@@ -25,17 +25,21 @@ Use <> to make sure entities are not equal to each other in any way.
 
 **DATE FIELDS**  
 **single quotes! syntax depends on location and system setup for dates**  
-`WHERE orderdate = '2020-05-14';`  
-`WHERE orderdate > '2020-01-01';`  
+``` sql
+WHERE orderdate = '2020-05-14';
+WHERE orderdate > '2020-01-01';
+```
 
 **BOOLEANS**  
 Boolean values TRUE and FALSE  
 
 **Before creating a table:** use  
-`drop table if exists *table name(s)*;`  
+``` sql
+drop table if exists *table name(s)*;
+```
 
 **CREATE A TABLE**  
-```
+``` sql
 CREATE TABLE [IF NOT EXISTS] table_name (
    column1 datatype(length) column_contraint,
    column2 datatype(length) column_contraint,
@@ -46,7 +50,9 @@ CREATE TABLE [IF NOT EXISTS] table_name (
 
 **INSERT DATA**  
 To insert data into a table, use:  
-`INSERT INTO` *table name* (keyOne, keyTwo) `VALUES` ('value for keyOne', 'value for keyTwo', etc.).  
+``` sql
+INSERT INTO *table name* (keyOne, keyTwo) VALUES ('value for keyOne', 'value for keyTwo', etc.)
+``` 
 For multiple lines, supply a comma-separated list of rows after the VALUES keyword:  
 `INSERT INTO` *table name* (keyOne, keyTwo) `VALUES` ('value1 for keyOne', 'value1 for keyTwo'),  
 ('value2 for keyOne', 'value2 for keyTwo'), ('value3 for keyOne', 'value3 for keyTwo') etc.  
