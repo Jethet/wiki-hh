@@ -3,7 +3,9 @@
 ### Various
 * comments that should be ignored in HTML code:
    Use special tag to add notes that will be ignored:
-    <!-- Note to self: xxx xxx -->`
+    ``` html
+    <!-- Note to self: xxx xxx -->
+    ```
 * meta data is not rendered but used by the server (for example: description and
   keywords are giving information that will be used by Google)
 
@@ -113,7 +115,7 @@ indicates that the things it contains are not part of the regular flow of the se
 **lists**  
 `<ul>`: unordered list with bullets, and `<ol>`: ordered list with numbers before each item. ul and ol are used with list items `<li>`.  
 The code example is:
-```
+``` html
 <ol>
   <li>item 1</li>
   <li>item 2</li>
@@ -132,7 +134,7 @@ Images have three primary attributes:
 * the alt attribute that provides extra information if the image cannot be seen on the webpage for any reason
 To see the image on the webpage, the image needs to be linked by telling the webpage where the image is and what  
 it is called. Code:  
-```
+``` html
 <div>
   <img src="images/logo.png" alt="codebar.io">
 </div>
@@ -177,7 +179,7 @@ tag that contains the URL address of the link: it is used to indicate where the 
 * **regular link:** `<a href="https://codebar.io">Click here</a>` (this is an absolute URL).  
 Links also work with relative URLs by using / in the href. Links can include text, images or any other element but  
 not other links. Example image: 
-```
+``` html
 <a href="https://codebar.io">
   <img src="test.jpg">
 </a>
