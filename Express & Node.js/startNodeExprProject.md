@@ -12,14 +12,7 @@ Main file or entry point | If you do not change anything during `npm init`, and 
 The npm package manager: **package.json**. | You need this file to set up the Node modules that you need. You do not have to look at those, the programme will use any modules it needs automatically. Install all Node modules with the command `npm i` (or `npm install`). You will see that a package-lock.json file is created automatically in the project folder. 
 Install Express | Install Express for **each new project**: `npm i express -–save`
 Import Express in your main file (entry point) | To be able to use Express with Node, you have to import it in your main file (index.js). Put at the top of your index.js file: ```const express = require(“express”) const app = express()```
-Add port to index.js (main file) | At the bottom of your index.js file, add the app listener with the port. You can do this in various ways. For a fixed port:  
-``` js
-app.listen(3000, () {console.log(“Listening on port 3000”) })
-```
-In case of flexibility (port can change): 
-``` js
-app.listen(port, () => { console.log(`Listening on port ${port}.`) })
-``` 
+Add port to index.js (main file) | At the bottom of your index.js file, add the app listener with the port. You can do this in various ways. For a fixed port: `app.listen(3000, () {console.log(“Listening on port 3000”) })` In case of flexibility (port can change): `app.listen(port, () => { console.log(`Listening on port ${port}.`) })`
 To use this way of indicating the port, you have to define the port in your code, for example at the top: `const port = 3000`.
 Run your code from the terminal | Use the command `node index.js` to run your code.
 Check localhost in your browser | Go to your browser and type localhost:3000 as url. If all went well, you will see in your terminal the text you put for the listener (for example, Listening on port 3000).
