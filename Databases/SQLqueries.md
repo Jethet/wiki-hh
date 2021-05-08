@@ -24,45 +24,71 @@ select * from customers where id in (
 
 **SELECT**  
 Selecting all data from table:   
-`SELECT *`  
-`FROM *table_name*;`
+``` sql
+SELECT *  
+FROM *table_name*;
+```
 
 Selecting with field names:  
-`SELECT *column1*, *column2*, ...`  
-`FROM *table_name*;`
+``` sql
+SELECT *column1*, *column2*, ...  
+FROM *table_name*;
+```
 
 Selecting distinct values (only one value for each type, ignores duplicates):  
-`SELECT DISTINCT *column1*, *column2*, ...`  
-`FROM *table_name*;`
+``` sql
+SELECT DISTINCT *column1*, *column2*, ...  
+FROM *table_name*;
+```
 
 **SELECT COUNT**  
 *How many* records match? (e.g. how many items in a table)  
-`SELECT COUNT (*column1*)`  
-`FROM *table_name*;`  
+``` sql
+SELECT COUNT (*column1*)  
+FROM *table_name*;
+``` 
 or for all rows:  
-`SELECT COUNT (*)`  
-`FROM *table_name*;`  
+``` sql
+SELECT COUNT (*)
+FROM *table_name*;
+``` 
 
 Combine with **DISTINCT**:  
-`SELECT COUNT (DISTINCT *column*)`  
-`FROM *table_name*;`  
+``` sql
+SELECT COUNT (DISTINCT *column*) 
+FROM *table_name*;
+```
 
 **Combining fields for calculations**  
-`SELECT *column1* + *column2*`  
-`SELECT *column1* / 1.1;`  
+``` sql
+SELECT *column1* + *column2*
+SELECT *column1* / 1.1;
+``` 
 
 **WHERE to narrow down selection**  
-`SELECT *column1*, *column2*`  
-`FROM *table_name*`  
-`WHERE *condition*;`  
-Example: `SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;`  
-Example with Regex: `SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';`  
+``` sql
+SELECT *column1*, *column2*
+FROM *table_name*
+WHERE *condition*;
+```
+Example: 
+``` sql
+SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;
+```
+Example with Regex:  
+``` sql
+SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';
+```  
 
 **LOGICAL OPERATORS: AND, OR, NOT**  
 * Using AND with WHERE: all conditions must be true for a record to be selected  
-`WHERE *condition1* AND *condition2* AND *condition3* ...;`  
+``` sql
+WHERE *condition1* AND *condition2* AND *condition3* ...;
+```  
 * Using OR with WHERE: one of the conditions must be true for a record to be selected  
-`WHERE *condition1* OR *condition2* OR *condition3* ...;`  
+``` sql
+WHERE *condition1* OR *condition2* OR *condition3* ...;
+``` 
 * Using OR with WHERE: a record will be selected if the condition(s) is not true  
 `WHERE NOT *condition*;`  
 * Combining AND, OR and NOT with WHERE: *use parentheses to group for clarity!*  
