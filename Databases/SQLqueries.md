@@ -325,7 +325,11 @@ SELECT *
 FROM orders
 JOIN customer_details USING (customerid)
 ```
-(instead of using `JOIN customer_details ON customer_details.id = orders.customerid`)  
+(instead of using  
+``` sql
+JOIN customer_details ON customer_details.id = orders.customerid
+```
+) 
 
 **NATURAL**  
 NATURAL is shorthand for JOIN on a column that is the same in both tables.  
