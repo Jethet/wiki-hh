@@ -1,36 +1,35 @@
 ## HTML learning
 
 ### Various
-* comments that should be ignored in HTML code:
-   Use special tag to add notes that will be ignored:
+* for comments that should be ignored in HTML code, use a special tag to add notes that will be ignored:
     ``` html
     <!-- Note to self: xxx xxx -->
     ```
 * meta data is not rendered but used by the server (for example: description and
   keywords are giving information that will be used by Google)
 
-* Attributes: `key="value"` syntax, such as `class=""`, `id=""`, `src=""`, `style=""`. An id is unique in the context of a web page and cannot be duplicated. A class can appear multiple times and hold multiple values.
+* Attributes: `key="value"` syntax, such as `class=""`, `id=""`, `src=""`, `style=""`. An id is unique in the context of a web page and cannot be duplicated. A class can appear multiple times and hold multiple values. NB: React sometimes uses a different syntax.
 
 * `defer src` is used for faster path to a fast-loading page.
 
 
 ### Webpage structure
 * a doctype needs to be defined first in an HTML page: it tells the browser which version of HTML the page is using. The code is:
-``` html
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body></body>
-</html>
-```
+  ``` html
+  <!DOCTYPE html>
+  <html>
+    <head></head>
+    <body></body>
+  </html>
+  ```
 * head and body tags: an HTML page is split into two parts, head and body. The head contains important webpage information (title, stylesheet, script, font etc.). The head is the name of the website for search engines. The body contains the webpage content that is visible to the user. The code is:  
-``` html
-<head>
-  <title>THIS IS THE TITLE</title>
-</head>
-<body>
-</body>
-```
+  ``` html
+  <head>
+    <title>THIS IS THE TITLE</title>
+  </head>
+  <body>
+  </body>
+  ```
 * footer: whatever is coded between the `<footer></footer>` tags will be repeated for each page
 
 #### HEAD:
@@ -42,7 +41,10 @@
 ``` html
 <link rel="stylesheet" href="reset.css">
 ```
-
+* With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media attribute this can be applied only for a specified medium, for example 
+``` html
+<style media="print">.class-name {margin: 10px}</style>
+```
 * The media attribute allows loading different stylesheets depending on the device capabilities:
 ``` html
   <link href="file.css" media="screen" rel="stylesheet">
@@ -53,16 +55,11 @@
 <link rel="alternate" type="application/rss+xml" href="file.css"> 
 <link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">
 ```
-* With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media attribute this can be applied only for a specified medium, for example 
-``` html
-<style media="print">.some-css {}</style>
-```
 
 * With the base tag, a base URL is set for all relative URLs contained in the page, for example for favicon icons that are used:
 ``` html
 <base href="https://favicon.com/">
 ```  
-
 
 * **Meta tag:** The meta tag is very important, especially for SEO. A meta element has only the starting tag. The basic meta tag is the description that could be used by search engines to describe the page: 
 ``` html
