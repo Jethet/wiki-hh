@@ -33,62 +33,62 @@
 * footer: whatever is coded between the `<footer></footer>` tags will be repeated for each page
 
 #### HEAD:
-* In the head, the links to the css stylesheets should come first, above the title: 
-``` html
-<link rel="stylesheet" href="file.css">
-```  
+* In the head, the links to the css stylesheets should come above the title: 
+  ``` html
+  <link rel="stylesheet" href="file.css">
+  ```  
 * The styles.css link should be the last one you add. To start with a good layout without default values, include
-``` html
-<link rel="stylesheet" href="reset.css">
-```
+  ``` html
+  <link rel="stylesheet" href="reset.css">
+  ```
 * With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media attribute this can be applied only for a specified medium, for example 
-``` html
-<style media="print">.class-name {margin: 10px}</style>
-```
+  ``` html
+  <style media="print">.class-name {margin: 10px}</style>
+  ```
 * The media attribute allows loading different stylesheets depending on the device capabilities:
-``` html
-  <link href="file.css" media="screen" rel="stylesheet">
-  <link href="file.css" media="print" rel="stylesheet">
-```
+  ``` html
+    <link href="file.css" media="screen" rel="stylesheet">
+    <link href="file.css" media="print" rel="stylesheet">
+  ```
 * Other resources than stylesheets can be added, for example RSS feed:  
-``` html
-<link rel="alternate" type="application/rss+xml" href="file.css"> 
-<link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">
-```
+  ``` html
+  <link rel="alternate" type="application/rss+xml" href="file.css"> 
+  <link rel="icon" sizes="180X180" href="/assets/apple-touch-icon.png">
+  ```
 
 * With the base tag, a base URL is set for all relative URLs contained in the page, for example for favicon icons that are used:
-``` html
-<base href="https://favicon.com/">
-```  
+  ``` html
+  <base href="https://favicon.com/">
+  ```  
 
-* **Meta tag:** The meta tag is very important, especially for SEO. A meta element has only the starting tag. The basic meta tag is the description that could be used by search engines to describe the page: 
-``` html
-<meta name="description" content="Full explanation of healthy food">
-```
+* **Meta tag:** The meta tag is very important, especially for SEO. A meta element has the starting tag `<` and ends with `>`. The basic meta tag is the description that could be used by search engines to describe the page: 
+  ``` html
+  <meta name="description" content="Full explanation of healthy food">
+  ```
 * With the **charset** tag the page character encoding is set, usally utf-8: 
-``` html
-<meta charset="utf-8">
-```
+  ``` html
+  <meta charset="utf-8">
+  ```
 * With the **robots** tag the SEO bots are instructed to index a page: 
-``` html
-<meta name="robots" content="noindex">
-```
+  ``` html
+  <meta name="robots" content="noindex">
+  ```
  or if they should follow links:
- ``` html
- <meta name="robots" content="nofollow">
- ```
+  ``` html
+  <meta name="robots" content="nofollow">
+  ```
  * Combination is possible: 
- ``` html
- <meta name="robots" content="noindex, nofollow">
- ```
+  ``` html
+  <meta name="robots" content="noindex, nofollow">
+  ```
 * With **viewport** tag the browser is told to set the page width based on the device width: 
-``` html
-<meta name="viewport" content="width=device-width, initial-scale=1">
-```
+  ``` html
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  ```
 * With 
-``` html
-<meta http-equiv="refresh" content="3;url=http://flavicon.com/anotherpage">
-```
+  ``` html
+  <meta http-equiv="refresh" content="3;url=http://flavicon.com/anotherpage">
+  ```
 as meta tag, the browser is told to **wait** 3 seconds before directing to the other page.
 
 #### BODY:
@@ -150,13 +150,13 @@ indicates that the things it contains are not part of the regular flow of the se
 **lists**  
 `<ul>`: unordered list with bullets, and `<ol>`: ordered list with numbers before each item. ul and ol are used with list items `<li>`.  
 The code example is:
-``` html
-<ol>
-  <li>item 1</li>
-  <li>item 2</li>
-  <li>etc...</li>
-</ol>
-  ```
+  ``` html
+  <ol>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>etc...</li>
+  </ol>
+    ```
 
 `<pre></pre>` all that is within these tags is respected: in this way empty lines can be created, for example.
 
