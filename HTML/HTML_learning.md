@@ -73,11 +73,11 @@
   ``` html
   <meta name="robots" content="noindex">
   ```
- or if they should follow links:
+ * or if they should follow links:
   ``` html
   <meta name="robots" content="nofollow">
   ```
- * Combination is possible: 
+ * A combination is possible: 
   ``` html
   <meta name="robots" content="noindex, nofollow">
   ```
