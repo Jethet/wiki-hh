@@ -7,9 +7,9 @@ Your project needs to have a Git repository i.e. your code has to be tracked by 
 1. Log into Heroku
 1. Type `heroku create <your-app-name>` in the terminal
 1. Make notes of the name of the app that Heroku creates plus the https addresses
-1. Type `heroku git:remote -a <heroku-app-name>` in the terminal
-1. Type `git push heroku master` to push the code to Heroku
+1. Type `git push heroku master` or `git push heroku main` to push the code to Heroku (see comment above about using main or master)
 
+Type `heroku git:remote -a <heroku-app-name>` in the terminal if you want to add a different remote
 
 
 **Errors**  
