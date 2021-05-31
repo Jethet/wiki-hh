@@ -1,6 +1,6 @@
 ## Basic Markdown
 
-* non-breaking spaces that can serve as indent: macOS Alt plus space
+* non-breaking spaces that can serve as indent: macOS **Alt plus space**
 * 'hard' line break: add two spaces and return
 * italic text is surrounded by * or _
 * bold text is surrounded by ** or __  
