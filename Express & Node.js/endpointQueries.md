@@ -69,7 +69,7 @@ const productId = parseInt(req.params.id)
 ```
 Path parameters are usually set off with curly braces. With path parameters, **the order does matter**.
 
-To **delete an item in a database array:**
+To **delete an item in a database array:**  
 ``` javascript
 app.delete("/items/:id", (req, res) => {
   const itemId = parseInt(req.params.id);
