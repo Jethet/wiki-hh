@@ -57,3 +57,22 @@ module.exports = router;
 **res.end()**  
 `res.end()` will end the response process. This method actually comes from Node: response.end() method of http.ServerResponse.  
 It is used to quickly end the response without any data.  
+
+**Example code:**  
+File: router.js
+``` javascript
+const { Router } = require('express')
+const router = new Router()
+router.get('/my-route', (req, res) => {})
+router.post('/my-route', (req, res) => {})
+module.exports = router
+```
+File: index.js
+``` javascript
+const router = require('./router.js)
+app.use(router)
+```
+ or for /my-namespace/my-route ....
+``` javascript
+app.use('/my-namespace', router)
+```
