@@ -9,7 +9,7 @@ from a different server than your React app was initially loaded (see **terms-ac
 
 * Then in your server.js add:  
 ``` javascript
-var cors = require('cors')
+const cors = require('cors')
 // and
 app.use(cors())
 ```
