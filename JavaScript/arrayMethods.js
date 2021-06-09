@@ -29,6 +29,21 @@ const editedText = text.slice(0, -1) //'abcde'
 const text = 'abcdef'
 const editedText = text.slice(1) //'bcdef'
 
+// SPLICE
+// To delete an item in a database array called itemArray (a Node/Express server endpoint):
+app.delete("/items/:id", (req, res) => {
+  const itemId = parseInt(req.params.id);
+
+  const item = itemArray.find((item) => item.id === itemId);
+  if (item) {
+    const index = itemArray.findIndex((item) => item.itemId == itemId);
+    itemArray.splice(index, 1);
+    res.status(201).send({ success: true });
+  } else {
+    res.status(404).send("This item does not exist");
+  }
+});
+
 // REDUCE method: this method is different than other array methods because it is doing
 // some operations on the array and returns a combination of these operations
 // Reduce works like a for loop; in the example, the FIRST variable is where the price is
