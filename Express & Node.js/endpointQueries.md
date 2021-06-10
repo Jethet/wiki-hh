@@ -1,5 +1,7 @@
 ### Endpoints
 
+**Sequence matters:** the more specific endpoints asking for params, such as for /items/:id, have to come later than the more general ones otherwise the execution will happen there when you use a query such as /items/search
+
 **Endpoint query needs to be specific**  
 Example:  
 ``` javascript
