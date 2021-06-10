@@ -1,6 +1,6 @@
 ### Endpoints
 
-**Sequence matters:** the more specific endpoints asking for params, such as for /items/:id, have to come later than the more general ones otherwise the execution will happen there when you use a query such as /items/search
+**Sequence matters:** the more specific endpoints asking for params, such as for `/items/:id`, have to come AFTER the more general ones, otherwise the execution will happen there when you use a general query such as `/items/search`.
 
 **Endpoint query needs to be specific**  
 Example:  
@@ -86,3 +86,6 @@ app.delete("/items/:id", (req, res) => {
   }
 });
 ```
+
+**POST request including timestamp:**  
+With `item.timeSent = new Date()` in a post request, you will add the timestamp to each new item that is posted.
