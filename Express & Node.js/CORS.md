@@ -14,6 +14,17 @@ const cors = require('cors')
 app.use(cors())
 ```
 
+Example setting the origin URL:  
+``` javascript
+const cors = require('cors')
+
+const corsOptions = {
+  origin: "http://localhost:3000"
+}
+// enable CORS
+app.use(cors(corsOptions))
+```
+
 WEBSITE WITH EXAMPLES: https://expressjs.com/en/resources/middleware/cors.html
 
 # Cors error
