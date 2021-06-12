@@ -1,16 +1,35 @@
 **Jason Web Token (JST)**  
 A JST is given to a user who signs up or logs in to make sure the user can stay signed in, also when they go to a different part of the website. This used to be done with a **cookie**. Cookies are being abandoned for various reasons (storing and managing sessions is cumbersome, poor scalability, extra security needed, and problems with CORS). A JST does not create sessions.
 
-JSON is a data text format that is easy to access, and can be used in any programming language. A token is a string of data that can represent something, for example an identity. A JWT consists of claimes. What these claims are, depends on the use case. A JWT is a string made up of three parts, seperated by dots and serialized using **base64**. One part is the header that contains the **hashing algorithm that was used to generate the sign and the type of the token.
+JSON is a data text format that is easy to access, and can be used in any programming language. A token is a string of data that can represent something, for example an identity. A JWT consists of claimes. What these claims are, depends on the use case. A JWT is a string made up of three parts, seperated by dots and serialized using **base64**. One part is the header that contains the **hashing algorithm** that was used to generate the sign and the type of the token.
 
 No hash can be converted back to the original text. When this signature is sent back to the server, the server can verify that the client has not changed any details in the object.
 
-With JWT, a user registers with an app as usual and can log in with their credentials (username and password). Instead of creating a session and setting a cookie, the server checks the user's ID and 'signature', and will send a JST if all of that is correct. This gives the user authorisation to make authenticated requests. The token is useless after it expires. 
+With JWT, a user registers with an app as usual and can log in with their credentials (username and password). Instead of creating a session and setting a cookie, the server checks the user's ID and 'signature', and will send a JST if all of that is correct. This gives the user authorisation to make authenticated requests. The token is useless after it expires.
 
 A JWT is an **object** and is sent back as such, for example: ` res.status(201).send({ jwt: jwt})`
 
+**To generate a JWT:**
 
-**Example of hashing password and authenticate user**  
+```javascript
+// install and import jsonwebtoken
+const jsonwebtoken = require("jsonwebtoken")
+
+// take an id, calculate and return a signed JWT (a secret is needed for the signature)
+ function generateJWT(userId) {
+    const secret = "migracodeAuthJan2021"
+    const jwt = jsonwebtoken.sign({ id: userId }, secret)
+    return jwt
+
+// generate a JWT for this user's ID; function below
+  const jwt = generateJWT(newUser.id)
+
+  // return the JWT (= object) so the user can start to making authenticated requests
+  res.status(201).send({ jwt: jwt})
+```
+
+
+**Example of hashing password and authenticate user**
 
 ``` javascript
 const express = require("express");
@@ -50,6 +69,6 @@ router.post("/sign-up", async (req, res) => {
   fs.writeFileSync("./database/db.json", JSON.stringify(userDB));
   res.status(200).send(newUser);
 })
-```
+````
 
 **bcrypt is an npm library to hash passwords. bcrypt includes salt so the salt does not have to be stored separately**
