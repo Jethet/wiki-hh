@@ -5,9 +5,9 @@ JSON is a data text format that is easy to access, and can be used in any progra
 
 No hash can be converted back to the original text. When this signature is sent back to the server, the server can verify that the client has not changed any details in the object.
 
-With JWT, a user registers with an app as usual and can log in with their credentials (username and password). Instead of creating a session and setting a cookie, the server checks the user's ID and 'signature', and will send a JST if all of that is correct. This gives the user authorisation to do whatever they want (within the restrictions set). The token is useless after it expires. 
+With JWT, a user registers with an app as usual and can log in with their credentials (username and password). Instead of creating a session and setting a cookie, the server checks the user's ID and 'signature', and will send a JST if all of that is correct. This gives the user authorisation to make authenticated requests. The token is useless after it expires. 
 
-
+A JWT is an **object** and is sent back as such, for example: ` res.status(201).send({ jwt: jwt})`
 
 
 **Example of hashing password and authenticate user**  
