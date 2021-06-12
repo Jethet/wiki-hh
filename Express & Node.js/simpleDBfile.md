@@ -6,3 +6,5 @@ Example to set up a simple user database:
 * Create a new user with a POST request, for example name, email and password
 * add the new user to the userDB: `userDB.push(newUser)`
 * save the userDB array to the file db.json: `fs.writeFileSync("./db.json", JSON.stringify(userDB))`
+
+*see in file json.md in folder Databases for info on JSON.stringify*
