@@ -1,3 +1,15 @@
+**Jason Web Token (JST)**  
+A JST is given to a user who signs up or logs in to make sure the user can stay signed in, also when they go to a different part of the website. This used to be done with a **cookie**. Cookies are being abandoned for various reasons (storing and managing sessions is cumbersome, poor scalability, extra security needed, and problems with CORS). A JST does not create sessions.
+
+JSON is a data text format that is easy to access, and can be used in any programming language. A token is a string of data that can represent something, for example an identity. A JWT consists of claimes. What these claims are, depends on the use case. A JWT is a string made up of three parts, seperated by dots and serialized using **base64**. One part is the header that contains the **hashing algorithm that was used to generate the sign and the type of the token.
+
+No hash can be converted back to the original text. When this signature is sent back to the server, the server can verify that the client has not changed any details in the object.
+
+With JWT, a user registers with an app as usual and can log in with their credentials (username and password). Instead of creating a session and setting a cookie, the server will send a JST. This gives the user authorisation to do whatever they want with the server. The token is useless after it expires.
+
+
+
+
 **Example of hashing password and authenticate user**  
 
 ``` javascript
