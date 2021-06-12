@@ -5,7 +5,7 @@ JSON is a data text format that is easy to access, and can be used in any progra
 
 No hash can be converted back to the original text. When this signature is sent back to the server, the server can verify that the client has not changed any details in the object.
 
-With JWT, a user registers with an app as usual and can log in with their credentials (username and password). Instead of creating a session and setting a cookie, the server will send a JST. This gives the user authorisation to do whatever they want with the server. The token is useless after it expires.
+With JWT, a user registers with an app as usual and can log in with their credentials (username and password). Instead of creating a session and setting a cookie, the server checks the user's ID and 'signature', and will send a JST if all of that is correct. This gives the user authorisation to do whatever they want (within the restrictions set). The token is useless after it expires. 
 
 
 
@@ -51,3 +51,5 @@ router.post("/sign-up", async (req, res) => {
   res.status(200).send(newUser);
 })
 ```
+
+**bcrypt is an npm library to hash passwords. bcrypt includes salt so the salt does not have to be stored separately**
