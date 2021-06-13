@@ -1,4 +1,4 @@
-# Enabling CORS on an Express app
+## Enabling CORS on an Express app
 
 You have to install and enable CORS in order to allow your JSON to be loaded  
 from a different server than your React app was initially loaded (see **terms-acronyms.md** in folder *Various*).
@@ -32,9 +32,17 @@ app.use(cors({
 }))
 ```
 
+**Allowing cookies with CORS**  
+By default, cookies are blocked. To allow cookies, you have to pass in `credentials: "include"` in a request. Example:  
+``` javascript
+fetch("http://localhost:3000/data", { method: "PUT", credentials: "include" })
+.then(res => res.json())
+.then(data => console.log(data))
+```
+
 WEBSITE WITH EXAMPLES: https://expressjs.com/en/resources/middleware/cors.html
 
-# Cors error
+## Cors error
 
 This is a common problem when you try to send requests from one "origin" (the hostname  
 in the URL) to another. You need to configure the server to send some headers that tell  
