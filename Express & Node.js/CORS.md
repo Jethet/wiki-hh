@@ -24,16 +24,21 @@ const corsOptions = {
 app.use(cors(corsOptions))
 ```
 
+You can add **method restrictions** to cors, for example allowing only GET and POST request but not DELETE or PUT requests:
+``` javascript
+app.use(cors({
+  origin: "http://127.0.0.1:3000",
+  methods: ["GET", "POST"],
+}))
+```
+
 WEBSITE WITH EXAMPLES: https://expressjs.com/en/resources/middleware/cors.html
 
 # Cors error
 
 This is a common problem when you try to send requests from one "origin" (the hostname  
 in the URL) to another. You need to configure the server to send some headers that tell  
-the browser that it accepts requests from other places. So if your website is running at  
-https://example.com and you send a request to an API at https://my-api.com, the API must  
-respond with some headers to say "I accept requests from other origins", otherwise it will  
-be blocked in the browser
+the browser that it accepts requests from other places. So if your website is running at https://example.com and you send a request to an API at https://my-api.com, the API must respond with some headers to say "I accept requests from other origins", otherwise it will be blocked in the browser
 
 The main use case for CORS is this:
 * your API has some authentication (e.g. it uses cookies to identify which user made the request)
@@ -44,8 +49,8 @@ The main use case for CORS is this:
 If you want to restrict to a specific origin, you should write the full URL:  
 res.header('Access-Control-Allow-Origin', 'https://*name-of-domain-deployment*').  
 
-If your API has no authentication then you don't need to worry about limiting access.  
-Use "*" to allow CORS for all resources on your server.
+If your API has no authentication then you don't need to worry about limiting access. Use `origin: *` to allow CORS for all resources on your server. If there is an error still, you have to use `http://127.0.0.1:3000`.
+
 ``` javascript
   app.use(function(req, res, next) {
     // update to match the domain you will make the request from:
