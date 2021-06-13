@@ -29,6 +29,8 @@ const jsonwebtoken = require("jsonwebtoken")
 ```
 
 
+
+
 **Example of hashing password and authenticate user**
 
 ``` javascript

@@ -13,8 +13,7 @@ const cors = require('cors')
 // and
 app.use(cors())
 ```
-
-Example setting the origin URL:  
+* set the origin URL (example):  
 ``` javascript
 const cors = require('cors')
 

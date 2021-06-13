@@ -23,7 +23,7 @@ Add to file where pool is defined:
 require("dotenv").config();
 ```  
 
-Use environment variables as follows:  
+Use environment variables as follows (or with process.env.):  
 ``` js
 const pool = new Pool({
   user: PGUSER,
