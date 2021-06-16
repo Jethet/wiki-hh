@@ -1,7 +1,6 @@
-## .json data format
+## JSON data format
 
-JSON is a type of file for structuring data in a readable way. It is also a really popular format for sending data across the web.  
-JSON is a string representation of a Javascript object. 
+JSON is a type of file for structuring data in a readable way. It is also a really popular format for sending data across the web. A JSON file will have the .json ending (example.json). JSON is a string representation of a Javascript object. 
 
 The JSON object has two useful methods to deal with JSON-formatted content: parse and stringify.  
 * `JSON.parse()` takes a JSON string and transforms it into a JavaScript object.

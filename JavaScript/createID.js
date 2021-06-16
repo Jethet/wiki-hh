@@ -5,7 +5,6 @@ if (data.items.length > 0) {
   ID = 0;
 }
 
-
 // Alternative: function does not take any params, returns the next ID in the sequence
 
 function getNextId() {
