@@ -157,9 +157,9 @@ WHERE condition;
 **LIKE and ILIKE**  
 Match patterns with `LIKE`:  
 ``` sql
-SELECT *column1*, *column2*
-FROM *table_name*
-WHERE *column* LIKE *pattern*;
+SELECT column1, column2
+FROM table_name
+WHERE column LIKE pattern;
 ```
 
 **Using % you create a pattern:**  
@@ -204,8 +204,8 @@ It is possible to use `GROUP BY` and `ORDER BY` because these statements are eva
 **LIMIT**  
 To control the number of records returned by a search query:  
 ``` sql
-SELECT *column*
-FROM *table_name* 
+SELECT column
+FROM table_name 
 LIMIT *number*;
 ``` 
 
@@ -222,23 +222,23 @@ LIMIT 5;
 * If there is no value in a particular field, PostgreSQL will put NULL as the default.
 * **Search syntax**: there are two options to search for NULL values:  
 ``` sql
-SELECT *column_names * 
-FROM *table_name*  
-WHERE *column* IS NULL  
+SELECT column_names 
+FROM table_name  
+WHERE column IS NULL  
 
-SELECT *column_names * 
-FROM *table_name*  
-WHERE *column* IS NOT NULL  
+SELECT column_names 
+FROM table_name 
+WHERE column IS NOT NULL  
 ```
 
 **EXTRACT**
 With `EXTRACT FROM` you get a field from a date or time value:  
 ``` sql
-SELECT EXTRACT(YEAR FROM *date*)
+SELECT EXTRACT(YEAR FROM date)
 ```  
 or  
 ``` sql
-EXTRACT *field* FROM *condition*
+EXTRACT field FROM condition
 ```  
 Example:
 ``` sql  
