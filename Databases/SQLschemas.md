@@ -1,8 +1,8 @@
 ### SQL name syntax
 
 **Table names:** a tablename is the plural noun of the data in the table:  
-*customer data* becomes *customers*  
-*order data* becomes *orders*  
+`customer data` becomes `customers`  
+`order data` becomes `orders`  
 
 **ID fields:** an ID field name is the singular noun plus Id at the end:  
 the table *customers* has the field *customerId* for one customer  
