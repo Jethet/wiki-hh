@@ -5,19 +5,19 @@
 `order data` becomes `orders`  
 
 **ID fields:** an ID field name is the singular noun plus Id at the end:  
-the table *customers* has the field *customerId* for one customer  
-the table *orders* has the field *orderId* for one order  
+the table `customers` has the field `customerId` for one customer  
+the table `orders` has the field `orderId` for one order  
 
 #### SQL Datatypes
 
 **TEXT**  
 **single quotes! Postgres does not allow double quotes**
 `WHERE customername = 'Brown';`  
-*to escape a single quote, use double quote: `'O"Brien'`*  
+to escape a single quote, use double quote: `'O"Brien'`  
 TEXT is used for input of an unlimited number of characters  
 
 **VARCHAR**  
-Use VARCHAR(n) when you want PostgreSQL to check the length limit (n) of the input.  
+Use VARCHAR(n) when you want PostgreSQL to check the length limit (n) of the input
 
 **NUMERIC FIELDS (no quotes)**  
 Use =, >, >=, < and <=  
@@ -35,7 +35,7 @@ Boolean values TRUE and FALSE
 
 **Before creating a table:** use  
 ``` sql
-drop table if exists *table name(s)*;
+drop table if exists table name;
 ```
 
 **CREATE A TABLE**  
@@ -79,7 +79,7 @@ Data types:
 
 
 **TO REFERENCE TABLE KEYS**  
-This is called column-level foreign key constraint: `REFERENCES` *table name*(*table key*) The type also has to be added, for example  
+This is called column-level foreign key constraint: `REFERENCES table name (table key)` The type also has to be added, for example  
 ``` sql
 customer_id INT REFERENCES customers(id)
 ```

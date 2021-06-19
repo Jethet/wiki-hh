@@ -1,4 +1,4 @@
-## Using PostgreSQL
+## Using PostgreSQL with Mac and pgAdmin
 
 **Find configuration with pgAdmin**  
 * open pgAdmin
