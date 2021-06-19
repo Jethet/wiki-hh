@@ -26,26 +26,26 @@ select * from customers where id in (
 Selecting all data from table:   
 ``` sql
 SELECT *  
-FROM *table_name*;
+FROM table_name;
 ```
 
 Selecting with field names:  
 ``` sql
-SELECT *column1*, *column2*, ...  
-FROM *table_name*;
+SELECT column1, column2, ...  
+FROM table_name;
 ```
 
 Selecting distinct values (only one value for each type, ignores duplicates):  
 ``` sql
-SELECT DISTINCT *column1*, *column2*, ...  
-FROM *table_name*;
+SELECT DISTINCT column1, column2, ...  
+FROM table_name;
 ```
 
 **SELECT COUNT**  
-*How many* records match? (e.g. how many items in a table)  
+How many records match? (e.g. how many items in a table)  
 ``` sql
-SELECT COUNT (*column1*)  
-FROM *table_name*;
+SELECT COUNT (column1)  
+FROM table_name;
 ``` 
 or for all rows:  
 ``` sql
@@ -55,21 +55,21 @@ FROM *table_name*;
 
 Combine with **DISTINCT**:  
 ``` sql
-SELECT COUNT (DISTINCT *column*) 
-FROM *table_name*;
+SELECT COUNT (DISTINCT column) 
+FROM table_name;
 ```
 
 **Combining fields for calculations**  
 ``` sql
-SELECT *column1* + *column2*
-SELECT *column1* / 1.1;
+SELECT column1 + column2
+SELECT column1 / 1.1;
 ``` 
 
 **WHERE to narrow down selection**  
 ``` sql
-SELECT *column1*, *column2*
-FROM *table_name*
-WHERE *condition*;
+SELECT column1, column2
+FROM table_name
+WHERE condition;
 ```
 Example: 
 ``` sql
@@ -83,25 +83,25 @@ SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';
 **LOGICAL OPERATORS: AND, OR, NOT**  
 * Using AND with WHERE: all conditions must be true for a record to be selected  
 ``` sql
-WHERE *condition1* AND *condition2* AND *condition3* ...;
+WHERE condition1 AND condition2 AND condition3 ...;
 ```  
 * Using OR with WHERE: one of the conditions must be true for a record to be selected  
 ``` sql
-WHERE *condition1* OR *condition2* OR *condition3* ...;
+WHERE condition1 OR condition2 OR condition3 ...;
 ``` 
 * Using OR with WHERE: a record will be selected if the condition(s) is not true  
 ``` sql
-WHERE NOT *condition*;
+WHERE NOT condition;
 ```
 * Combining AND, OR and NOT with WHERE: *use parentheses to group for clarity!*  
 ``` sql
-WHERE (*condition1* AND *condition2*) OR *condition3*;
+WHERE (condition1 AND condition2) OR condition3;
 ```  
 
 **BETWEEN operator**  
 BETWEEN is a shortcut for >= xxx AND <= xxx  
 ``` sql
-WHERE *column* BETWEEN xxx AND xxx;
+WHERE column BETWEEN xxx AND xxx;
 ```
 
 **IN operator**  
@@ -119,39 +119,39 @@ This will select each id that is between 20 and 50.
 **ORDER BY**  
 To get ordered results, ascending or descending:  
 ``` sql
-SELECT DISTINCT *column*  
-FROM *tablename* 
-ORDER BY *column* ASC;
+SELECT DISTINCT column  
+FROM tablename 
+ORDER BY column ASC;
 ```
 
 Also here you can add more columns to search in:  
 ``` sql
-SELECT DISTINCT *column1*, *column2*
-FROM *tablename*
-ORDER BY *column1* ASC, *column2* ASC;
+SELECT DISTINCT column1, column2
+FROM tablename
+ORDER BY column1 ASC, column2 ASC;
 ```
 
 **MIN MAX**  
 Can be used for dates as well (earliest - latest).  
 ``` sql
-SELECT MAX *column*
-FROM *tablename*;
+SELECT MAX column
+FROM tablename;
 ```
 
 **AVG**  
 Calculate the average:  
 ``` sql
-SELECT AVG (*column*)
-FROM *tablename*
-WHERE *condition*;
+SELECT AVG (column)
+FROM tablename
+WHERE condition;
 ```
 
 **SUM**  
 Calculate the number/amount:  
 ``` sql
-SELECT SUM (*column*)
-FROM *tablename*
-WHERE *condition*;
+SELECT SUM (column)
+FROM tablename
+WHERE condition;
 ```
 
 **LIKE and ILIKE**  
