@@ -8,7 +8,7 @@
 the table `customers` has the field `customerId` for one customer  
 the table `orders` has the field `orderId` for one order  
 
-#### SQL Datatypes
+### SQL Datatypes
 
 **TEXT**  
 **single quotes! Postgres does not allow double quotes**
@@ -182,7 +182,7 @@ Syntax:
 UPDATE table SET column1 = value1, column2 = value2 WHERE condition;
 ```  
 The `WHERE` condition usually is an id value.  
-**=> always include a WHERE condition, otherwise all rows will be updated**
+**=> always include a WHERE condition, otherwise all rows will be updated**  
 Examples:  
 ``` sql
 UPDATE customers SET name='John Smith', country='UK' WHERE id=3;  
