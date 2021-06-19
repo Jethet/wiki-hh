@@ -206,7 +206,7 @@ To control the number of records returned by a search query:
 ``` sql
 SELECT column
 FROM table_name 
-LIMIT *number*;
+LIMIT number;
 ``` 
 
 Example:
