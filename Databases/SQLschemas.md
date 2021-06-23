@@ -214,6 +214,11 @@ To **delete a column** from a table, use
 ALTER TABLE table_name 
 DROP COLUMN column_name;
 ```
+In case of foreign keys, use `CASCADE`:  
+``` sql
+DROP TABLE table_name;
+CASCADE
+```
 
 ___
 

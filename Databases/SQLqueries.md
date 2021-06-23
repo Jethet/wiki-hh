@@ -12,6 +12,8 @@ ORDER BY              JOIN ON
 AS                            NULL  
 HAVING  
 
+**Alias**: with `select * from customers c` you set **c** as alias for the table customers. This means you can use **c.name** instead of customers.name, etc.
+
 **Subquery**  
 * A complex query can be split into one *outer query* and *subqueries*.
 * It is recommended to write each query and then nest them into the outer query (main query). Example:
