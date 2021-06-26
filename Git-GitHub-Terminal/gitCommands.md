@@ -41,6 +41,22 @@ Safely **merging** a branch: go onto the branch you want merge into, then merge 
 `git merge branch-name --no-commit --no-ff`  
 (the --no-commit does not automatically commit the branch after merging and --no-ff does not fast forward the branch you're merging into)
 
+### Renaming master branch to main
+Manually set upstream so that you do not get branch 'main' set up to track remote branch 'master' from 'origin'.
+
+If you have not pushed anything to GitHub yet and have no remote yet:  
+* Make sure master is up to date, then git checkout -b main
+* git push -u origin main
+* git branch -d master
+
+If you have a remote repo on GitHub already that has a master branch instead of main:  
+* Make sure master is up to date, then git checkout -b main
+* git push -u origin main
+* Log into github and set the default branch to main
+* git branch -d master
+* git push origin :master
+
+
 ### Solving conflicts
 This will check out their file if you know yours is incorrect:   `git checkout --theirs /path-to/conflict-file`  
 This will check out your file if you know the one in the repo is outdated:   `git checkout --ours /path-to/conflict-file`  
