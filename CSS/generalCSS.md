@@ -37,6 +37,8 @@ cursor hovers over it. In this way, different styling can be specified for diffe
 * `a:hover` is a link when the user mouses over it  
 * `a:active` is a link the moment it is clicked  
 
+Use `cursor: pointer` to display the little hand instead of the default cursor.
+
 The `text-decoration` property is mostly used to remove underlines from links:  
 ```
 a:link {
