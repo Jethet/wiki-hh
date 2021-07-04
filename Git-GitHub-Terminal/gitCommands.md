@@ -56,6 +56,10 @@ If you have a remote repo on GitHub already that has a master branch instead of 
 * git branch -d master
 * git push origin :master
 
+### Changing the remote
+In order to change the URL of a Git remote, you have to use the `git remote set-url` command and specify the name of the remote as well as the new remote URL to be changed, as follows:
+
+`git remote set-url <remote_name> <remote_url>`
 
 ### Solving conflicts
 This will check out their file if you know yours is incorrect:   `git checkout --theirs /path-to/conflict-file`  
