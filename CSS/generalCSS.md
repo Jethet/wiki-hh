@@ -119,6 +119,12 @@ of the container, the web page is usable on small screens: you can resize the pa
 and with `margin: 0 auto` the element will centre horizontally in the container: the remaining space will be split evenly between  
 the two margins.
 
+**max-width for paragraphs:** use characters (ch)  
+```css
+p {
+  max-width: 50ch;
+}
+
 **Floating elements**  
 A floating element stands as far to the left or right of its container element as possible. Other elements, such as paragraphs text  
 or Lists, wrap around the floating element. To ensure an element floats, its width must always be specified (otherwise it takes the  
