@@ -41,9 +41,21 @@ Delete a **remote** branch:   `git push origin --delete branch-name`
 Delete a **local** branch:   `git branch -d branch-name`  
 This pulls your branch from origin if you do not have it locally:   `git checkout -b branch-name origin/branch-name`
 
+**Merging** branches: this means integrating changes from another branch into your current local head branch. First, you switch to the branch that should receive the changes, and then you execute the merge command with the branch that contains the changes you want to merge. By merging, you combine all the changes on the branches in one commit.
+* git switch main
+* git merge new-feature 
+
 Safely **merging** a branch: go onto the branch you want merge into, then merge in your chosen branch using the following command:  
 `git merge branch-name --no-commit --no-ff`  
 (the --no-commit does not automatically commit the branch after merging and --no-ff does not fast forward the branch you're merging into).
+
+**Rebasing** branches: this is an alternative way to integrate changes from another branch in your current local head branch. There will be one continuous line of commits, no diverging into two branches.  
+* git switch branch-that-receives-changes
+* git rebase branch-that-contains-desired-changes
+The changes are added into the commit timeline as one history of commits.
+
+**Comparing** branches: `git log branch1..branch2` will show a log of the commits that are present in branch2 but not in branch1.  
+This can also be done between a local and a remote branch: `git log origin/main..main` will show the commits that are in the local main branch and not in the remote origin/main branch.
 
 ### Renaming master branch to main
 Manually set upstream so that you do not get branch 'main' set up to track remote branch 'master' from 'origin'.
