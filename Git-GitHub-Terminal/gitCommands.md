@@ -1,4 +1,5 @@
-## A list of the most commonly used git commands
+**head** branch is the name of the currently active or *checked out* branch: you are 'on' the head branch.  
+
 ### Cloning
 Navigate into the folder you want to clone your project into:  `cd /chosen-path/`. Then clone it:   `git clone project-URL`.  
 If you want to do a shallow clone (= only get the recent commit, ignore all history): `git clone project-URL --depth=1`
@@ -26,11 +27,13 @@ You can use `gitlog` to see past commits: the most recent one is at the top.
 
 ### Branches
 **Creating** a new branch: `git branch branch-name`  
-**Creating** a new branch and moving to that branch:   `git checkout -b branch-name`
-**Pushing** your branch to the repo for the first time:   `git push -u origin branch-name`
-**Switching** branch:   `git checkout branch-name`
-
+**Creating** a new branch and moving to that branch:   `git checkout -b branch-name`  
+**Pushing** your branch to the repo for the first time:   `git push -u origin branch-name`  
+**Switching** branch:   `git switch branch-name` (you can also use `git checkout`)  
 To see a **list** of all your branches:   `git branch`
+
+**git checkout**  
+`git checkout` command works with files, commits and branches. It can be used to view old commits. You can also restore a historic version of a file using `git checkout` plus a commit hash. This way, you can reset files to earlier revisions without touching the rest of the project.
 
 **Deleting** a branch: make sure you're not on the branch you want to delete otherwise it will not work: `git branch -d branch-name`
 Delete a **remote** branch:   `git push origin --delete branch-name`  
