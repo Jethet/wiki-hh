@@ -35,14 +35,14 @@ To see a **list** of all your branches:   `git branch`
 **git checkout**  
 `git checkout` command works with files, commits and branches. It can be used to view old commits. You can also restore a historic version of a file using `git checkout` plus a commit hash. This way, you can reset files to earlier revisions without touching the rest of the project.
 
-**Deleting** a branch: make sure you're not on the branch you want to delete otherwise it will not work: `git branch -d branch-name`
+**Deleting** a branch: make sure you're not on the branch you want to delete otherwise it will not work: `git branch -d branch-name`  
 Delete a **remote** branch:   `git push origin --delete branch-name`  
 Delete a **local** branch:   `git branch -d branch-name`  
 This pulls your branch from origin if you do not have it locally:   `git checkout -b branch-name origin/branch-name`
 
-Safely **merging** a branch: go onto the branch you want merge into, then merge in your chosen branch:  
+Safely **merging** a branch: go onto the branch you want merge into, then merge in your chosen branch using the following command:  
 `git merge branch-name --no-commit --no-ff`  
-(the --no-commit does not automatically commit the branch after merging and --no-ff does not fast forward the branch you're merging into)
+(the --no-commit does not automatically commit the branch after merging and --no-ff does not fast forward the branch you're merging into).
 
 ### Renaming master branch to main
 Manually set upstream so that you do not get branch 'main' set up to track remote branch 'master' from 'origin'.
