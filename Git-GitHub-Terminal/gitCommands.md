@@ -30,6 +30,7 @@ You can use `gitlog` to see past commits: the most recent one is at the top.
 **Creating** a new branch and moving to that branch:   `git checkout -b branch-name`  
 **Pushing** your branch to the repo for the first time:   `git push -u origin branch-name`  
 **Switching** branch:   `git switch branch-name` (you can also use `git checkout`)  
+**Renaming** a branch:   `git branch -m new-branch-name` (on the branch you want to rename)  
 To see a **list** of all your branches:   `git branch`
 
 **git checkout**  
