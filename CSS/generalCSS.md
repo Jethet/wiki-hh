@@ -188,13 +188,31 @@ Padding and margin can be set in a number of ways, following a specific order:
 * padding/margin: top right/left bottom `margin: 10px 20px 5px`
 * padding/margin: top/bottom right/left `padding: 5px 15px`
 * padding/margin: all `margin: 20px`
-You can also set one specific padding or margin, for example `padding-right: 10px` or `margin-top: 30px`.
+You can also set one specific padding or margin, for example `padding-right: 10px` or `margin-top: 30px`
 
 #### Images
-* Always optimise images beforehand (scaling etc.) to have small filesize.  
+* Always optimise images beforehand (scaling etc.) to have small filesize  
 * `vertical-align: top` will position all images in an image container at the top   
-* `object-fit: cover` will size the image to the given width.  
-
+* `object-fit: cover` will size the image to the given width  
+* put the image/photo in a wrapping div that has the position and layout for the image/photo
+Example:  
+``` css
+.profile-img{
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    width:220px;
+    height: 220px;
+}
+.profile-photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
 
 **Background images**  
 * Add to `body` or whatever element where the background should be: `background: url(path-to-image)`
