@@ -613,3 +613,7 @@ There is a hierarchy of content, for example:
 4 - author info
 ________________________________________________________________________________
 
+#### Emmet abbrev
+To get Lorem Ipsum dummy text to represent data on a page, type `lorem` and hit Enter. Emmet will generate 30 words of fake text that you can use as a filler in your project.
+
+The amount of words generated can be defined as well: `lorem10` will give you 10 words of random text.
