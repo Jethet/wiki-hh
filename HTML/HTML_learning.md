@@ -33,14 +33,16 @@
 * footer: whatever is coded between the `<footer></footer>` tags will be repeated for each page
 
 #### HEAD:
-* In the head, the links to the css stylesheets should come above the title: 
+* In the head, the links to the main css stylesheet (style.css) should come under the title: 
   ``` html
   <link rel="stylesheet" href="file.css">
   ```  
-* The styles.css link should be the last one you add. To start with a good layout without default values, include
+* The style.css link should be the last one you add. To start with a good layout without default values, you can include
   ``` html
   <link rel="stylesheet" href="reset.css">
   ```
+* All other (external) stylesheet links are placed above the `<title>` line.
+
 * With the `<style>` tag, a style can be added without loading an external stylesheet: `<style>.some-css {}</style>` (with media attribute this can be applied only for a specified medium, for example 
   ``` html
   <style media="print">.class-name {margin: 10px}</style>
@@ -156,7 +158,7 @@ The code example is:
     <li>item 2</li>
     <li>etc...</li>
   </ol>
-    ```
+  ```
 
 `<pre></pre>` all that is within these tags is respected: in this way empty lines can be created, for example.
 

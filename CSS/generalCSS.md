@@ -2,7 +2,7 @@
 CSS defines the visual representation of the content of a website, such as colour, margins, borders, backgrounds and positions in the  
 page. CSS is the presentation of the website, and HTML is the structure.
 
-**Comments in CSS:** use `/* place your comments here */`.
+**Comments in CSS:** use `/* */`. Example: /*place your comments here */.
 
 #### Reset styles to avoid browser inconsistencies
 ``` css
@@ -196,7 +196,7 @@ You can also set one specific padding or margin, for example `padding-right: 10p
 * `object-fit: cover` will size the image to the given width  
 * put the image/photo in a wrapping div that has the position and layout for the image/photo
 Example:  
-``` css
+```css
 .profile-img{
     position: relative;
     border-radius: 50%;
@@ -280,3 +280,9 @@ It is possible to apply a different style to every second item on a list with th
 The `not` selector finds all elements that do not match the specified description, for example, for a paragraph `p:not(....) {  }`.
 
 
+You can use the CSS `zoom` property to scale any HTML element. Use a value < 1 to make an element smaller or use a value > 1 to make the element bigger. For example, half the size with 0.5:
+```css
+div {
+  zoom: 0.5;
+}
+```

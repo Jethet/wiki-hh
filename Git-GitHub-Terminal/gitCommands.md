@@ -77,6 +77,12 @@ In order to change the URL of a Git remote, you have to use the `git remote set-
 
 `git remote set-url <remote_name> <remote_url>`
 
+### Renaming repository
+In the **remote repository**, go to Settings and change the name of the repo in the input field where you see the existing name; click Rename and the change has been made.  
+Now you have to change the name of the **local repository**: change the folder name in your local files or in VSC (right-click on the name and change it). After you have changed it, check if it is exactly the same as the name of the remote repo. Then go to the remote and copy the url of the remote repo. In your terminal, use the `git remote set-url` as follows:
+
+`git remote set-url origin <new_url>`
+
 ### Solving conflicts
 This will check out their file if you know yours is incorrect:   `git checkout --theirs /path-to/conflict-file`  
 This will check out your file if you know the one in the repo is outdated:   `git checkout --ours /path-to/conflict-file`  
