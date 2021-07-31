@@ -1,3 +1,5 @@
+## Terminal commands
+
 **`ctrl` + `c`** leave any terminal view you are stuck in (terminates most operations).  
 **`date`**  displays the current date and time.  
 **`diff`**  compares two files line by line (assumes there is text).  
@@ -82,3 +84,4 @@ To remove files with a specific pattern: never put a space after *, always immed
 **sudo** lets you carry out commands for which the account you are using  
 lacks authority.  
 You will be asked for an administrator’s password.  
+

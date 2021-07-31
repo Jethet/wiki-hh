@@ -1,6 +1,6 @@
 ## Forms
-The `<label for="">` should have exactly the same value as `<input name="">`:  
-*label* and *name* have to be the same.
+The `<label htmlFor="">` should have exactly the same value as `<input name="">`:  
+*label* and *name* have to be the same. The htmlFor (in regular JS: for) attribute specifies which form element a label is bound to.
 
 **Try run your app with npm start and get error:**  
 ENOENT: no such file or directory, open /Users/<username>/package.json  
