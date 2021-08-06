@@ -420,11 +420,14 @@ The content is defined using: `<td></td>`
 Example of a table with 3 rows with content, and 3 columns defined in the first row:
 ``` html
   <table>
-    <tr>
-      <th>Column 1</th>
-      <th>Column 2</th>
-      <th>Column 3</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+    </thead>
+    <tbody>
     <tr>
       <td>Row 1 column 1</td>
       <td>Row 1 column 2</td>
@@ -435,6 +438,7 @@ Example of a table with 3 rows with content, and 3 columns defined in the first 
       <td>Row 2 column 2</td>
       <td>Row 2 column 3</td>
     </tr>
+    </tbody>
   </table>
 ```
 (adding CSS padding and border for `th` and `td` makes the table look more like a proper table).  
