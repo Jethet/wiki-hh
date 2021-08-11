@@ -4,7 +4,7 @@ alt + shift + 2 = euro sign
 
 ### Mac shortcuts
 
-To show **invisible files** on Mac:nn
+To show **invisible files** on Mac:  
 In Finder, click on Macintosh HD and use Shift + Ctrl + .
 
 **Shortcuts to jump through code:**  
