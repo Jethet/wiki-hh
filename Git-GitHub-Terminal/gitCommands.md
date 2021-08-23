@@ -45,6 +45,8 @@ This pulls your branch from origin if you do not have it locally:   `git chec
 * git switch main
 * git merge new-feature 
 
+Merging is done most easily in the GitHub interface. The Current Change is the change in the branch you are currently on. The Incoming Change is the change that is in the branch you want to merge into. This could be the master branch, and if you want to merge your branch into master you will see the difference with the master branch as Incoming Change.
+
 Safely **merging** a branch: go onto the branch you want merge into, then merge in your chosen branch using the following command:  
 `git merge branch-name --no-commit --no-ff`  
 (the --no-commit does not automatically commit the branch after merging and --no-ff does not fast forward the branch you're merging into).

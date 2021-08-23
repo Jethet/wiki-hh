@@ -15,3 +15,6 @@ Bottom of Document: Fn+DownArrow
 
 **Shortcut to select same variable or element or name in entire code:**  
 fn + F2
+
+**Shortcut to get multiple cursors:**  
+put the cursor where you want to type, then keep Alt key down and put the cursor in the next place you want to type
