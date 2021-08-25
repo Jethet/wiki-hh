@@ -4,7 +4,7 @@ The 'fullscreen' means it blocks the page during the time the spinner runs: the 
 
 Website for [free spinners:](https://icons8.com/preloaders/).
 
-**HTML** (this spinner is similar to the iPhone spinner)  
+**HTML** (this spinner is similar to the iPhone spinner, see spinner gif files)  
 ```html
 <div id="spinner-back"></div>
   <div id="spinner-front">
