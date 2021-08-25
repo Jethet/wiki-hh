@@ -48,3 +48,43 @@
   overflow: auto;
   background-attachment: fixed;
 }
+
+/* Example to keep the footer at the bottom of the page: Set the bottom edge of the <div>
+ element to 10px above the bottom edge of its nearest parent element with some positioning: */
+
+div.absolute {
+  position: absolute;
+  bottom: 10px;
+  width: 50%;
+  border: 3px solid #8AC007;
+} 
+
+/* In the Chat App I used the following: adjust the html and body as well as the footer*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+/* The JS to place new chats under the previous ones and have these move up: 
+
+const newMessage = chatTemplate.children[0];
+chatBody.append(newMessage);
+
+// make sure bottom messages and input field remain visible
+newMessage.scrollIntoView();
+
+*/
