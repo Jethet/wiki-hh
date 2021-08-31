@@ -1,5 +1,8 @@
 ## Basic Markdown
 
+**Markdown in VSC:**  
+You can open a Markdown file and work with it in VSC. To switch between views, press `⇧⌘V `in the editor. You can view the preview side-by-side (⌘K V) with the file you are editing and see changes reflected in real-time as you edit.
+
 * non-breaking spaces that can serve as indent: macOS **Alt plus space**
 * 'hard' line break: add two spaces and return
 * italic text is surrounded by * or _
