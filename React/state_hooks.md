@@ -10,10 +10,12 @@
 * Hooks receive props from App.js or components.
 
 ### useEffect hook
-* The useEffect hook is a special hook that runs a function: `useEffect(() => { ... })`
-* By default, the useEffect hook runs on **every re-render**.
-* useEffect can be **configured to run under a specific condition**, for example when a **component mounts** or **if a variable changes**.
-* A second argument can be added to the useEffect function, called the **dependency array**. If the useEffect function has to run only when the component loads for the first time, an empty dependency array is added: `useEffect(() => { .... }, [])`. This can be used to load data when the component loads, for example from an API.
+* The useEffect hook is a special hook that runs a function: `useEffect(() => { ... }, [<dependencies>])`
+* By default, the useEffect hook runs on **every re-render** when a state variable changes.
+* A second argument can be added to the useEffect function, called the **dependency array**. If the useEffect function has to run only once, for example when the component loads for the first time, an empty dependency array is added: `useEffect(() => { .... }, [])`. This can be used to load data when the component loads, for example from an API.
+* useEffect can be **configured to run under a specific condition**, for example when a **component mounts** or **if a variable changes**. The variable is **watched** by useEffect if it is added as a dependency, and useEffect will run again when the variable changes.
+
+You can use the useEffect hook as many times as needed.
 
 
 #### Destructuring
