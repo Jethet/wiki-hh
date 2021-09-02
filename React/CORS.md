@@ -32,7 +32,7 @@ res.header('Access-Control-Allow-Origin', 'https://*name-of-domain-deployment*')
 
 If your API has no authentication then you don't need to worry about limiting access.  
 Use "*" to allow CORS for all resources on your server.
-```
+```js
   app.use(function(req, res, next) {
     // update to match the domain you will make the request from:
     res.header("Access-Control-Allow-Origin", "*"); 
