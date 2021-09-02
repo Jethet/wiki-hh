@@ -4,4 +4,6 @@ Eslint error in useEffect() about missing dependencies can be corrected by addin
 `// eslint-disable-line react-hooks/exhaustive-deps`
 
 Example from Memory Crunch game:  
-`![eslintError](/wiki-images/eslintError.png)`
+
+<img src="eslintError.png" width="500" />
+
