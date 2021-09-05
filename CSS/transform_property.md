@@ -49,12 +49,12 @@ This example moves the element 50 pixels to the right, and 100 pixels down from 
     }
   ```
   
-  * **skewX()**: This method **skews an element along the X-axis** by the given angle. This example skews the element 20 degrees along the X-axis:  
-  ```css
-    div {
-      transform: skewX(20deg);
-    }
-  ```
+* **skewX()**: This method **skews an element along the X-axis** by the given angle. This example skews the element 20 degrees along the X-axis:  
+```css
+  div {
+    transform: skewX(20deg);
+  }
+```
 
 * **skewY()**: This method **skews an element along the Y-axis** by the given angle. This example skews the element 20 degrees along the Y-axis:  
   ```css
