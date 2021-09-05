@@ -12,7 +12,12 @@ With the **CSS transform property** you can use the following transformation met
       }
     ```  
 
-* **rotate()**
+* **rotate()**: The rotate() method rotates an element clockwise or counter-clockwise according to a given degree. Using negative values will rotate the element counter-clockwise. The following example rotates the <div> element clockwise with 20 degrees:
+    ```css
+    div {
+      transform: rotate(20deg);
+    }
+    ```
 
 * **scaleX()**
 
