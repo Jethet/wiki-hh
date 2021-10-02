@@ -25,3 +25,10 @@ let listItemA = document.createElement("li")
 listItemA.textContent = "This is the first item"
 unorderedList.appendChild(listItemA)
 ```
+
+**Style property to change inline CSS styles:**  
+Using the `style` property you can change the CSS of elements.
+
+First grab the element using the `document.getElementById()` or `document.querySelector()` methods. For example:  
+`const headerA = document.querySelector("h1")`  
+With `headerA.style.color = "blue"` you can directly access the color of the element.
