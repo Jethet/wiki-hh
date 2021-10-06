@@ -35,7 +35,7 @@ myPromise
 ```
 
 **With async-await promises get easier**  
-The `async` function using the `await` keyword make asynchronous code easier to write and read.
+The `async` function using the `await` keyword make asynchronous code easier to write and read. `await` eliminates the need to use callbacks in .then() and .catch(). It also ensures all promises that are returned in the async function are synchronised: they 'wait' for each other.
 
 `async` is put in front of a function declaration: this turns the function into an asynchronous function that can be used with the `await` keyword to invoke asynchronous code. Example:
 ```js
@@ -78,6 +78,41 @@ This function is fetching a URL and logging the response as text.
     }
   }
   ```
+  The latter can also be done with an **arrow function**:
+  ```js
+    const myURL = async (url) => {
+      try {
+        const response = await fetch(url)
+        console.log(await response.text())
+      }
+      catch (error) {
+        console.log("Fetch failed", error)
+      }
+    }
+    ```
+
+**Executing various function calls**
+Using `await` you can declare async functions after each other:  
+```js
+async function printData() {
+  try {
+    await getFirstSection("TextA")
+    await getSecondSection("TextB") // will run AFTER getFirstSection has finished
+    await getThirdSection("TextC")  // will run AFTER getSecondSection has finished
+  }
+  catch (error => console.log(error))
+}
+```
+This means the execution of these three functions is synchronous. Async/await makes it possible to write asynchronous code that still looks and feels synchronous.
+
+You can do this without try/catch, using **Promise.all**:  
+```js
+async function printData() {
+  const [text1, text2, text3] = await Promise.all[(getFirstSection(), getSecondSection(), getThirdSection()])
+  const allTexts = text1.concat(text2, text3)
+  console.log(allTexts)
+}
+```
 
 ---
 
@@ -147,3 +182,6 @@ The error object will give a detailed error message of where in the code the err
       .catch ((error) => console.log(error)
       )
   ```
+
+**throw**  
+`throw` is used to throw (= generate) an error: this means an error is caught by the `catch` statement. The execution stops and a custom error message is displayed. This is also called "throwing an exception" because it allows you to create a custom error message. This message can be a string, a number, a boolean or an object.
