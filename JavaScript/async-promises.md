@@ -79,3 +79,71 @@ This function is fetching a URL and logging the response as text.
   }
   ```
 
+---
+
+**Response methods**  
+The most used ones:
+* `response.json()` returns a promise that resolves with the result of parsing the response body text as JSON
+* `response.text()` returns a promise that resolves with a text representation of the response body
+* `response.redirect()` creates a new response with a different URL
+* `response.error()` returns a new Response object associated with a network error
+* `response.blob()` Returns a promise that resolves with a Blob (a file-like object of immutable, raw data, not necessarily in a JavaScript-native format) representation of the response body
+
+**Response properties (read only)**  
+* `response.body` a ReadableStream (byte data) of the body contents
+* `response.bodyUsed` boolean value that declares if the body has been used in a response yet
+* `response.headers` the Headers object associated with the response
+* `response.ok` boolean indicating if the response was successful (range 200–299) or not
+* `response.redirected` indicates if the response is the result of a redirect (i.e. the URL list has more than one entry).
+* `response.status` status code of the response (200 for a success)
+* `response.statusText` status message corresponding to the status code (e.g. OK for 200)
+* `response.typ` type of the response (e.g., basic, cors)
+* `response.url` the URL of the response.
+
+
+---
+
+**Error handling**  
+* Option 1: use synchronous structure with `try ... catch`  
+  ```js
+    async function myFetchRequest(url) {
+      try {
+        let myResponse = await fetch("holiday.jpg")
+
+        if (!response.ok) {
+          throw new Error(`HTTP error, status: ${response.status}`)
+        }
+      
+        let myBlob = await response.blob()
+        let objectURL = URL.createObjectURL(myBlob)
+        let image = document.createElement("img")
+        image.src = objectURL
+        document.body.appendChild(image)
+      }
+      catch (error) {
+        console.log(error)
+      }
+    }
+    ```
+The error object will give a detailed error message of where in the code the error was thrown.
+
+* Option 2: chain a .catch code block
+  ```js
+    async function myFetchRequest(url) {
+      let response = await fetch("holiday.jpg")
+      if (!response.ok) {
+        throw new Error(`HTTP error, status: ${response.status}`)
+      }
+      return await response.blob()
+    }
+
+    myFetch()
+      .then((blob) => {
+        let objectURL = URL.createObjectURL(myBlob)
+        let image = document.createElement("img")
+        image.src = objectURL
+        document.body.appendChild(image)
+      }) 
+      .catch ((error) => console.log(error)
+      )
+  ```
