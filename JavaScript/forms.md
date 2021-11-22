@@ -19,3 +19,13 @@ The name attribute of a form field determines the way its value will be identifi
   // → true
 </script>
 ```
+
+Use `reset()` to clear fields:
+```js
+const resetForm = () => {
+  document.getElementById("form").reset();
+  username.style.border = "";
+  email.style.border = "";
+  password.style.border = "";
+};
+```
