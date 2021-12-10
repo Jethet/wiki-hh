@@ -20,7 +20,7 @@ The name attribute of a form field determines the way its value will be identifi
 </script>
 ```
 
-Use `reset()` to clear fields:
+Use `reset()` to clear fields (in this example also coloured borders are reset):
 ```js
 const resetForm = () => {
   document.getElementById("form").reset();
