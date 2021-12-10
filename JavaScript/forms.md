@@ -32,8 +32,23 @@ const resetForm = () => {
 
 ### Submitting a form in HTML
 
+There are two main ways to submit a form:
+* click <input type="submit"> or <input type="image">.
+* press Enter on an input field.
+
+Both actions lead to a submit event on the form. The handler can check the data, and if there are errors, show them and call event.preventDefault(), then the form won’t be sent to the server.
+
+The `submit` event triggers when the form is submitted, it is usually used to validate the form before sending it to the server or to abort the submission and process it in JavaScript.
+
+The method `form.submit()` allows to initiate **form-sending from JavaScript**. We can use it to dynamically create and send our own forms to server. Using `submit()` is the same as clicking a submit button:
+```js
+document.getElementById("myForm").submit(); 
+```
+
+### Accessing form elements
+
 ```html
-<form action="example/submit.html">
+<form action="">
   Name: <input type="text" name="name"><br>
   Password: <input type="password" name="password"><br>
   <button type="submit">Log in</button>
