@@ -152,10 +152,6 @@ it (the container), the image may overflow outside of its container. This can be
 
 **Z-index:** the z-index controls how content overlaps. The element with the highest z-index appears on top.
 
-### Media queries and responsive design
-By using media queries it is possible to make a design that responds to the device and the browser used. There are various sizes  
-of device viewports. Use `@media screen and (min-width: xxxpx)` and `@media screen and (max-width: xxxpx)` for this, for example  
-to move a menu to the top if the browser is too small to have the menu as sidebar.
 
 **Text shadow** adds a drop shadow and is formatted as follows: text-shadow: horizontal-shadow vertical-shadow blur color  
 * `horizontal-shadow`: length of shadow along x-axis
