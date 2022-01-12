@@ -80,3 +80,7 @@ rdp→ 	empty defaultProps declaration
 con→ 	class default constructor with props
 conc→ 	class default constructor with props and context
 est→ 	empty state object
+
+**Get rid of React logo in tab**  
+Delete all favicons and mentions of favicons in the HTML file.  
+Then delete browser history.
