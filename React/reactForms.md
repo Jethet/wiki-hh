@@ -34,3 +34,12 @@ const handleChange = (e) => {
   });
 };
 ```
+
+Websites:
+https://javascript.info/formdata
+https://javascript.info/forms-submit
+https://javascript.info/events-change-input
+https://ibaslogic.com/simple-guide-to-react-form/
+
+Storage with JSON:
+https://www.bitnative.com/2020/07/06/four-ways-to-fetch-data-in-react/
