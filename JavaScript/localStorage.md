@@ -1,0 +1,15 @@
+## Local storage
+
+**create entries** with the setItem() method. The setItem() method takes two arguments, the key and corresponding value:
+```js
+let key = 'Item 1';
+localStorage.setItem(key, 'Value');
+```
+ 
+**read entries** with the getItem() method. The getItem() method takes one argument which must be the key. This function will return the corresponding value as a string:
+`let myItem = localStorage.getItem(key)`
+This code sets myItem equal to 'Value', which is the corresponding value for key.
+
+**updating entries** also with the setItem() method. Again, it takes two arguments: the key argument will be an existing key, and the value argument will be a new value:
+`localStorage.setItem(key, 'New Value')`  
+Now, the localStorage value for key is 'New Value' instead of 'Value'.

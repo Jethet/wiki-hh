@@ -82,5 +82,5 @@ conc→ 	class default constructor with props and context
 est→ 	empty state object
 
 **Get rid of React logo in tab**  
-Delete all favicons and mentions of favicons in the HTML file.  
+Delete all icons and favicons, and delete mentions of favicons in the HTML file.  
 Then delete browser history.
