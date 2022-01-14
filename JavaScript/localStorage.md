@@ -1,6 +1,7 @@
 ## Local storage
+Web storage is possible with localStorage: you can save key/value pairs in the browser. The data survives a page refresh and even a full browser restart. It is stored in the browser you are using and not available if you switch browsers. Most browsers allow 2 megabytes of data or more. 
 
-### Imortant: local storage can only store strings
+### Important: local storage can only store strings
 To work around this, use JSON methods. To **store** objects or arrays as values in localStorage, use `JSON.stringify()` to convert them into strings. When creating or updating key/value pairs in localStorage, use `JSON.stringify()` with the object or array as the argument:
 ```js
 let myObj = { name: 'Skip', breed: 'Labrador' };
@@ -65,7 +66,7 @@ for (let i = 0; i < localStorage.length; i++){
   // ...
 }
 ```
-2. The `key()` method takes an integer as an argument and returns the corresponding key. With a `for` loop, pass `i` in as the integer for `key()`:
+2. With `key(index)` you get access to items by index. The `key()` method takes an integer as an argument and returns the corresponding key. With a `for` loop, pass `i` in as the integer for `key()`:
 ```js
 for (let i = 0; i < localStorage.length; i++){
   let key = localStorage.key(i);
