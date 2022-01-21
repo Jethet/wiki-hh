@@ -87,3 +87,5 @@ for (let i = 0; i < localStorage.length; i++){
   console.log(key, value);
 }
 ```
+**Delete all local storage in the browser terminal**  
+Go to the Storage tab in the browser terminal, click on Local Storage and then right-click on the *localhost* URL. You will see the option 'Delete' pop up. When you click that, all data is removed from local storage.
