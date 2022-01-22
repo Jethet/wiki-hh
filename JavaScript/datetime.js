@@ -62,3 +62,18 @@ function currentTime() {
 }
 
 currentTime()
+
+// different formats:
+let o = new Intl.DateTimeFormat("es" , {
+  timeStyle: "short"
+});
+console.log(o.format(Date.now())); // 17:20
+
+let x = new Intl.DateTimeFormat("es" , {
+  dateStyle: "short", timeStyle: "short"
+});
+console.log(x.format(Date.now()))  // 22/1/22 17:20
+
+let z = new Date().toLocaleString("nl")
+console.log(z);   // 22-1-2022 17:20:15
+
