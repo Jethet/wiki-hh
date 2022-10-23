@@ -26,6 +26,8 @@ Instead of iterating from left to right over items in a string or list, the rang
 * start = value of start parameter (or 0 if no parameter is given)
 * stop = the value of the stop parameter
 * step = value of the step parameter (or 1 if no parameter is given)
+
+When the user call range() with one argument, the user will get a series of numbers that **starts at 0** and includes every whole number up to, **but not including**, the number that the user has provided as the stop.
 ```py
 for i in range(5)
   print i  #returns 0, 1, 2, 3, 4
