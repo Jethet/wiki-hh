@@ -1,6 +1,7 @@
 ## HTML learning
 
 ### Various
+* set up a new HTML file with shortcut **! + tab**
 * for comments that should be ignored in HTML code, use a special tag to add notes that will be ignored:
     ``` html
     <!-- Note to self: xxx xxx -->
