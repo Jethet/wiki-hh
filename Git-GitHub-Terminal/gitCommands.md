@@ -124,7 +124,7 @@ hint: See "git help submodule" for more information.
 ```  
 
 
-###Git configuration
+### Git configuration
 Git configuration variables can be stored at **three different levels**. Each level overrides values at the previous level.
 
 1. **System level** (applied to every user on the system and all their repositories)
@@ -142,11 +142,11 @@ Git configuration variables can be stored at **three different levels**. Each le
 * to set: `git config --local core.ignorecase true' (`--local` optional)
 * to edit repository config file: `git config --edit --local` (`--local` optional)
 
-####How do I view all settings?
+#### How do I view all settings?
 * Run `git config --list` shows **system**, **global**, and (if inside a repository) **local** configs
 * Run `git config --list --show-origin` shows the origin file of each config item
 
-####How do I read one particular configuration?
+#### How do I read one particular configuration?
 * Run `git config user.name` to get `user.name`, for example.
 * You may also specify options `--system`, `--global`, `--local` to read that value at a particular level.
 
