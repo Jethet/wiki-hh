@@ -155,5 +155,5 @@ Git configuration variables can be stored at **three different levels**. Each le
 Type `^X` (stands for Ctrl X)
 
 **Exit VIM in terminal**  
-Type `:qa`  and press <Enter>
+Type `:qa` and press Enter
 

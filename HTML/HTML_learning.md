@@ -1,7 +1,7 @@
 ## HTML learning
 
 ### Various
-* set up a new HTML file with shortcut **! + tab**
+* set up a new HTML file with shortcut **! + tab** (HTML boilerplate)
 * for comments that should be ignored in HTML code, use a special tag to add notes that will be ignored:
     ``` html
     <!-- Note to self: xxx xxx -->
@@ -115,8 +115,7 @@ Elements have an opening and a closing tag, plus content. All the following are 
 
 **heading**  
 There are 6 sizes for headings. The code is: `<h1></h1>` (usually only 1 per page: the page title), `<h2></h2>` etc.  
-`<h1>` defines the largest (= most important) heading and `<h6>` the smallest. SEO engines recognise headings. Headings  
-are block elements and cannot contain other elements.
+`<h1>` defines the largest (= most important) heading and `<h6>` the smallest. The headings should be used for hierarchy in importance of sections. They should not be used because of size (a heading size can be determined with CSS). SEO engines recognise headings. Headings are block elements and cannot contain other elements.
 
 **paragraph**  
 Use `<p>` to put content into paragraphs. It will break up your text and make it easier to read for the user. Code  
@@ -227,8 +226,7 @@ and mailto links is the content defined in the href attribute. Code:
 `<a href="mailto:social&codebar.io?subject=I%20love%20owls%20::%20codebar">Email us</a>`  
 Note: spaces in the subject text are replaced by %20.
 
-* **Twitter link:** a *share-on-Twitter* link can be added as follows:  
-`<a href="https://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on Twitter</a>`
+* **Link to top:** a link to the top of the webpage can be added by using `<a href="#">Jump to top</a>`
 
 * **target** is an anchor tag attribute that specifies where to open the link and the value "_blank" specifies to  
 open the link in a new tab: `<a target="_blank" href="http://freecodecamp.org">Freecodecamp.org</a>`
