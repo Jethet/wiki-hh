@@ -7,6 +7,8 @@ If you want to do a shallow clone (= only get the recent commit, ignore all hist
 ### Checking git status
 Which files have changed, which branch is git using, etc.:   `git status`  
 Show a log of your recent commits:   `git log`
+Show log with one line of commit messages: `git log --oneline`
+Show log with one line of commit messages in reversed order (first commit on top): `git log --oneline --reverse`
 
 ### Adding/committing and pushing
 ```
