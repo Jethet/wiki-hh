@@ -1,19 +1,9 @@
 ### General CSS info
-CSS defines the visual representation of the content of a website, such as colour, margins, borders, backgrounds and positions in the  
-page. CSS is the presentation of the website, and HTML is the structure.
+CSS defines the visual representation of the content of a website, such as colour, margins, borders, backgrounds and positions in the page. CSS is the presentation of the website, and HTML is the structure.
 
 **Comments in CSS:** use `/* */`. Example: /*place your comments here */.
 
-#### Reset styles to avoid browser inconsistencies
-``` css
-html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-```
+#### Reset styles to avoid browser inconsistencies: see file totalCSSreset.css
 
 #### Selector, property and value in CSS
 The selector is the part of a CSS rule that determines which HTML elements the rule applies to:
@@ -173,6 +163,33 @@ With **EM** (em = ephemeral unit) used for font-size, the font is kept relative 
 These elements have a content that is not affected by the current document's styles. The position of the replaced element can be  
 affected using CSS, but not the contents of the replaced element itself. The only other impact CSS can have on a replaced  
 element is that there are properties which support controlling the positioning of the element's content within its box.
+
+#### Fonts
+There are **nine web-safe fonts** (i.e. fonts installed on almost all computers):
+* Arial
+* Arial Black
+* Comic Sans MS
+* Courier New
+* Georgia
+* Impact
+* Times New Roman
+* Trebuchet MS
+* Verdana
+
+By defining multiple values for `font-family` the browser will look for the first value and use it. When not available, it will use the following. It is good practice to use a generic font family (like `sans-serif`) as the last value.
+
+A more original font can be used if included in the webpage itself using Google fonts, Open Font Library (fontlibrary.org), etc.
+
+**`font` property** can be used to group several font properties:
+* `font-style`
+* `font-variant`
+* `font-weight`
+* `font-size`
+* `line-height`
+* `font-family`
+Example: ```css
+body {font: italic small-caps bold 16px/1.5 Arial, sans-serif}```
+This order and the slash are obligatory, but only `font-size` and `font-family` are mandatory.
 
 #### Padding and margin
 
