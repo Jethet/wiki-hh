@@ -20,8 +20,7 @@ body {
 `body` `h1` `a` `p` `img` etc. can be used as *element selectors*. The CSS style is ensured for all elements of that type.
 
 **Pseudo class:**  
-A pseudo class is a keyword added to selectors to specify a special state, for example `:hover` to turn a button blue when the  
-cursor hovers over it. In this way, different styling can be specified for different states of a link `<a>`:  
+A pseudo class is a keyword added to selectors to specify a special state, for example `:hover` to turn a button blue when the cursor hovers over it. In this way, different styling can be specified for different states of a link `<a>`:  
 * `a:link` is a normal, unvisited link  
 * `a:visited` is a link the user has visited  
 * `a:hover` is a link when the user mouses over it  
@@ -53,30 +52,23 @@ content. It means the box will become bigger when padding and border are added. 
 `box-sizing: initial` sets the box-sizing to the default value  
 `box-sizing: inherit` sets the box-sizing to the parent's value  
 
-With `box-sizing: border-box` the padding and border no longer increase the width of a box. This is a very recent technique, and it  
-should be used together with the `-webkit` and `-moz` prefix to be used in specific browsers, as follows:  
+With `box-sizing: border-box` the padding and border no longer increase the width of a box. This is a very recent technique, and it should be used together with the `-webkit` and `-moz` prefix to be used in specific browsers, as follows:  
 ``` css
 -webkit-box-sizing: border-box;
    -mox-box-sizing: border-box;
         box-sizing: border-box;
 ```
 
-**Percent width**: percent is a measurement unit relative to the containing box. It can ensure that an image is always 50%  
-the width of its container, for example. With 'min-width' and 'max-width' the size of the image can be limited.
+**Percent width**: percent is a measurement unit relative to the containing box. It can ensure that an image is always 50% the width of its container, for example. With 'min-width' and 'max-width' the size of the image can be limited.
 
-* Default position HTML elements is `<div class="static">`. `static` means: not positioned in any specific way within the normal flow  
-of the page. If not static, then an element is 'positioned'.  
-* `<div class="relative">`: when an element has position **relative** it is no longer in the normal flow and can be moved to top, bottom,  
-right or left.
-* With a **fixed** position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled, the element always appears to be at the same place. The top/right/bottom/left properties can be used. A fixed element does  
-not leave a gap in the page where it would normally have been located.
-* **absolute** positioning means the element behaves as if fixed, except relative to the nearest positional ancestor (or else the document  
-body). An element of `<div class="relative">` can have an absolute-positioned 'child': `<div class="absolute">`.
+* Default position HTML elements is `<div class="static">`. `static` means: not positioned in any specific way within the normal flow of the page. If not static, then an element is 'positioned'.  
+* `<div class="relative">`: when an element has position **relative** it is no longer in the normal flow and can be moved to top, bottom, right or left.
+* With a **fixed** position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled, the element always appears to be at the same place. The top/right/bottom/left properties can be used. A fixed element does not leave a gap in the page where it would normally have been located.
+* **absolute** positioning means the element behaves as if fixed, except relative to the nearest positional ancestor (or else the document body). An element of `<div class="relative">` can have an absolute-positioned 'child': `<div class="absolute">`.
 
 
 **Inline and block elements are the most common ways to display elements:**  
-* **block**: elements appear on a new line (also called block-level element). `<div>` is the standard block-level element: starts on a new  
-line and stretches out to the left and right as far as it can. `<p> <form> <header> <footer> <section> <h1> <ul> <li>` etc. are all  
+* **block**: elements appear on a new line (also called block-level element). `<div>` is the standard block-level element: starts on a new line and stretches out to the left and right as far as it can. `<p> <form> <header> <footer> <section> <h1> <ul> <li>` etc. are all  
 block-level elements.
 
 * **inline**: elements appear on the same line. An inline element can wrap some text inside a paragraph: `<span>sometext</span>`  
@@ -140,6 +132,19 @@ it (the container), the image may overflow outside of its container. This can be
 }
 ```
 
+### Change the HTML element type with display property
+With the `display` property the type of an element can be changed without its HTML meaning.
+The `display` options have specific rendering behaviours:
+* `p {display: block;}` will take up the whole width available
+* `p {display: inline;}` will act as plain text
+* `p {display: inline-block;}` is a compound of block and inline behaviour
+* `table table-row table-cell` all have very specific behaviour that allow more complex layouts.
+* `p {display: list-item;}` also takes up the whole width available but shows an additional bullet point. It is never used because `<li>` items are easier to style using `display: block` or `display: inline`.
+
+The `display: block;` is often used to turn **links** into a block element because this increases their clickable zone (this can be checked by testing it with a background colour).
+
+With `display: inline;` a horizontal navigation can be created from list items: instead of a list the items will be shown next to each other.
+
 **Z-index:** the z-index controls how content overlaps. The element with the highest z-index appears on top.
 
 
@@ -149,20 +154,15 @@ it (the container), the image may overflow outside of its container. This can be
 * `blur`: controls how much (if any) blur radius is added to the shadow (optional)
 * `color`: controls the colour of the shadow (optional)  
 
-Same goes for **Box shadow**: this makes it possible to use multiple drop shadows on box elements using:  
-`box-shadow: horizontal-shadow vertical-shadow blur size color inset`
+Same goes for **Box shadow**: this makes it possible to use multiple drop shadows on box elements using: `box-shadow: horizontal-shadow vertical-shadow blur size color inset`
 
-**RGBA**: with `rgba` not only colour but also opacity can be assigned: `rgba(rgb code, opacity)`. For example `rgb(176, 175, 192)`  
- is the hex code #b0afc0. Opacity of 0.2 is very transparant; 1.0 is solid colour.
+**RGBA**: with `rgba` not only colour but also opacity can be assigned: `rgba(rgb code, opacity)`. For example `rgb(176, 175, 192)` is the hex code #b0afc0. Opacity of 0.2 is very transparant; 1.0 is solid colour.
 
-With **EM** (em = ephemeral unit) used for font-size, the font is kept relative to the default font size. This means 0.5 em is  
-50% of the size that would apply as default.
+With **EM** (em = ephemeral unit) used for font-size, the font is kept relative to the default font size. This means 0.5 em is 50% of the size that would apply as default.
 
 
 **Replaced elements** are external objects such as`<img>` or `<video>`, whose representation is independent of the CSS formatting model.  
-These elements have a content that is not affected by the current document's styles. The position of the replaced element can be  
-affected using CSS, but not the contents of the replaced element itself. The only other impact CSS can have on a replaced  
-element is that there are properties which support controlling the positioning of the element's content within its box.
+These elements have a content that is not affected by the current document's styles. The position of the replaced element can be affected using CSS, but not the contents of the replaced element itself. The only other impact CSS can have on a replaced element is that there are properties which support controlling the positioning of the element's content within its box.
 
 #### Fonts
 There are **nine web-safe fonts** (i.e. fonts installed on almost all computers):
@@ -187,8 +187,8 @@ A more original font can be used if included in the webpage itself using Google 
 * `font-size`
 * `line-height`
 * `font-family`
-Example: ```css
-body {font: italic small-caps bold 16px/1.5 Arial, sans-serif}```
+  
+Example: `body {font: italic small-caps bold 16px/1.5 Arial, sans-serif}`.
 This order and the slash are obligatory, but only `font-size` and `font-family` are mandatory.
 
 #### Padding and margin
@@ -202,6 +202,10 @@ Padding and margin can be set in a number of ways, following a specific order:
 * padding/margin: top/bottom right/left `padding: 5px 15px`
 * padding/margin: all `margin: 20px`
 You can also set one specific padding or margin, for example `padding-right: 10px` or `margin-top: 30px`
+
+**Text indent**
+The `text-indent` property allows to add space before the first letter of the first line of a block-level element. The default value is zero. The indent is applied ONLY to the first line:
+`quote { text-indent: 30px;}`
 
 #### Images
 * Always optimise images beforehand (scaling etc.) to have small filesize  
@@ -228,7 +232,7 @@ Example:
 ```
 
 **Background images**  
-* Add to `body` or whatever element where the background should be: `background: url(path-to-image)`
+* Add to `body` or whatever element where the background should be: `background-image: url(path-to-image)`. NB: this only indicates which image to use, no sizing or whatever is applied.
 * Use more background images by adding more urls after each other.  
 * Set properties for background images: `background-size: first_image_size, second-image-size` etc.  
 * `no repeat` must be added, otherwise the image repeats itself to fill the container.  
